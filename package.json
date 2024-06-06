@@ -16,7 +16,12 @@
     "start": "next start",
     "lint": "next lint",
     "clean": "yarn cache clean && rm -rf node_modules && rm -rf globe-report-admin && rm -rf yarn.lock && rm -rf package-lock.json && yarn globe-report-admin && yarn start ",
-    "git": "git add . && git commit -m \"$COMMENT :: on $(date +'%a, %b %d, %Y %r')\" && git push --all --force"
+    "git": "git add . && git commit -m \"$COMMENT :: on $(date +'%a, %b %d, %Y %r')\" && git push --all --force",
+    "prisma:generate": "npx dotenv -e .env.local -- prisma generate",
+    "migrate:dev": "npx dotenv -e .env.local -- prisma migrate dev",
+    "prisma:studio": "npx dotenv -e .env.local -- prisma studio",
+    "migrate": "npx dotenv -e .env.local -- prisma migrate deploy",
+    "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.5.0",
