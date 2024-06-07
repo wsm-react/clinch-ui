@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from '@/lib/utils';
-import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
+import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, LayoutDashboard, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -19,6 +19,12 @@ export default function SideDialogLinks() {
     }
 
     const dialogLinks: DialogLinks[] = [
+        {
+            id: 1,
+            label: "Dashboard",
+            href: "/admin",
+            icon: LayoutDashboard,
+        },
         {
             id: 1,
             label: "Career",

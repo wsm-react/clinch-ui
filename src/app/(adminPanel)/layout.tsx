@@ -18,16 +18,16 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
             <div className="mb-14 overflow-y-auto">
               <SideDialogLinks />
             </div>
-            <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 drop-shadow-xl border-t border-gray-200">
+            <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200">
               <SideBottomLinks />
             </div>
           </div>
         </div>
-        <div className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-80 dark:bg-gray-900 ">
-          <div className="px-8 pt-6 max-sm:px-4">
+        <div className="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-80 dark:bg-gray-900 min-h-screen">
+          <div className="p-8 pt-6 max-sm:px-4 h-full">
             {children}
           </div>
-          <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 drop-shadow-xl border-t border-gray-200">
+          <div className=" justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200">
             <div className="aasas">&copy; 2019-2023 sitename.com. All rights reserved.</div>
           </div>
         </div>

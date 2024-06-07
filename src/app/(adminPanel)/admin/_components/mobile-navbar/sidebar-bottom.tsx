@@ -21,14 +21,14 @@ export default function SideBottomLinks() {
         className?: string;
     }
 
-    interface DialogLinks {
+    interface BottomLinks {
         id: number | string
         href: string
         label: string
         icon?: React.ComponentType<IconProps>;
     }
 
-    const dialogLinks: DialogLinks[] = [
+    const bottomLinks: BottomLinks[] = [
         {
             id: 1,
             label: "Career",
@@ -59,7 +59,7 @@ export default function SideBottomLinks() {
 
     return (
         <div className="flex flex-row list-inside space-x-1 align-middle justify-center">
-            {dialogLinks.map((item, index) => {
+            {bottomLinks.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = pathName === item.href;
 
@@ -73,9 +73,7 @@ export default function SideBottomLinks() {
                                         {/* {item.label} */}
                                     </Link>
                                 </TooltipTrigger>
-                                <TooltipContent>
-                                    <p>Add to library</p>
-                                </TooltipContent>
+                                <TooltipContent> <p>{item.label}</p></TooltipContent>
                             </Tooltip>
                         </TooltipProvider>
                     </div>
