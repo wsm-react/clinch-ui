@@ -10,18 +10,18 @@ import {
 import { Menu } from 'lucide-react';
 
 import Link from 'next/link';
-import MobNavDialogBody from './mobile-navbar/dialog-body';
+import SideDialogBody from './mobile-navbar/dialog-body';
 
 
 
 export default function MobileNavBar() {
     return (
         <Sheet>
-            <SheetTrigger>
+            <SheetTrigger className='md:hidden'>
                 <Menu />
             </SheetTrigger>
             <SheetContent side='left' className='p-0'>
-                <MobNavDialogBody />
+                <SideDialogBody />
             </SheetContent>
         </Sheet>
     );

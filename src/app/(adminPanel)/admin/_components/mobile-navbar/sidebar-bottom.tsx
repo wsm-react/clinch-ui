@@ -1,11 +1,21 @@
 "use client"
 
+
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 import { cn } from '@/lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-export default function SideDialogLinks() {
+
+
+export default function SideBottomLinks() {
 
     interface IconProps {
         className?: string;
@@ -42,40 +52,34 @@ export default function SideDialogLinks() {
             label: "Page block",
             href: "/admin/page-block",
             icon: FilePlus2,
-        },
-        {
-            id: 1,
-            label: "Services",
-            href: "/admin/services",
-            icon: BriefcaseBusiness,
-        },
-        {
-            id: 1,
-            label: "Testimonial",
-            href: "/admin/testimonial",
-            icon: MessageSquareDiff,
-        },
-        {
-            id: 1,
-            label: "Why Us",
-            href: "/admin/why-us",
-            icon: Earth,
-        },
+        }
     ]
 
     const pathName = usePathname();
 
     return (
-        <div className="flex flex-col p-4 list-inside pr-4 pl-4 space-y-1 overflow-y-auto">
+        <div className="flex flex-row list-inside space-x-1 align-middle justify-center">
             {dialogLinks.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = pathName === item.href;
 
                 return (
-                    <Link key={index} href={item.href} className={cn("text-sm p-3 pl-3 pr-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200 w-full transition duration-75 rounded-lg", isActive && "bg-gray-200 text-gray-900")}>
-                        {Icon && <Icon className="inline-block w-5 mr-3 text-sm" />}
-                        {item.label}
-                    </Link>
+                    <div key={index}>
+                        <TooltipProvider>
+                            <Tooltip>
+                                <TooltipTrigger asChild>
+                                    <Link key={index} href={item.href} className={cn("text-sm p-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200 transition duration-75 rounded-lg", isActive && "bg-gray-200 text-gray-900")}>
+                                        {Icon && <Icon className="inline-block w-6" />}
+                                        {/* {item.label} */}
+                                    </Link>
+                                </TooltipTrigger>
+                                <TooltipContent>
+                                    <p>Add to library</p>
+                                </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                    </div>
+
                 );
             })}
         </div>

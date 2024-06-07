@@ -13,18 +13,16 @@ import SideDialogLinks from './dialog-links';
 
 export default function SideDialogBody() {
     return (
-        <div>
+        <div className='w-100'>
             <SheetHeader>
-                <div className="p-5">
-                    <SheetTitle>Edit profile</SheetTitle>
-                    <SheetDescription>
+                <div className="p-4 pr-8 pl-8">
+                    <SheetTitle>Co. Logo</SheetTitle>
+                    {/* <SheetDescription>
                         Make changes to your profile here. Click save when youre done.
-                    </SheetDescription>
+                    </SheetDescription> */}
                 </div>
             </SheetHeader>
-            <div className="flex flex-col mt-4 list-inside space-y-4">
-                <SideDialogLinks />
-            </div>
+            <SideDialogLinks />
         </div>
     );
 }
