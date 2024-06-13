@@ -41,7 +41,7 @@ model comment {
   id      String   @id @default(auto()) @map("_id") @db.ObjectId
   comment String
   post    blog_post @relation(fields: [postId], references: [id])
-  postId  String   @db.ObjectId
+  postId  String   @db.ObjectId @map("post_id")
 }
 
 // Address is an embedded document
