@@ -13,8 +13,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// datasource db {
+//   provider  = "postgresql"
+//   url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+//   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+// }
+
 model User {
-  id           String     @id @default(cuid()) 
+  id           String     @id @default(uuid()) @db.Uuid
   email        String     @unique
   name         String?
   hashPassword String     @map("hash_password")
@@ -24,26 +30,27 @@ model User {
 }
 
 model BlogPost {
-  id        String     @id @default(cuid()) 
+  id        String     @id @default(uuid()) @db.Uuid
   slug      String     @unique
   title     String
   body      String
   published Boolean
   author    User       @relation(fields: [authorId], references: [id])
+  authorId  String     @map("author_id") @db.Uuid
   comments  Comment[]
-  authorId  String     @map("author_id") 
   updatedAt DateTime   @updatedAt @map("updated_at")
   createdAt DateTime   @default(now()) @map("created_at")
 }
 
 model Comment {
-  id        String   @id @default(cuid()) 
+  id        String   @id @default(uuid()) @db.Uuid
   comment   String
   post      BlogPost @relation(fields: [postId], references: [id])
-  postId    String   
+  postId    String   @db.Uuid
   updatedAt DateTime @updatedAt @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
 }
+
 
 // Address is an embedded document
 // type address {

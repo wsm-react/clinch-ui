@@ -1,13 +1,10 @@
-
-"use client"
-
 import { NewsAndBlogsTable } from './_components/blog-table';
-import { NewsAndBlogsData, NewsAndBlogsTableColumns } from './_components/blog-table-data';
 import { InsertBlogForm } from './_components/insert-blog';
 
 import { Button } from "@/components/ui/button"
 import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
+import NewsAndBlogsData from './_components/blog-userdata';
 
 export default function NewsAndBlogsPage() {
 
@@ -15,23 +12,14 @@ export default function NewsAndBlogsPage() {
 
   return (
     <div>
-      <h1 className='border-b border-gray-200 mb-10 pb-6 font-medium'>News and blogs page</h1>
+      <h1 className='border-b border-gray-200 mb-7 pb-6 font-medium'>News and blogs page</h1>
+      <div className="asasaasas">
+        <NewsAndBlogsData />
+      </div>
       <div className="flex gap-12">
-        <div className="w-2/5">
-          <InsertBlogForm />
-          {/* 
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p> */}
 
+        <div className="w-2/5">
+          {/* <InsertBlogForm /> */}
           {/* <Button
             variant="outline"
             onClick={() => {
@@ -48,7 +36,7 @@ export default function NewsAndBlogsPage() {
           </Button> */}
         </div>
         <div className="w-3/5">
-          <NewsAndBlogsTable columns={NewsAndBlogsTableColumns} data={NewsAndBlogsData} />
+          {/* <NewsAndBlogsTable columns={NewsAndBlogsTableColumns} data={NewsAndBlogsData} /> */}
         </div>
       </div>
     </div>

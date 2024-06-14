@@ -1,6 +1,4 @@
 "use client"
-
-
 import {
     Tooltip,
     TooltipContent,
@@ -68,8 +66,8 @@ export default function SideBottomLinks() {
                         <TooltipProvider>
                             <Tooltip>
                                 <TooltipTrigger asChild>
-                                    <Link key={index} href={item.href} className={cn("text-sm p-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200 transition duration-75 rounded-lg", isActive && "bg-gray-200 text-gray-900")}>
-                                        {Icon && <Icon className="inline-block w-6" />}
+                                    <Link key={index} href={item.href} className={cn("text-xs p-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200 transition duration-75 rounded-lg", isActive && "bg-gray-200 text-gray-900")}>
+                                        {Icon && <Icon className="inline-block w-4" />}
                                         {/* {item.label} */}
                                     </Link>
                                 </TooltipTrigger>

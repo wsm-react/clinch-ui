@@ -32,7 +32,6 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
               <div className="aasas">&copy; 2019-2023 sitename.com. All rights reserved.</div>
             </div>
           </div>
-
         </div>
       </div>
     </>
