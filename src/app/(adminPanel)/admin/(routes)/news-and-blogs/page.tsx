@@ -15,10 +15,22 @@ export default function NewsAndBlogsPage() {
 
   return (
     <div>
-      <h1>NewsAndBlogsPage</h1>
-      <div className="flex gap-5">
+      <h1 className='border-b border-gray-200 mb-10 pb-6 font-medium'>News and blogs page</h1>
+      <div className="flex gap-12">
         <div className="w-2/5">
           <InsertBlogForm />
+          {/* 
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolores velit perferendis, ipsum deserunt eligendi suscipit sunt. Sequi deleniti officiis, nobis quas aut, fugit perspiciatis hic placeat optio molestias mollitia?</p> */}
 
           {/* <Button
             variant="outline"
