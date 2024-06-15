@@ -13,19 +13,19 @@ export default function AppFooter() {
         {
             id: 1,
             label: "Privacy & cookie notice",
-            href: "/text",
+            href: "/privacy-cookie-notice",
             className: "text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
         },
         {
             id: 1,
             label: "Terms of service",
-            href: "/text",
+            href: "/terms-of-service",
             className: "text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
         },
         {
             id: 1,
             label: "About",
-            href: "/text",
+            href: "/about-us",
             className: "text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
         }
     ]

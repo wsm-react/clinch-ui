@@ -3,14 +3,11 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { Button } from "@/components/ui/button"
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
 import { z as zodvalid } from "zod"
-import { cn } from '@/lib/utils'
 import { createUser } from '@/actions/actions'
-import { revalidatePath } from 'next/cache';
 
 const FormSchema = zodvalid.object({
   name: zodvalid.string().min(6, { message: "name must be at least 6 characters long" }),
@@ -30,13 +27,12 @@ export function InsertUserForm() {
   })
 
   const { toast } = useToast();
-  const { isSubmitting, isValid } = form.formState;
+  // const { isSubmitting, isValid } = form.formState;
 
   function onSubmit(data: zodvalid.infer<typeof FormSchema>) {
     console.log(data);
 
     // createUser(data as FormData);
-    revalidatePath('/admin/user/');
     toast({
       title: "You submitted the following values:",
       description: (
@@ -49,7 +45,7 @@ export function InsertUserForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+      <form action={createUser} className="space-y-6">
         <FormField
           control={form.control}
           name="name"
@@ -90,7 +86,8 @@ export function InsertUserForm() {
           )}
         />
 
-        <Button type="submit" disabled={!isValid || isSubmitting}>Submit</Button>
+        {/* <Button type="submit" disabled={!isValid || isSubmitting}>Submit</Button> */}
+        <Button type="submit">Submit</Button>
       </form>
     </Form>
   )

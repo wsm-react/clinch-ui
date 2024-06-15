@@ -11,7 +11,7 @@ const appDB = new PrismaClient()
 
 const initialBlog: Prisma.BlogPostCreateInput[] = [
     {
-        slug: 'This is normal blog',
+        slug: 'this-is-normal-blog',
         title: 'This is blog title',
         body: 'this is blog body',
         published: true,
@@ -29,7 +29,7 @@ const initialBlog: Prisma.BlogPostCreateInput[] = [
         }
     },
     {
-        slug: 'This is manish blog',
+        slug: 'this-is-manish-blog',
         title: 'This is manish title',
         body: 'this is manish body',
         published: true,
@@ -47,41 +47,60 @@ const initialBlog: Prisma.BlogPostCreateInput[] = [
         }
     },
     {
-        slug: 'This is manish blog',
-        title: 'This is manish title',
-        body: 'this is manish body',
+        slug: 'This is varun blog',
+        title: 'This is varun title',
+        body: 'this is varun body',
         published: true,
         author: {
             connectOrCreate: {
                 where: {
-                    email: "manish@gmail.com"
+                    email: "varun@gmail.com"
                 },
                 create: {
-                    email: 'manish@gmail.com',
-                    name: 'manish kumar Gupta',
+                    email: 'varun@gmail.com',
+                    name: 'varun kumar Gupta',
                     hashPassword: 'string',
                 }
             }
         }
     },
     {
-        slug: 'This is manish blog',
-        title: 'This is manish title',
-        body: 'this is manish body',
+        slug: 'This is anjali blog',
+        title: 'This is anjali title',
+        body: 'this is anjali body',
         published: true,
         author: {
             connectOrCreate: {
                 where: {
-                    email: "manish@gmail.com"
+                    email: "anjali@gmail.com"
                 },
                 create: {
-                    email: 'manish@gmail.com',
-                    name: 'manish kumar Gupta',
+                    email: 'anjali@gmail.com',
+                    name: 'anjali kumar Gupta',
                     hashPassword: 'string',
                 }
             }
         }
-    }
+    },
+    {
+        slug: 'This is roshani blog',
+        title: 'This is roshani title',
+        body: 'this is roshani body',
+        published: true,
+        author: {
+            connectOrCreate: {
+                where: {
+                    email: "roshani@gmail.com"
+                },
+                create: {
+                    email: 'roshani@gmail.com',
+                    name: 'roshani kumar Gupta',
+                    hashPassword: 'string',
+                }
+            }
+        }
+    },
+
 ]
 
 async function main() {

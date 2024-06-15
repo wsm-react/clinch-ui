@@ -22,7 +22,7 @@ export async function createUser(formdata: FormData) {
         },
     });
 
-
+    revalidatePath('/admin/user/');
 }
 
 
