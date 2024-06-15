@@ -1,11 +1,12 @@
 import { withAuth } from '@kinde-oss/kinde-auth-nextjs/server'
-import { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 // import { NextApiRequest } from 'next';
 
 export default function middleware(req: NextRequest) {
+    // console.log(req);
     return withAuth(req);
 }
 
 export const configKinde = {
-    matcher: ['/admin']
+    matcher: ['/admin/login']
 }

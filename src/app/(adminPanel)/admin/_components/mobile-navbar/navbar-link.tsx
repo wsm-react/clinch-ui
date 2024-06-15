@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip"
 
 import { cn } from '@/lib/utils';
-import { Newspaper, User } from 'lucide-react';
+import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -27,12 +27,12 @@ export default function NavbarLink() {
     }
 
     const bottomLinks: BottomLinks[] = [
-        // {
-        //     id: 1,
-        //     label: "News and blogs",
-        //     href: "/admin/news-and-blogs",
-        //     icon: Newspaper,
-        // },
+        {
+            id: 1,
+            label: "Website",
+            href: "/",
+            icon: Home,
+        },
         {
             id: 1,
             label: "User",
