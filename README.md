@@ -69,6 +69,12 @@ Testimonial
 Why us
 
 
+about-us
+our-promise
+contact-us
+disclaimer
+
+
 
 
 browserconfig.xml 

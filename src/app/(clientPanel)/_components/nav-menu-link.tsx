@@ -21,36 +21,35 @@ export default function NavMenuLink() {
     }
 
     const menuLinks: MenuLinks[] = [
-
         {
             id: 1,
-            label: "User",
-            href: "/user",
-            icon: User,
+            label: "Home",
+            href: "/",
+            // icon: User,
         },
         {
             id: 1,
-            label: "User",
-            href: "/user",
-            icon: User,
+            label: "About Us",
+            href: "/about-us",
+            // icon: User,
         },
         {
             id: 1,
-            label: "User",
-            href: "/user",
-            icon: User,
+            label: "Contact us",
+            href: "/contact-us",
+            // icon: User,
         },
         {
             id: 1,
-            label: "User",
-            href: "/user",
-            icon: User,
+            label: "Get started",
+            href: "/get-started",
+            // icon: User,
         },
         {
             id: 1,
-            label: "User",
-            href: "/user",
-            icon: User,
+            label: "Admin",
+            href: "/admin",
+            // icon: User,
         },
     ]
 
