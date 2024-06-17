@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import AdminAppNavBar from './admin/_components/admin-navbar';
 import MobNavDialogBody from './admin/_components/main-navbar';
 import SideDialogLinks from './admin/_components/mobile-navbar/dialog-links';
@@ -5,7 +6,7 @@ import SideBottomLinks from './admin/_components/mobile-navbar/sidebar-bottom';
 
 export default function AdminLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <>
+    <Fragment>
       <div className="md:hidden">
         <AdminAppNavBar />
       </div>
@@ -34,6 +35,6 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
           </div>
         </div>
       </div>
-    </>
+    </Fragment>
   );
 }

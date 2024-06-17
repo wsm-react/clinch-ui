@@ -3,7 +3,7 @@ import CardOurServices from './cards/services';
 
 export default function SectionServices() {
     return (
-        <div className="container max-w-screen-2xl">
+        <div className="container max-w-screen-xl">
             <CardOurServices />
             SectionServices
         </div>

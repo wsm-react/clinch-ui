@@ -17,7 +17,7 @@ export default function ClientIndexPage() {
       <SectionInvestmentProducts />
       <SectionExclusiveProducts />
       <SectionCareer />
-      <div className="container max-w-screen-2xl">
+      <div className="container max-w-screen-xl">
         <h1>ClientPageScreen page data</h1>
       </div>
     </>

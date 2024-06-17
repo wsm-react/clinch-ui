@@ -13,7 +13,7 @@ export default function SectionCareer() {
     ]
 
     return (
-        <div className="container max-w-screen-2xl">
+        <div className="container max-w-screen-xl">
             <CardHeadings title={'Section Career'} subTitle={'Section Career subTitle'} />
             {CardCareerData.map((item, index) => (
                 <CardCareer key={index} id={item.id} title={item.title} subTitle={item.subTitle} />

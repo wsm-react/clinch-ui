@@ -3,7 +3,7 @@ import CardPageBlock from './cards/page-block';
 
 export default function SectionPageBlock() {
     return (
-        <div className="container max-w-screen-2xl">
+        <div className="container max-w-screen-xl">
             <CardPageBlock />
             SectionPageBlock
         </div>

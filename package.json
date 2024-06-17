@@ -19,16 +19,18 @@
     "git": "git add . && git commit -m \"$COMMENT :: on $(date +'%a, %b %d, %Y %r')\" && git push --all --force",
     "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build",
     "postinstall": "prisma generate && prisma migrate deploy",
-    "migrate": "prisma migrate dev",
-    "postmigrate": "npx @snaplet/seed sync",
-    "seed": "npx prisma db seed"
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:postmigrate": "npx @snaplet/seed sync",
+    "prisma:seed": "npx prisma db seed",
+    "prisma:push": "npx prisma db push",
+    "prisma:studio": "npx prisma studio"
   },
   "prisma": {
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
+    "@clerk/nextjs": "^5.1.5",
     "@hookform/resolvers": "^3.6.0",
-    "@kinde-oss/kinde-auth-nextjs": "^2.2.13",
     "@prisma/client": "^5.15.0",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-avatar": "^1.0.4",
@@ -51,6 +53,7 @@
     "input-otp": "^1.2.4",
     "lucide-react": "^0.383.0",
     "next": "14.2.3",
+    "next-themes": "^0.3.0",
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",

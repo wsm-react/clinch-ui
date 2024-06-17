@@ -3,7 +3,7 @@ import CardTestimonial from './cards/testimonial';
 
 export default function SectionTestimonial() {
     return (
-        <div className="container max-w-screen-2xl">
+        <div className="container max-w-screen-xl">
             <CardTestimonial />
             SectionTestimonial
         </div>

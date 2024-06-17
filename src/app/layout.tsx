@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils"
 import { Inter as FontSans } from "next/font/google"
 import { Toaster } from "@/components/ui/toaster"
 import "./globals.css";
+import { ThemeProvider } from './provider';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -114,7 +115,6 @@ export const metadata: Metadata = {
   other: {
     "mobile-web-app-capable": "yes",
     custom2: "asasas",
-
   },
 
 };
@@ -122,9 +122,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
         <Toaster />
       </body>
     </html>
