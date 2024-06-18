@@ -1,13 +1,7 @@
 import Link from 'next/link';
+import { FooterLink } from './_interface/app-interface';
 
 export default function AppFooter() {
-
-    interface FooterLink {
-        id: number | string
-        href: string
-        label: string
-        // className: string
-    }
 
     const footerLink: FooterLink[] = [
         {

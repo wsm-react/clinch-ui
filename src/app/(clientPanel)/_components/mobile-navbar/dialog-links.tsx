@@ -4,19 +4,10 @@ import { cn } from '@/lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, LayoutDashboard, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { DialogLinks } from '../_interface/app-interface';
 
 export default function SideDialogLinks() {
 
-    interface IconProps {
-        className?: string;
-    }
-
-    interface DialogLinks {
-        id: number | string
-        href: string
-        label: string
-        icon?: React.ComponentType<IconProps>;
-    }
 
     const dialogLinks: DialogLinks[] = [
         {

@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import CardCareer, { CardCareerProps } from './cards/career';
+import CardCareer from './cards/career';
 import CardHeadings from './cards/headings';
+import { CardCareerProps } from './_interface/app-interface';
 
 export default function SectionCareer() {
 
@@ -13,12 +14,13 @@ export default function SectionCareer() {
     ]
 
     return (
-        <div className="container max-w-screen-xl">
-            <CardHeadings title={'Section Career'} subTitle={'Section Career subTitle'} />
-            {CardCareerData.map((item, index) => (
-                <CardCareer key={index} id={item.id} title={item.title} subTitle={item.subTitle} />
-            ))}
-
+        <div className="bg-white/[.04] pt-20 pb-20">
+            <div className="container max-w-screen-xl">
+                <CardHeadings title={'Section Career'} subTitle={'Section Career subTitle'} />
+                {CardCareerData.map((item, index) => (
+                    <CardCareer key={index} id={item.id} title={item.title} subTitle={item.subTitle} />
+                ))}
+            </div>
         </div>
     );
 }

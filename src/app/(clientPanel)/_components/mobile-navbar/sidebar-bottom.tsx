@@ -10,21 +10,11 @@ import { cn } from '@/lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { BottomLinks } from '../_interface/app-interface';
 
 
 
 export default function SideBottomLinks() {
-
-    interface IconProps {
-        className?: string;
-    }
-
-    interface BottomLinks {
-        id: number | string
-        href: string
-        label: string
-        icon?: React.ComponentType<IconProps>;
-    }
 
     const bottomLinks: BottomLinks[] = [
         {

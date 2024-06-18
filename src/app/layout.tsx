@@ -1,14 +1,9 @@
+import "./globals.css";
 import type { Metadata, MetadataRoute } from "next";
 import { cn } from "@/lib/utils"
-import { Inter as FontSans } from "next/font/google"
 import { Toaster } from "@/components/ui/toaster"
-import "./globals.css";
 import { ThemeProvider } from './provider';
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+import { poppinsFont } from '@/utility/fonts';
 
 export const metadata: Metadata = {
   title: "clinch webapp",
@@ -123,7 +118,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", [poppinsFont])}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

@@ -3,9 +3,11 @@ import CardOurServices from './cards/services';
 
 export default function SectionServices() {
     return (
-        <div className="container max-w-screen-xl">
-            <CardOurServices />
-            SectionServices
+        <div className="bg-white/[.04] pt-20 pb-20">
+            <div className="container max-w-screen-xl">
+                SectionServices
+                <CardOurServices />
+            </div>
         </div>
     );
 }

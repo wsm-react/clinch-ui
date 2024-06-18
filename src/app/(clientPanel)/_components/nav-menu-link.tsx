@@ -1,25 +1,14 @@
 "use client"
 
 import { cn } from '@/lib/utils';
-import { Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ModeToggle } from './mode-toggle';
+import { MenuLinks } from './_interface/app-interface';
 
 
 
 export default function MenuLink() {
-
-    interface IconProps {
-        className?: string;
-    }
-
-    interface MenuLinks {
-        id: number | string
-        href: string
-        label: string
-        icon?: React.ComponentType<IconProps>;
-    }
 
     const menuLinks: MenuLinks[] = [
         {

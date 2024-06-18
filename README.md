@@ -120,3 +120,6 @@ mstile-310x150.png
 mstile-310x310.png 
 safari-pinned-tab.svg 
 favicon.ico -->
+
+
+<!-- xl:text-[4.4rem]/[6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] -->
