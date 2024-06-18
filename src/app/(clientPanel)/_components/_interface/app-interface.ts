@@ -26,13 +26,13 @@ export interface FooterLink {
     // className: string
 }
 
-export interface CardCareerProps {
+export interface CareerProps {
     id?: number | string
     title: string
     subTitle: string
 }
 
-export interface CardBannerProps {
+export interface BannerProps {
     id?: number | string
     title: string
     subTitle: string
@@ -41,12 +41,37 @@ export interface CardBannerProps {
     icon?: React.ComponentType<IconProps>;
 }
 
-export interface CardHeadingsProps {
+export interface OurServicesProps {
+    id?: number | string
+    title: string
+    subTitle: string
+    linkText?: string
+    href?: string
+    icon?: React.ComponentType<IconProps>;
+    tags?: OurServicesTagsProps[]
+}
+
+export interface OurServicesTagsProps {
+    id?: number | string
     title: string
     subTitle: string
 }
 
 
+
+export interface BorderdLinkProps {
+    label: string | undefined
+    href: string
+    className: string
+    classText?: string
+    icon?: React.ComponentType<IconProps>;
+    iconClass: string
+}
+
+export interface HeadingsProps {
+    title: string
+    subTitle: string
+}
 
 export interface DialogLinks {
     id?: number | string

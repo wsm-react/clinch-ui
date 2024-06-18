@@ -1,9 +1,9 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { CardCareerProps } from '../_interface/app-interface';
+import { CareerProps } from '../_interface/app-interface';
 
 
-const CardCareer: React.FC<CardCareerProps> = (CardProps, ...props) => {
+const CardCareer: React.FC<CareerProps> = (CardProps, ...props) => {
     return (
         <>
             <Card className={cn(CardProps)} {...props}>
