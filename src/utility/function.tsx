@@ -1,10 +1,20 @@
+import { highlightKeywordProps } from '@/app/(clientPanel)/_components/_interface/app-interface';
+import { cn } from '@/lib/utils';
 import React from 'react';
+import { text } from 'stream/consumers';
 
-export const highlightKeyword = (text: string, keyword: string): React.ReactNode[] => {
-  const parts = text.split(new RegExp(`(${keyword})`, 'gi'));
+const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
+  if (!keyword) return [text]; // Return the original text if keyword is undefined
+
+  const sanitizedKeyword = keyword.trim().replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special characters
+  const parts = text.split(new RegExp(`(${sanitizedKeyword})`, 'gi'));
+
   return parts.map((part, index) =>
-    part.toLowerCase() === keyword.toLowerCase() ? (
-      <span key={index} className="font-bold inline  text-gray-500 dark:text-gray-300"> {part}  </span>
-    ) : (part)
+    part.toLowerCase() === sanitizedKeyword.toLowerCase() ? (
+      <span key={index} className={cn('font-bold', className ? className : "text-gray-500 dark:text-gray-300")}>
+        {part}
+      </span>) : (part)
   );
 };
+
+export default HighlightKeyword;

@@ -3,10 +3,10 @@ import { cn } from "@/lib/utils"
 import { CareerProps } from '../_interface/app-interface';
 
 
-const CardCareer: React.FC<CareerProps> = (CardProps, ...props) => {
+const CardCareer: React.FC<CareerProps> = (cardProps, ...props) => {
     return (
         <>
-            <Card className={cn(CardProps)} {...props}>
+            <Card className={cn(cardProps)} {...props}>
                 <CardHeader>
                     <CardTitle>Notifications</CardTitle>
                     <CardDescription>You have 3 unread messages.</CardDescription>

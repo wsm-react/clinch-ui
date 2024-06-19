@@ -41,6 +41,30 @@ export interface BannerProps {
     icon?: React.ComponentType<IconProps>;
 }
 
+export interface WealthManagerProps {
+    id?: number | string
+    title: string
+    subTitle: string
+    imgSrc: string
+    imgAlt?: string
+    linkText?: string
+    href?: string
+    icon?: React.ComponentType<IconProps>;
+
+}
+export interface ExclusiveProductsProps {
+    id?: number | string
+    title: string
+    subTitle: string
+    keyword?: string
+    imgSrc: string
+    imgAlt?: string
+    linkText?: string
+    href?: string
+    reversed?: boolean
+    icon?: React.ComponentType<IconProps>;
+}
+
 export interface OurServicesProps {
     id?: number | string
     title: string
@@ -55,6 +79,12 @@ export interface OurServicesTagsProps {
     id?: number | string
     title: string
     subTitle: string
+}
+
+export interface highlightKeywordProps {
+    text: string
+    keyword: string | undefined
+    className?: string
 }
 
 

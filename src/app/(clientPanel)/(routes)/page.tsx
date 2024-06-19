@@ -7,17 +7,20 @@ import SectionServices from '../_components/section-services';
 import SectionTestimonial from '../_components/section-testimonial';
 import SectionPageBanner from '../_components/section-banner';
 import SectionRegisterNow from '../_components/section-register-now';
+import SectionWealthManager from '../_components/section-wealth-manager';
+
 
 export default function ClientIndexPage() {
   return (
     <>
       <SectionPageBanner />
       <SectionServices />
-      <SectionTestimonial />
-      <SectionPageBlock />
+      <SectionWealthManager />
+      <SectionExclusiveProducts />
+      {/* <SectionPageBlock /> */}
       <SectionNewsAndBlogs />
       <SectionInvestmentProducts />
-      <SectionExclusiveProducts />
+      <SectionTestimonial />
       <SectionCareer />
       <SectionRegisterNow />
     </>

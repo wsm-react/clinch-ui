@@ -4,14 +4,12 @@ import { ChevronRight } from 'lucide-react';
 
 
 const BorderdLink: React.FC<BorderdLinkProps> = ({ href, label, className, classText, icon: Icon, iconClass }) => {
-    return (
+    return (label && (
         <Link href={href} className={className}>
-            <span className={classText ? classText : "border-b-2 border-blue-400 dark:border-cyan-500 pb-2"}>
-                {label}
-            </span>
+            <span className={classText ? classText : "border-b-2 border-blue-400 dark:border-cyan-500 pb-2"}>{label}</span>
             {Icon && <Icon className={iconClass} />}
         </Link>
-    );
+    ));
 };
 
 export default BorderdLink;

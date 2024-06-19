@@ -3,7 +3,7 @@ import { OurServicesProps } from '../_interface/app-interface';
 import BorderdLink from './borderd-link';
 import { ChevronRight } from 'lucide-react';
 
-const CardOurServices: React.FC<OurServicesProps> = (cardProps, ...props) => {
+const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
     return (
         <div className='border border-gray-200 dark:border-gray-700 m-2 p-10 rounded-2xl bg-white dark:bg-white/[.02]'>
             <div className="sm:text-[2.6rem] text-[1rem] font-semibold">{cardProps.title}</div>

@@ -94,7 +94,7 @@ export default function SectionServices() {
                 <div className="sm:text-[1.3rem] text-[1rem]">Choose from our curated products baskets catering to all risk types.</div>
             </div>
             <div className="container max-w-screen-2xl">
-                <div className="grid gap-x-4 gap-y-4 grid-cols-2">
+                <div className="gap-x-4 gap-y-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                     {CardCareerData.map((item, index) => (
                         <CardOurServices
                             key={index}
