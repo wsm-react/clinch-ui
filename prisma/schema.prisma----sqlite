@@ -8,21 +8,16 @@ generator client {
   provider = "prisma-client-js"
 }
 
-// datasource db {
-//   provider = "sqlite"
-//   url      = env("DATABASE_URL")
-// }
-
 datasource db {
-  provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 model User {
-  id           String     @id @default(uuid()) @db.Uuid
+  id           String     @id @default(cuid())
   email        String     @unique
   name         String?
+  lastName     String?    @map("last_name")
   hashPassword String     @map("hash_password")
   posts        BlogPost[]
   updatedAt    DateTime   @updatedAt @map("updated_at")
@@ -30,27 +25,27 @@ model User {
 }
 
 model BlogPost {
-  id        String     @id @default(uuid()) @db.Uuid
-  slug      String     @unique
+  id        String    @id @default(cuid())
+  slug      String    @unique
   title     String
+  subTitle  String?    @map("sub_title")
   body      String
-  published Boolean
-  author    User       @relation(fields: [authorId], references: [id])
-  authorId  String     @map("author_id") @db.Uuid
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  String    @map("author_id")
   comments  Comment[]
-  updatedAt DateTime   @updatedAt @map("updated_at")
-  createdAt DateTime   @default(now()) @map("created_at")
+  published Boolean
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  createdAt DateTime  @default(now()) @map("created_at")
 }
 
 model Comment {
-  id        String   @id @default(uuid()) @db.Uuid
+  id        String   @id @default(cuid())
   comment   String
   post      BlogPost @relation(fields: [postId], references: [id])
-  postId    String   @db.Uuid
+  postId    String
   updatedAt DateTime @updatedAt @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
 }
-
 
 // Address is an embedded document
 // type address {
