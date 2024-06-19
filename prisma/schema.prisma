@@ -1,22 +1,11 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
-// datasource db {
-//   provider = "sqlite"
-//   url      = env("DATABASE_URL")
-// }
-
 datasource db {
   provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model User {
@@ -25,30 +14,35 @@ model User {
   name         String?
   lastName     String?    @map("last_name")
   hashPassword String     @map("hash_password")
-  posts        BlogPost[]
   updatedAt    DateTime   @updatedAt @map("updated_at")
   createdAt    DateTime   @default(now()) @map("created_at")
+  posts        BlogPost[]
 }
 
 model BlogPost {
-  id        String     @id @default(uuid()) @db.Uuid
-  slug      String     @unique
+  id        String    @id @default(uuid()) @db.Uuid
+  slug      String    @unique
   title     String
-  subTitle  String?    @map("sub_title")
+  subTitle  String?   @map("sub_title")
   body      String
   published Boolean
-  author    User       @relation(fields: [authorId], references: [id])
-  authorId  String     @map("author_id") @db.Uuid
+  authorId  String    @map("author_id") @db.Uuid
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  author    User      @relation(fields: [authorId], references: [id])
   comments  Comment[]
-  updatedAt DateTime   @updatedAt @map("updated_at")
-  createdAt DateTime   @default(now()) @map("created_at")
+
+  @@index([slug])
 }
 
 model Comment {
   id        String   @id @default(uuid()) @db.Uuid
   comment   String
-  post      BlogPost @relation(fields: [postId], references: [id])
+  slug      String   @unique
   postId    String   @db.Uuid
   updatedAt DateTime @updatedAt @map("updated_at")
   createdAt DateTime @default(now()) @map("created_at")
+  post      BlogPost @relation(fields: [postId], references: [id])
+
+  @@index([slug])
 }
