@@ -3,7 +3,7 @@ import CardNewsAndBlogs from './cards/news-and-blogs';
 
 export default function SectionNewsAndBlogs() {
     return (
-        <div className="container max-w-screen-xl">
+        <div className="container max-w-screen-2xl">
             <CardNewsAndBlogs />
             SectionNewsAndBlogs
         </div>

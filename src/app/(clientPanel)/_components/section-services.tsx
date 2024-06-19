@@ -24,26 +24,88 @@ export default function SectionServices() {
                     subTitle: "50,00,000",
                 }
             ]
+        },
+        {
+            title: "Mutual Funds",
+            subTitle: "Bringing down to 40 great investment plans from 4000 schemes. From low, medium to high alpha generator we have in our basket.",
+            linkText: "Get Started",
+            href: "/get-started",
+            tags: [
+                {
+                    title: "Benchmark return",
+                    subTitle: "42%",
+                },
+                {
+                    title: "Holding period",
+                    subTitle: "3+ Yrs.",
+                },
+                {
+                    title: "Min Investment",
+                    subTitle: "50,00,000",
+                }
+            ]
+        },
+        {
+            title: "Bonds and FD's",
+            subTitle: "If you are looking for low risk, consistent returns, Of Course better in deposits and bank FD's , This is you game and we know the trick to win.",
+            linkText: "Get Started",
+            href: "/get-started",
+            tags: [
+                {
+                    title: "Benchmark return",
+                    subTitle: "42%",
+                },
+                {
+                    title: "Holding period",
+                    subTitle: "3+ Yrs.",
+                },
+                {
+                    title: "Min Investment",
+                    subTitle: "50,00,000",
+                }
+            ]
+        },
+        {
+            title: "IPO's",
+            subTitle: "Many thinks it's a easy bet to make big money but their is a caveat and for sure not all are same.",
+            linkText: "Get Started",
+            href: "/get-started",
+            tags: [
+                {
+                    title: "Benchmark return",
+                    subTitle: "42%",
+                },
+                {
+                    title: "Holding period",
+                    subTitle: "3+ Yrs.",
+                },
+                {
+                    title: "Min Investment",
+                    subTitle: "50,00,000",
+                }
+            ]
         }
     ]
 
     return (
-        <div className="bg-white/[.04] pt-20 pb-20">
-            <div className="container max-w-screen-xl mb-10 text-center">
+        <div className="bg-black/[.05] dark:bg-white/[.04] pt-20 pb-20">
+            <div className="container max-w-screen-2xl mb-10 text-center">
                 <div className="xl:text-[3rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">Investment products, to aid your wealth</div>
-                <div className="sm:text-[1.3rem] text-[1rem] text-gray-200">Choose from our curated products baskets catering to all risk types.</div>
+                <div className="sm:text-[1.3rem] text-[1rem]">Choose from our curated products baskets catering to all risk types.</div>
             </div>
-            <div className="container max-w-screen-xl">
-                {CardCareerData.map((item, index) => (
-                    <CardOurServices
-                        key={index}
-                        title={item.title}
-                        subTitle={item.subTitle}
-                        linkText={item.linkText}
-                        href={item.href}
-                        tags={item.tags}
-                    />
-                ))}
+            <div className="container max-w-screen-2xl">
+                <div className="grid gap-x-4 gap-y-4 grid-cols-2">
+                    {CardCareerData.map((item, index) => (
+                        <CardOurServices
+                            key={index}
+                            title={item.title}
+                            subTitle={item.subTitle}
+                            linkText={item.linkText}
+                            href={item.href}
+                            tags={item.tags}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

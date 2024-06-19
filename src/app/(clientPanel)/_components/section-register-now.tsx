@@ -13,7 +13,7 @@ export default function SectionRegisterNow() {
     ]
     return (
         <div className="bg-background/20 backdrop-blur pt-20 pb-20">
-            <div className="container max-w-screen-xl">
+            <div className="container max-w-screen-2xl">
                 SectionRegisterNow
             </div>
         </div>
