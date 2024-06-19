@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import CardExclusiveProducts from './cards/exclusive-products';
-import { CardCareerProps } from './_interface/app-interface';
+import { CareerProps } from './_interface/app-interface';
 
 export default function SectionRegisterNow() {
 
-    const CardCareerData: CardCareerProps[] = [
+    const CardCareerData: CareerProps[] = [
         {
             id: 1,
             title: "Privacy & cookie notice",

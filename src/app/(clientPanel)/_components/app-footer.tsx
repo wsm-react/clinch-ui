@@ -143,7 +143,7 @@ export default function AppFooter() {
                     </div>
                 </div>
                 <div className="text-center">
-                    <div className="text-sm">Clinch is powered by "NNNNNNNNNN"  is registered with SEBI Registration no. INP000007377. Mutual Fund distribution services are offered through NHOJH Distribution Services Pvt Limited, a wholly owned subsidiary with AMFI Registration No.: ARN -248439. Mutual fund investments are subject to market risks, read all scheme related documents carefully. Terms and conditions of the website are applicable. Privacy policy of the website is applicable.</div>
+                    <div className="text-sm">Clinch is powered by  is registered with SEBI Registration no. INP000007377. Mutual Fund distribution services are offered through NHOJH Distribution Services Pvt Limited, a wholly owned subsidiary with AMFI Registration No.: ARN -248439. Mutual fund investments are subject to market risks, read all scheme related documents carefully. Terms and conditions of the website are applicable. Privacy policy of the website is applicable.</div>
                 </div>
                 <div className="text-center">
                     <ul className="flex justify-center space-x-5">

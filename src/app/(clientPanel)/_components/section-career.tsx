@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import CardCareer from './cards/career';
 import CardHeadings from './cards/headings';
-import { CardCareerProps } from './_interface/app-interface';
+import { CareerProps } from './_interface/app-interface';
 
 export default function SectionCareer() {
 
-    const CardCareerData: CardCareerProps[] = [
+    const CardCareerData: CareerProps[] = [
         {
             id: 1,
             title: "Privacy & cookie notice",

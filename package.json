@@ -15,7 +15,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "yarn cache clean && rm -rf node_modules && rm -rf globe-report-admin && rm -rf yarn.lock && rm -rf package-lock.json && yarn globe-report-admin && yarn start ",
+    "clean": "yarn cache clean && rm -rf node_modules && rm -rf .vscode && rm -rf yarn.lock && rm -rf package-lock.json && yarn start ",
     "git": "git add . && git commit -m \"$COMMENT :: on $(date +'%a, %b %d, %Y %r')\" && git push --all --force",
     "build:production": "npx dotenv -e .env.local -- npm run migrate && npm run generate && npm run build",
     "prisma:postinstall": "prisma generate && prisma migrate deploy",
