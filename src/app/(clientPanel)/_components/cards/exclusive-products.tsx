@@ -4,7 +4,7 @@ import BorderdLink from './borderd-link';
 import Image from 'next/image';
 
 import { text } from 'stream/consumers';
-import HighlightKeyword from '@/utility/function';
+import { HighlightKeyword } from '@/utility/function';
 
 
 
@@ -25,7 +25,7 @@ const CardExclusiveProducts: React.FC<ExclusiveProductsProps> = (cardProps, prop
                             href={`${cardProps.href}`}
                             className={'sm:text-[1.6rem] text-[.9rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-600 dark:hover:text-green-300'}
                             icon={ChevronRight}
-                            classText={"border-b-2 border-blue-500 dark:border-green-700 pb-2 hover:border-gray-300 dark:hover:border-green-300"}
+                            labelClassName={"border-b-2 border-blue-500 dark:border-green-700 pb-2 hover:border-gray-300 dark:hover:border-green-300"}
                             iconClass={'inline-block w-12 h-10 ml-2 mt-1'}
                         />
                     </div>}

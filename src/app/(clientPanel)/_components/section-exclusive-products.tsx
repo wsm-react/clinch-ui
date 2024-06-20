@@ -41,9 +41,9 @@ export default function SectionExclusiveProducts() {
     ]
 
     return (
-        <div className="bg-white/[.04] pt-20 pb-20">
+        <div className="bg-black/[.05] dark:bg-white/[.04] pt-20">
             <div className="container max-w-screen-2xl mb-10">
-                <div className="xl:text-[3rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">Exclusive products and tools to make more on your money</div>
+                <div className="xl:text-[4.2rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold border-b-2 border-gray-300 dark:border-gray-600 pb-10">Exclusive products and tools to make more on your money</div>
             </div>
             <div className="container max-w-screen-2xl">
                 {exclusiveProductsData.map((items, index) => {
@@ -60,7 +60,6 @@ export default function SectionExclusiveProducts() {
                         />
                     );
                 })}
-
             </div>
         </div>
     );

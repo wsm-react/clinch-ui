@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export default function CardNewsAndBlogs() {
+export default function CardBlogs() {
     return (
         <div >
-            CardNewsAndBlogs
+            CardBlogs
         </div>
     );
 }

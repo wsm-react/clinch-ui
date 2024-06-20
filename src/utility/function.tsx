@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 import { text } from 'stream/consumers';
 
-const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
+export const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
   if (!keyword) return [text]; // Return the original text if keyword is undefined
 
   const sanitizedKeyword = keyword.trim().replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'); // Escape special characters
@@ -17,4 +17,13 @@ const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, clas
   );
 };
 
-export default HighlightKeyword;
+export function PadWithZero(number: number): string {
+  return number < 10 ? `0${number}` : `${number}`;
+}
+
+export function GetAvatarName(name: string): string {
+  return name
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase())
+    .join('');
+}

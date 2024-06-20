@@ -1,7 +1,15 @@
-import { Url } from 'next/dist/shared/lib/router/router';
+export interface highlightKeywordProps {
+    text: string
+    keyword: string | undefined
+    className?: string
+}
 
-export interface MenuLinks {
+export interface ListId {
     id?: number | string
+}
+
+
+export interface MenuLinks extends ListId {
     href: string
     label: string
     icon?: React.ComponentType<IconProps>;
@@ -11,101 +19,62 @@ export interface IconProps {
     className?: string;
 }
 
-export interface BottomLinks {
-    id?: number | string
-    href: string
-    label: string
-    icon?: React.ComponentType<IconProps>;
-}
-
-
-export interface FooterLink {
-    id?: number | string
-    href: string
-    label: string
-    // className: string
-}
-
-export interface CareerProps {
-    id?: number | string
+export interface HeadingsProps {
     title: string
     subTitle: string
 }
 
-export interface BannerProps {
-    id?: number | string
-    title: string
-    subTitle: string
+export interface CareerProps extends HeadingsProps, ListId { }
+
+export interface CardsProps extends ListId, HeadingsProps {
     linkText?: string
     href?: string
     icon?: React.ComponentType<IconProps>;
 }
 
-export interface WealthManagerProps {
-    id?: number | string
-    title: string
-    subTitle: string
+export interface WealthManagerProps extends CardsProps {
     imgSrc: string
     imgAlt?: string
-    linkText?: string
-    href?: string
-    icon?: React.ComponentType<IconProps>;
-
 }
-export interface ExclusiveProductsProps {
-    id?: number | string
-    title: string
-    subTitle: string
+
+export interface ExclusiveProductsProps extends CardsProps {
     keyword?: string
     imgSrc: string
     imgAlt?: string
-    linkText?: string
-    href?: string
     reversed?: boolean
-    icon?: React.ComponentType<IconProps>;
 }
 
-export interface OurServicesProps {
-    id?: number | string
-    title: string
-    subTitle: string
-    linkText?: string
-    href?: string
-    icon?: React.ComponentType<IconProps>;
+export interface OurServicesProps extends CardsProps {
     tags?: OurServicesTagsProps[]
 }
 
-export interface OurServicesTagsProps {
-    id?: number | string
-    title: string
-    subTitle: string
+export interface OurServicesTagsProps extends CardsProps { }
+
+export interface WeServeProps extends HeadingsProps, ListId {
+    reversed?: boolean
 }
 
-export interface highlightKeywordProps {
-    text: string
-    keyword: string | undefined
-    className?: string
+
+export interface TestimonialSectionProps {
+    data: TestimonialProps[];
 }
 
+export interface TestimonialProps extends ListId {
+    name: string
+    imgSrc: string
+    position: string
+    message: string
+    industry: string
+    imgAlt?: string
+    reversed?: boolean
+}
 
 
 export interface BorderdLinkProps {
     label: string | undefined
     href: string
     className: string
-    classText?: string
+    labelClassName?: string
     icon?: React.ComponentType<IconProps>;
     iconClass: string
-}
-
-export interface HeadingsProps {
-    title: string
-    subTitle: string
-}
-
-export interface DialogLinks {
-    id?: number | string
-    href: string
-    label: string
-    icon?: React.ComponentType<IconProps>;
 }

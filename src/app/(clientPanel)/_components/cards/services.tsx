@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 
 const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
     return (
-        <div className='border border-gray-200 dark:border-gray-700 m-2 p-10 rounded-2xl bg-white dark:bg-white/[.02]'>
+        <div className='border border-gray-200 dark:border-gray-700 p-10 rounded-2xl bg-white dark:bg-white/[.02]'>
             <div className="sm:text-[2.6rem] text-[1rem] font-semibold">{cardProps.title}</div>
             <div className="sm:text-[1.3rem] text-[1rem] mt-4">{cardProps.subTitle}</div>
             {cardProps.tags && cardProps.tags.length > 0 && (
@@ -28,7 +28,7 @@ const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
                         href={`${cardProps.href}`}
                         className={'sm:text-[1.2rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-600 dark:hover:text-green-300'}
                         icon={ChevronRight}
-                        classText={"border-b border-blue-500 dark:border-green-700 pb-1 hover:border-gray-300 dark:hover:border-green-300"}
+                        labelClassName={"border-b border-blue-500 dark:border-green-700 pb-1 hover:border-gray-300 dark:hover:border-green-300"}
                         iconClass={'inline-block w-12 h-8 ml-2 mt-1'}
                     />
                 </div>

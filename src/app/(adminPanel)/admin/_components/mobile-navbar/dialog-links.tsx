@@ -1,5 +1,6 @@
 "use client"
 
+import { MenuLinks } from '@/app/(clientPanel)/_components/_interface/app-interface';
 import { cn } from '@/lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, LayoutDashboard, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
@@ -7,18 +8,7 @@ import { usePathname } from 'next/navigation';
 
 export default function SideDialogLinks() {
 
-    interface IconProps {
-        className?: string;
-    }
-
-    interface DialogLinks {
-        id: number | string
-        href: string
-        label: string
-        icon?: React.ComponentType<IconProps>;
-    }
-
-    const dialogLinks: DialogLinks[] = [
+    const dialogLinks: MenuLinks[] = [
         {
             id: 1,
             label: "Dashboard",
