@@ -65,7 +65,6 @@ export default function SideBottomLinks() {
                             </Tooltip>
                         </TooltipProvider>
                     </div>
-
                 );
             })}
         </div>

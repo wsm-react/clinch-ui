@@ -61,7 +61,7 @@ export interface TestimonialSectionProps {
 
 export interface TestimonialProps extends ListId {
     name: string
-    imgSrc: string
+    imgSrc?: string
     position: string
     message: string
     industry: string

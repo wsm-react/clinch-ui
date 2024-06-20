@@ -25,9 +25,9 @@ const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
                     return (
                         <div key={paddedIndex} className="border border-gray-200 dark:border-gray-700 p-10 rounded-2xl bg-white dark:bg-white/[.02]">
                             <div className="flex items-center space-x-6">
-                                <Avatar className='w-14 h-14 bg-slate-600 dark:bg-slate-100 border-0'>
+                                <Avatar className='w-14 h-14'>
                                     <AvatarImage src={item.imgSrc} alt={item.imgAlt} />
-                                    <AvatarFallback className='bg-slate-600 dark:bg-slate-600 border-0'>{GetAvatarName(item.name)}</AvatarFallback>
+                                    <AvatarFallback className='bg-slate-200 dark:bg-slate-600 font-bold text-sm'>{GetAvatarName(item.name)}</AvatarFallback>
                                 </Avatar>
                                 <div className="flex-1">
                                     <p className="text-[.7rem] text-muted-foreground text-ellipsis line-clamp-1">1 month ago</p>
@@ -42,8 +42,8 @@ const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
                     )
                 })}
             </div>
-            <div className="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white pt-32 pb-8 pointer-events-none dark:from-slate-900 absolute">
-                <button type="button" onClick={handleClick} className="relative bg-slate-900 hover:bg-slate-700 focus-visible:ring-[none] text-sm text-white font-semibold h-12 px-6 rounded-lg flex items-center dark:bg-slate-700 dark:hover:bg-slate-600 pointer-events-auto">Show more...</button>
+            <div className="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t from-white pt-20 pointer-events-none dark:from-slate-900 absolute">
+                <button type="button" onClick={handleClick} className="relative bg-slate-900 hover:bg-slate-700 focus-visible:ring-[none] text-sm text-white font-semibold h-12 px-6 rounded-lg flex items-center dark:bg-slate-700 dark:hover:bg-slate-600 pointer-events-auto">View All Testimonials</button>
             </div>
         </div>
 

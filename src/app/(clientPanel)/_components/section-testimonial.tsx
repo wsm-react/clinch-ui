@@ -10,224 +10,192 @@ export default function SectionTestimonial() {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "Tailwind CSS is bridging the gap between design systems and products. It's becoming the defacto API for styling."
         },
         {
             name: "Manish Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
         {
             name: "Vaun Kumar Gupta",
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: 'If I had to recommend a way of getting into programming today, it would be HTML + CSS with Tailwind CSS.'
         },
         {
             name: 'Arun Kumar Gupta',
             position: 'Frontend Developer with React',
             industry: 'It',
-            imgSrc: '',
             message: "I've been writing CSS for over 20 years, and up until 2017, the way I wrote it changed frequently. It's not a coincidence Tailwind was released the same year. It might look wrong, but spend time with it and you'll realize semantic CSS was a 20 year mistake."
         },
     ]
