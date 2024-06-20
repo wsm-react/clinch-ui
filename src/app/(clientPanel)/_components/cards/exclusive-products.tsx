@@ -13,7 +13,7 @@ const CardExclusiveProducts: React.FC<ExclusiveProductsProps> = (cardProps, prop
         <div className="mt-48 mb-48" {...props}>
             {(cardProps.title && cardProps.imgSrc) && <div className="xl:text-[4.1rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold mb-14 lg:hidden">{cardProps.title}</div>}
             <div className="flex flex-row gap-[50] justify-between items-center">
-                {(cardProps.imgSrc && cardProps.reversed === undefined) && <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[42%] 2xl:basis-[36%]">
+                {(cardProps.imgSrc && cardProps.reversed === undefined) && <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[42%] 2xl:basis-[32%]">
                     <Image src={cardProps.imgSrc} alt={cardProps.imgSrc} width={800} height={800} sizes='100vh' />
                 </div>}
                 <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[45%] 2xl:basis-[43%]">
@@ -30,7 +30,7 @@ const CardExclusiveProducts: React.FC<ExclusiveProductsProps> = (cardProps, prop
                         />
                     </div>}
                 </div>
-                {(cardProps.imgSrc && cardProps.reversed === true) && <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[42%] 2xl:basis-[36%]">
+                {(cardProps.imgSrc && cardProps.reversed === true) && <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[42%] 2xl:basis-[32%]">
                     <Image src={cardProps.imgSrc} alt={cardProps.imgSrc} width={800} height={800} sizes='100vh' />
                 </div>}
             </div>
