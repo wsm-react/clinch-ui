@@ -1,12 +1,13 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
-import { BannerProps } from '../_interface/app-interface';
+
 import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import BorderdLink from './borderd-link';
+import { CardsProps } from '../_interface/app-interface';
 
 
-const CardRiskometer: React.FC<BannerProps> = (cardProps) => {
+const CardRiskometer: React.FC<CardsProps> = (cardProps) => {
     return (
         <div className="">
             {/* <div className="text-[4.2rem]/[6rem] font-semibold mb-10">{CardProps.title}</div> */}

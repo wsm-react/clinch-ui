@@ -10,13 +10,13 @@ import { cn } from '@/lib/utils';
 import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BottomLinks } from '../_interface/app-interface';
+import { MenuLinks } from '../_interface/app-interface';
 
 
 
 export default function NavbarLink() {
 
-    const bottomLinks: BottomLinks[] = [
+    const bottomLinks: MenuLinks[] = [
         {
             id: 1,
             label: "Website",

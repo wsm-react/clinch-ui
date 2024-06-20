@@ -1,9 +1,9 @@
+import { CardsProps } from './_interface/app-interface';
 import CardBanner from './cards/banner';
-import { BannerProps } from './_interface/app-interface';
 
 export default function SectionPageBanner() {
 
-    const CardCareerData: BannerProps[] = [
+    const CardCareerData: CardsProps[] = [
         {
             title: "Unlocking the power of money, Turning it to wealth",
             subTitle: "Clinch offers exclusively crafted investment solutions, enabling you to choose from the best.",

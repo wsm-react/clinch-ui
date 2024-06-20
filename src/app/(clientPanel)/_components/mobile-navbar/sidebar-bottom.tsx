@@ -7,16 +7,16 @@ import {
 } from "@/components/ui/tooltip"
 
 import { cn } from '@/lib/utils';
-import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
+import { Contact, FilePlus2, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BottomLinks } from '../_interface/app-interface';
+import { MenuLinks } from '../_interface/app-interface';
 
 
 
 export default function SideBottomLinks() {
 
-    const bottomLinks: BottomLinks[] = [
+    const bottomLinks: MenuLinks[] = [
         {
             id: 1,
             label: "Career",

@@ -27,3 +27,12 @@ export function GetAvatarName(name: string): string {
     .map(word => word.charAt(0).toUpperCase())
     .join('');
 }
+
+export const EscapeSpecialChars = (text: string): string => {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/'/g, '&apos;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+};
