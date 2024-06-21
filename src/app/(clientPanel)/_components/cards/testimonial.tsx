@@ -16,7 +16,7 @@ const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
     };
 
     return (
-        <div className="container max-w-screen-2xl xl:max-w-screen-xl">
+        <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl">
             {/* <div className="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden"> */}
             <div className={cn("grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 overflow-hidden", isActive ? null : 'max-h-[46rem]')}>
                 {data.map((item, index) => {

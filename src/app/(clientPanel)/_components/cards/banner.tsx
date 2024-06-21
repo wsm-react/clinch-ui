@@ -15,7 +15,7 @@ const CardBanner: React.FC<CardsProps> = (cardProps) => {
         <div className="text-center">
             {/* <div className="text-[4.2rem]/[6rem] font-semibold mb-10">{cardProps.title}</div> */}
             <div className="2xl:text-[4.4rem]/[5.6rem] xl:text-[3.6rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-black mb-10">{cardProps.title}</div>
-            <div className="max-w-2xl container">
+            <div className="max-w-2xl xl:max-w-3xl 2xl:max-w-4xl container">
                 <div className="2xl:text-[1.8rem] xl:text-[1.4rem] text-[1rem] text-gray-400">
                     <HighlightKeyword text={cardProps.subTitle} keyword={keyword} />
                 </div>

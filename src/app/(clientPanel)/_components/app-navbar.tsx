@@ -10,7 +10,7 @@ export default function AppNavBar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl">
       {/* <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl"> */}
-      <div className="container flex h-14 max-w-screen-2xl items-center max-sm:pr-2 max-sm:pl-6">
+      <div className="container flex h-14 max-w-screen-xl xl:max-w-screen-xl 2xl:max-w-screen-2xl items-center max-sm:pr-2 max-sm:pl-6">
         <div className="flex justify-between w-full">
           <div className="flex items-center font-bold">
             <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >Logo</Link>

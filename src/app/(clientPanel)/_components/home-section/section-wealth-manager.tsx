@@ -19,7 +19,7 @@ export default function SectionWealthManager() {
 
     return (
         <div className="pt-40 pb-40 min-h-[calc(100vh-20vh)] flex flex-col justify-center items-center">
-            <div className="container max-w-screen-2xl xl:max-w-screen-xl">
+            <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl">
                 {CardCareerData.map((item, index) => (
                     <CardWealthManager
                         key={index}
