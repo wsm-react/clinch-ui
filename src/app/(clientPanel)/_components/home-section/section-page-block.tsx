@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import CardPageBlock from './cards/page-block';
+import CardPageBlock from '../cards/page-block';
 
 export default function SectionPageBlock() {
     return (
         <div className="bg-white/[.04] pt-20 pb-20">
-            <div className="container max-w-screen-2xl">
+            <div className="container max-w-screen-2xl xl:max-w-screen-xl">
                 <CardPageBlock />
                 SectionPageBlock
             </div>

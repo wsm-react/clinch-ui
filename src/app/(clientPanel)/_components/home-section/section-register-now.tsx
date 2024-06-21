@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import CardExclusiveProducts from './cards/exclusive-products';
-import { CareerProps } from './_interface/app-interface';
-import BorderdLink from './cards/borderd-link';
+import CardExclusiveProducts from '../cards/exclusive-products';
+import { CareerProps } from '../_interface/app-interface';
+import BorderdLink from '../cards/borderd-link';
 import { ChevronRight, MoveRight } from 'lucide-react';
-import FilledLink from './cards/filled-link';
+import FilledLink from '../cards/filled-link';
 
 export default function SectionRegisterNow() {
 
@@ -16,7 +16,7 @@ export default function SectionRegisterNow() {
     ]
     return (
         <div className="bg-background/20 backdrop-blur pt-20 pb-20">
-            <div className="container max-w-screen-2xl mb-10 text-center">
+            <div className="container max-w-screen-2xl xl:max-w-screen-xl mb-10 text-center">
                 <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">This program is for you?</div>
             </div>
             <div className="container max-w-screen-xl text-center">

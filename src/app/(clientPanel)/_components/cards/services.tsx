@@ -5,16 +5,16 @@ import { ChevronRight } from 'lucide-react';
 
 const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
     return (
-        <div className='border border-gray-200 dark:border-gray-700 p-10 rounded-2xl bg-white dark:bg-white/[.02]'>
+        <div className='border border-gray-100 dark:border-gray-800 p-11 rounded-2xl bg-white dark:bg-white/[.01]'>
             <div className="sm:text-[2.6rem] text-[1rem] font-semibold">{cardProps.title}</div>
             <div className="sm:text-[1.3rem] text-[1rem] mt-4">{cardProps.subTitle}</div>
             {cardProps.tags && cardProps.tags.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-x-2 gap-y-[.4] mt-12 mb-20">
                     {cardProps.tags.map((tag, index) => (
-                        <div key={index} className="mt-2 flex justify-start align-middle gap-x-1 border border-gray-300 dark:border-gray-600 rounded-full p-1 pl-4 pr-4">
-                            <div className="text-[1rem] text-gray-600 dark:text-gray-400">{tag.title}</div>
-                            <div className="text-[1rem] text-gray-600 dark:text-gray-400">:</div>
-                            <div className="text-[1rem] text-gray-600 dark:text-gray-400"> {tag.subTitle}</div>
+                        <div key={index} className="mt-2 flex justify-start align-middle gap-x-1 border border-gray-300 dark:border-gray-700 rounded-full p-[.4rem] pl-4 pr-4">
+                            <div className="text-[.9rem] text-gray-600 dark:text-gray-400">{tag.title}</div>
+                            <div className="text-[.9rem] text-gray-600 dark:text-gray-400">:</div>
+                            <div className="text-[.9rem] text-gray-600 dark:text-gray-400"> {tag.subTitle}</div>
                         </div>
                     ))}
                 </div>

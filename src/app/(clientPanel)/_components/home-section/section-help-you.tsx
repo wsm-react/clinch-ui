@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react';
-import { HelpYouProps } from './_interface/app-interface';
-import CardHelpYou from './cards/help-you';
+import { HelpYouProps } from '../_interface/app-interface';
+import CardHelpYou from '../cards/help-you';
 
 export default function SectionHelpYou() {
 
@@ -23,8 +23,8 @@ export default function SectionHelpYou() {
 
 
     return (
-        <div className="bg-black/[.05] dark:bg-white/[.04] pt-20 pb-20">
-            <div className="container max-w-screen-2xl mb-10 text-center">
+        <div className="bg-black/[.05] dark:bg-white/[.02] pt-40 pb-40">
+            <div className="container max-w-screen-2xl xl:max-w-screen-xl mb-10 text-center">
                 <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">How can we help you?</div>
                 <div className="sm:text-[1.8rem] text-[1rem]">Popular Topics</div>
             </div>

@@ -1,7 +1,7 @@
 
 
-import { WealthManagerProps } from './_interface/app-interface';
-import CardWealthManager from './cards/card-wealth-manager';
+import { WealthManagerProps } from '../_interface/app-interface';
+import CardWealthManager from '../cards/card-wealth-manager';
 
 
 export default function SectionWealthManager() {
@@ -11,14 +11,15 @@ export default function SectionWealthManager() {
             title: "A Private wealth manager to you. Anywhere, Anytime",
             subTitle: "Our Qualified wealth managers are trained to guide you on your journey of Investment.",
             linkText: "Get Started",
-            imgSrc: "/section-2-img.jpg",
+            // imgSrc: "/section-2-img.jpg",
+            imgSrc: "/section-2-img-4.png",
             href: "/get-started",
         }
     ]
 
     return (
-        <div className="pt-20 pb-20 min-h-[calc(100vh-20vh)] flex flex-col justify-center items-center">
-            <div className="container max-w-screen-2xl">
+        <div className="pt-40 pb-40 min-h-[calc(100vh-20vh)] flex flex-col justify-center items-center">
+            <div className="container max-w-screen-2xl xl:max-w-screen-xl">
                 {CardCareerData.map((item, index) => (
                     <CardWealthManager
                         key={index}

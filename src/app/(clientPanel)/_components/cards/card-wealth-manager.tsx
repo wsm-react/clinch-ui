@@ -13,8 +13,8 @@ const CardWealthManager: React.FC<WealthManagerProps> = (cardProps, props) => {
             <div className="xl:text-[4.1rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold mb-14 lg:hidden">{cardProps.title}</div>
             <div className="flex flex-row gap-[50] justify-between items-center">
                 <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[45%] 2xl:basis-[43%]">
-                    <div className="2xl:text-[4.1rem]/[5rem] xl:text-[3.8rem]/[5rem] lg:text-[3rem]/[3.6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold mb-14 max-lg:hidden">{cardProps.title}</div>
-                    <div className="sm:text-[1.3rem] md:text-[1.6rem] text-[1rem]">{cardProps.subTitle}</div>
+                    <div className="2xl:text-[4.1rem]/[5rem] xl:text-[3.2rem]/[3.3rem] lg:text-[3rem]/[3.6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold mb-14 max-lg:hidden">{cardProps.title}</div>
+                    <div className="sm:text-[1.1rem] xl:text-[1.3rem] md:text-[1.6rem] text-[1rem]">{cardProps.subTitle}</div>
                     <div className="flex justify-start align-middle mt-24 max-sm:mt-6">
                         <BorderdLink
                             label={cardProps.linkText}
@@ -26,7 +26,8 @@ const CardWealthManager: React.FC<WealthManagerProps> = (cardProps, props) => {
                         />
                     </div>
                 </div>
-                <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[42%] 2xl:basis-[36%]">
+                {/* <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[45%] 2xl:basis-[36%]"></div> */}
+                <div className="basis-[45%] md:basis-[40%] lg:basis-[45%] xl:basis-[32%] 2xl:basis-[36%]">
                     <Image src={cardProps.imgSrc} alt={cardProps.imgSrc} width={800} height={800} sizes='100vh' />
                 </div>
             </div>
