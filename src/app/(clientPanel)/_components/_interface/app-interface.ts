@@ -24,6 +24,16 @@ export interface HeadingsProps {
     subTitle: string
 }
 
+
+export interface BorderdLinkProps {
+    label: string | undefined
+    href: string
+    className: string
+    labelClassName?: string
+    icon?: React.ComponentType<IconProps>;
+    iconClass: string
+}
+
 export interface CareerProps extends HeadingsProps, ListId { }
 
 export interface CardsProps extends ListId, HeadingsProps {
@@ -69,12 +79,11 @@ export interface TestimonialProps extends ListId {
     reversed?: boolean
 }
 
+export interface HelpYouProps extends ListId {
+    title: string
+    content: string
+}
 
-export interface BorderdLinkProps {
-    label: string | undefined
-    href: string
-    className: string
-    labelClassName?: string
-    icon?: React.ComponentType<IconProps>;
-    iconClass: string
+export interface HelpYouSectionProps extends BorderdLinkProps {
+    data: HelpYouProps[];
 }

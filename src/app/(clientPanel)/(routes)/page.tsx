@@ -7,6 +7,7 @@ import SectionRegisterNow from '../_components/section-register-now';
 import SectionWealthManager from '../_components/section-wealth-manager';
 import CardWeServe from '../_components/section-serve';
 import SectionBlogs from '../_components/section-blogs';
+import SectionHelpYou from '../_components/section-help-you';
 
 
 export default function ClientIndexPage() {
@@ -20,6 +21,7 @@ export default function ClientIndexPage() {
       <SectionTestimonial />
       {/* <SectionBlogs /> */}
       <SectionCareer />
+      <SectionHelpYou />
       <SectionRegisterNow />
     </>
   );

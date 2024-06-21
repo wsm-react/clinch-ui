@@ -32,9 +32,7 @@ const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
                                 <div className="flex-1">
                                     <p className="text-[.7rem] text-muted-foreground text-ellipsis line-clamp-1">1 month ago</p>
                                     <p className="font-medium leading-none text-ellipsis line-clamp-1 ">{item.name}</p>
-                                    <p className="text-sm text-muted-foreground mt-1">
-                                        Send notifications to device.
-                                    </p>
+                                    <p className="text-sm text-muted-foreground mt-1">{item.industry}</p>
                                 </div>
                             </div>
                             <div className="pt-10">{item.message}</div>

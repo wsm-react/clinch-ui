@@ -121,6 +121,6 @@ mstile-310x310.png
 safari-pinned-tab.svg 
 favicon.ico -->
 npx prisma migrate diff --from-schema-datamodel prisma/schema.prisma --to-schema-datamodel prisma/schema.prisma --script > baseline.sql
-
+vercel
 
 <!-- xl:text-[4.4rem]/[6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] -->
