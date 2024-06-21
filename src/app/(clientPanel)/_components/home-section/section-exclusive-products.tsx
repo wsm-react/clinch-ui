@@ -42,10 +42,10 @@ export default function SectionExclusiveProducts() {
 
     return (
         <div className="bg-black/[.02] dark:bg-white/[.01] pt-40 pb-10">
-            <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl mb-10">
+            <div className="size-10/12 mr-auto ml-auto mb-10">
                 <div className="xl:text-[3.4rem]/[4.3rem] 2xl:text-[4.2rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold border-b-2 border-gray-300 dark:border-gray-700 pb-10">Exclusive products and tools to make more on your money</div>
             </div>
-            <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl">
+            <div className="size-10/12 mr-auto ml-auto">
                 {exclusiveProductsData.map((items, index) => {
                     return (
                         <CardExclusiveProducts

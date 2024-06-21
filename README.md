@@ -52,7 +52,7 @@ career
 exclusive-products
 headings
 investment-products
-news-and-blogs
+blogs
 page-block
 services
 testimonial

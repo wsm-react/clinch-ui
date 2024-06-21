@@ -32,7 +32,7 @@ export default async function NewsAndBlogsPage({ params }: any) {
       <p className=''>{blogsData?.slug}</p>
       <p className=''>{blogsData?.body}</p>
       <div className='mt-12'>
-        <Link className='text-blue-500 font-medium' href={'/admin/news-and-blogs/'} >Back</Link>
+        <Link className='text-blue-500 font-medium' href={'/admin/blogs/'} >Back</Link>
       </div>
     </div>
   )

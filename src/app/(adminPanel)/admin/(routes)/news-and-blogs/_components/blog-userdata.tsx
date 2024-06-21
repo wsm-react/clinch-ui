@@ -20,7 +20,7 @@ export default async function NewsAndBlogsData() {
                         <p className="font-bold mb-3">{post.title}</p>
                         <p>{post.body}</p>
                         <div className='mt-6'>
-                            <Link className='text-blue-500 font-medium' href={'/admin/news-and-blogs/' + post.id} >View detail</Link>
+                            <Link className='text-blue-500 font-medium' href={'/admin/blogs/' + post.id} >View detail</Link>
                         </div>
                     </div>
                 </div>

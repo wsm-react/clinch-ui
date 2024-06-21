@@ -122,7 +122,7 @@ export default function AppFooter() {
 
     return (
         <footer className="bg-slate-800 dark:bg-black">
-            <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl space-y-16 py-20 pb-10">
+            <div className="size-10/12 mr-auto ml-auto space-y-16 py-20 pb-10">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
                     <div>
                         <span className="font-medium text-white">Important links</span>

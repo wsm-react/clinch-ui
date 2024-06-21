@@ -3,7 +3,7 @@ import CardBlogs from '../cards/blogs';
 
 export default function SectionBlogs() {
     return (
-        <div className="container 2xl:max-w-screen-2xl xl:max-w-screen-xl max-w-screen-xl">
+        <div className="size-10/12 mr-auto ml-auto">
             <CardBlogs />
             SectionBlogs
         </div>

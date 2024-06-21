@@ -42,7 +42,7 @@ export default function SideBottomLinks() {
         {
             id: 1,
             label: "News and blogs",
-            href: "/admin/news-and-blogs",
+            href: "/admin/blogs",
             icon: Newspaper,
         },
         {
