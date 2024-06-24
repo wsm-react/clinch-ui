@@ -16,7 +16,7 @@ export default function SectionRegisterNow() {
     ]
     return (
         <div className="bg-background/20 backdrop-blur pt-20 pb-20">
-            <div className="size-10/12 mr-auto ml-auto mb-10 text-center">
+            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-10 text-center">
                 <div className="xl:text-[3.2rem]/[5rem] lg:text-[3rem]/[4rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">This program is for you?</div>
             </div>
             <div className="max-w-3xl xl:max-w-4xl 2xl:max-w-4xl container text-center">

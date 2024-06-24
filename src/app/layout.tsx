@@ -1,5 +1,5 @@
 import "./globals.css";
-import type { Metadata, MetadataRoute } from "next";
+import type { Metadata, Viewport } from "next";
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from './provider';
@@ -108,17 +108,26 @@ export const metadata: Metadata = {
   //   },
   // },
   other: {
-    "mobile-web-app-capable": "yes",
-    custom2: "asasas",
+    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-capable": "yes",
   },
 
 };
 
+export const viewport: Viewport = {
+  // themeColor: 'black', 
+  themeColor: 'black',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
+
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background font-sans antialiased", [poppinsFont])}>
+    <html lang="en" suppressHydrationWarning className='bg-black'>
+      <body className={cn("min-h-screen bg-black font-sans antialiased", [poppinsFont])}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

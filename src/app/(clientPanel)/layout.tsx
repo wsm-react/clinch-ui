@@ -6,7 +6,7 @@ import AppNavBar from './_components/app-navbar';
 export default function ClientLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <Fragment>
-      <div className="relative flex min-h-screen flex-col bg-background">
+      <div className="relative flex min-h-screen flex-col bg-black">
         <AppNavBar />
         {children}
         <AppFooter />

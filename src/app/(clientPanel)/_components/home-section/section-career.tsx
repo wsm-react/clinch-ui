@@ -21,7 +21,7 @@ export default function SectionCareer() {
         <div className="dark:bg-black/[.2] pt-40 pb-20 bg-gradient-to-b relative">
             <div className="inset-x-0 top-0 flex justify-center bg-gradient-to-b from-white pt-40 dark:from-black/[.9] absolute"></div>
 
-            <div className="size-10/12 mr-auto ml-auto text-center ">
+            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 text-center ">
                 <div className="xl:text-[3.2rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">Career</div>
                 <div className="flex align-middle justify-center">
                     <Image src={"/career-img.png"} width={460} height={100} alt='' />

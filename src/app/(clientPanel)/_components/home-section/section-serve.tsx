@@ -23,7 +23,7 @@ export default function SectionServe() {
 
     return (
         <div className="pt-40 pb-52">
-            <div className="size-10/12 mr-auto ml-auto">
+            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5">
                 <div className="mb-28 text-center">
                     <div className="xl:text-[3rem]/[4.2rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-bold">What makes <br />us truly different</div>
                 </div>

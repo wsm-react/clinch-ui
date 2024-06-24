@@ -1,25 +1,36 @@
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
+import React from "react";
 import MobileNavBar from './mobile-navbar';
 import MenuLink from './nav-menu-link';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import { ModeToggle } from './mode-toggle';
+
+import ApppLogo from "/public/logo-dark.svg";
+import { LogoToggle } from './logo-toggle';
 
 export default function AppNavBar() {
   const buttonClasses = buttonVariants({ variant: "secondary" });
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl">
+    // <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl">
+    <header className="z-50 w-full bg-black">
       {/* <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl"> */}
-      <div className="flex h-14 size-10/12 mr-auto ml-auto items-center max-sm:pr-2 max-sm:pl-6">
+      <div className="flex w-11/12 mx-auto px-1 sm:px-1 md:px-5 items-center">
         <div className="flex justify-between w-full">
           <div className="flex items-center font-bold">
-            <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >Logo</Link>
+            <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >
+              {/* <Image layout="responsive" priority src={appLogo} alt='logo' width={120} height={0} className='h-auto' /> */}
+              {/* <ApppLogo alt='logo' width={160} height={0} className='h-auto pt-3 pb-3' /> */}
+              <LogoToggle />
+            </Link>
             {/* <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' ><Image src='/logo.svg' alt='logo' width={120} height={40} /></Link> */}
           </div>
           <div className="flex items-center">
-            <div className="flex items-center text-sm lg:gap-6 sm:hidden ">
-              <Link href='/' className={`${buttonClasses} h-7 rounded-md pr-2 text-xs bg-blue-600 hover:bg-blue-700 transition-colors hover:text-foreground/80 text-foreground/60 mr-5 focus-visible:ring-[none] flex flex-row items-center`} >Get started <ArrowRight className="inline-block w-4 ml-2" /></Link>
-              <MobileNavBar />
+            <div className="flex items-center text-sm sm:hidden ">
+              <Link href='/get-started' className={`rounded-full p-5 pt-2 pb-2 pr-3 text-[1rem] font-semibold text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700 transition-all focus-visible:ring-[none] flex flex-row items-center`} >Get started <ArrowRight className="inline-block w-5 ml-2" /></Link>
+              {/* <MobileNavBar /> */}
             </div>
             <div className="hidden sm:block">
               <MenuLink />

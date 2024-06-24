@@ -10,6 +10,7 @@ import { cn } from '@/lib/utils';
 import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ModeToggle } from './mode-toggle';
 
 
 
@@ -44,7 +45,7 @@ export default function NavbarLink() {
     const pathName = usePathname();
 
     return (
-        <div className="flex flex-row gap-4 text-sm lg:gap-8">
+        <div className="flex flex-row gap-4 text-sm lg:gap-8 items-center">
             {bottomLinks.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = pathName === item.href;
@@ -56,6 +57,7 @@ export default function NavbarLink() {
                     </Link>
                 );
             })}
+            <ModeToggle />
         </div>
     );
 }

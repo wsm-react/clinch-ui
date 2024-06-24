@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { cn } from '@/lib/utils'
 import { useState, useEffect } from 'react'
-import { Viewport } from 'next'
 
 export function ModeToggle() {
     const { setTheme, resolvedTheme, theme } = useTheme();
@@ -21,33 +20,17 @@ export function ModeToggle() {
     useEffect(() => {
         if (resolvedTheme) {
             setCurrentTheme(resolvedTheme);
-            updateThemeColor(resolvedTheme);
         }
     }, [resolvedTheme]);
 
     // console.log(theme);
 
+
     const handleThemeChange = (newTheme: string) => {
         setTheme(newTheme);
         setCurrentTheme(newTheme);
         // console.log(newTheme);
-
-        updateThemeColor(newTheme);
     };
-
-    const updateThemeColor = (newTheme: string) => {
-        const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', themeColor);
-        }
-    };
-
-    useEffect(() => {
-        updateThemeColor(currentTheme);
-    }, [currentTheme]);
-
 
     return (
         <DropdownMenu>

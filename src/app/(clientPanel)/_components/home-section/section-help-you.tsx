@@ -24,7 +24,7 @@ export default function SectionHelpYou() {
 
     return (
         <div className="bg-black/[.05] dark:bg-white/[.02] pt-40 pb-40">
-            <div className="size-10/12 mr-auto ml-auto mb-10 text-center">
+            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-10 text-center">
                 <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">How can we help you?</div>
                 <div className="sm:text-[1.8rem] text-[1rem]">Popular Topics</div>
             </div>

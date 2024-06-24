@@ -5,8 +5,8 @@ import { ChevronRight } from 'lucide-react';
 
 const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
     return (
-        <div className='border border-gray-100 dark:border-gray-800 p-11 rounded-2xl bg-white dark:bg-white/[.01]'>
-            <div className="sm:text-[2.6rem] text-[1rem] font-semibold">{cardProps.title}</div>
+        <div className='border border-gray-100 dark:border-gray-800 p-6 sm:p-11 rounded-2xl bg-white dark:bg-white/[.01]'>
+            <div className="sm:text-[2.6rem] text-[2.8rem]/[3.4rem] font-semibold">{cardProps.title}</div>
             <div className="sm:text-[1.3rem] text-[1rem] mt-4">{cardProps.subTitle}</div>
             {cardProps.tags && cardProps.tags.length > 0 && (
                 <div className="flex flex-row flex-wrap gap-x-2 gap-y-[.4] mt-12 mb-20">

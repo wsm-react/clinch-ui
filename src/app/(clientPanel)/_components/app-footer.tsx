@@ -116,13 +116,19 @@ export default function AppFooter() {
             label: "Subscriptions",
             href: "/text",
 
-        }
+        },
+        {
+            id: 1,
+            label: "Admin",
+            href: "/admin",
+            // icon: User,
+        },
     ]
 
 
     return (
         <footer className="bg-slate-800 dark:bg-black">
-            <div className="size-10/12 mr-auto ml-auto space-y-16 py-20 pb-10">
+            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 space-y-16 py-20 pb-10">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
                     <div>
                         <span className="font-medium text-white">Important links</span>
