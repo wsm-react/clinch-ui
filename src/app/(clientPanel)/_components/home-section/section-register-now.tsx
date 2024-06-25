@@ -16,13 +16,13 @@ export default function SectionRegisterNow() {
     ]
     return (
         <div className="bg-background/20 backdrop-blur pt-20 pb-20">
-            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-10 text-center">
-                <div className="xl:text-[3.2rem]/[5rem] lg:text-[3rem]/[4rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.8rem]/[2.6rem] font-semibold">This program is for you?</div>
+            <div className="container max-w-screen-lg  mt-16 md:text-center">
+                <div className="xl:text-[3.2rem]/[5rem] lg:text-[3rem]/[4rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.2rem]/[3.6rem] font-bold">This program is for you?</div>
             </div>
-            <div className="max-w-3xl xl:max-w-4xl 2xl:max-w-4xl container text-center">
-                <div className="2xl:text-[1.6rem] xl:text-[1.4rem] lg:text-[1.3rem] text-[1rem]">While strong financial acumen remains integral to our business, ethics and values are the most essential attributes we look for in our partners. Client trust is our biggest treasury and if you believe in this, we are always looking for right partners.</div>
-                <div className="flex justify-center align-middle mt-20">
-                    {/* <Link className="sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300" href={}><span className="border-b-2 border-blue-400 dark:border-cyan-500 pb-2">{cardProps.linkText}</span> <ChevronRight className="inline-block w-14 h-10 ml-2 mt-1" /></Link> */}
+            <div className="container max-w-screen-lg  mt-16 md:text-center">
+                <div className="2xl:text-[1.6rem] xl:text-[1.4rem] lg:text-[1.3rem] text-[1.2rem]">While strong financial acumen remains integral to our business, ethics and values are the most essential attributes we look for in our partners. Client trust is our biggest treasury and if you believe in this, we are always looking for right partners.</div>
+                <div className="flex md:justify-center align-middle mt-20">
+                    {/* <Link className="sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center  hover:text-blue-400 dark:hover:text-cyan-300" href={}><span className="border-b-2 border-blue-400 dark:border-cyan-500 pb-2">{cardProps.linkText}</span> <ChevronRight className="inline-block w-14 h-10 ml-2 mt-1" /></Link> */}
                     <FilledLink
                         label={"Register Now"}
                         href={"/get-started"}

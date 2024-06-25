@@ -11,7 +11,8 @@ export interface ListId {
 
 export interface MenuLinks extends ListId {
     href: string
-    label: string
+    label: string,
+    button?: boolean
     icon?: React.ComponentType<IconProps>;
 }
 
@@ -35,6 +36,9 @@ export interface BorderdLinkProps {
 }
 
 export interface CareerProps extends HeadingsProps, ListId { }
+export interface SubscribeProps extends HeadingsProps, ListId {
+    note?: string
+}
 
 export interface CardsProps extends ListId, HeadingsProps {
     linkText?: string
@@ -55,7 +59,9 @@ export interface ExclusiveProductsProps extends CardsProps {
 }
 
 export interface OurServicesProps extends CardsProps {
-    tags?: OurServicesTagsProps[]
+    tags?: OurServicesTagsProps[],
+    bgLight?: string
+    bgDark?: string
 }
 
 export interface OurServicesTagsProps extends CardsProps { }

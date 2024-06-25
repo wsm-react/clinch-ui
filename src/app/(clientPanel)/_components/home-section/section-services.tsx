@@ -10,6 +10,8 @@ export default function SectionServices() {
             subTitle: "Keeping your books up to date monthly gives you reliable numbers key to sound financial decisions.",
             linkText: "Get Started",
             href: "/get-started",
+            bgLight: "border border-lime-100 dark:border-lime-900",
+            bgDark: "bg-gradient-to-r from-lime-500/30 to-blue-500/05",
             tags: [
                 {
                     title: "Benchmark return",
@@ -30,6 +32,8 @@ export default function SectionServices() {
             subTitle: "Bringing down to 40 great investment plans from 4000 schemes. From low, medium to high alpha generator we have in our basket.",
             linkText: "Get Started",
             href: "/get-started",
+            bgLight: "border border-amber-100 dark:border-amber-900",
+            bgDark: "bg-gradient-to-r from-amber-500/30 to-blue-500/05",
             tags: [
                 {
                     title: "Benchmark return",
@@ -50,6 +54,8 @@ export default function SectionServices() {
             subTitle: "If you are looking for low risk, consistent returns, Of Course better in deposits and bank FD's , This is you game and we know the trick to win.",
             linkText: "Get Started",
             href: "/get-started",
+            bgLight: "border border-cyan-100 dark:border-cyan-900",
+            bgDark: "bg-gradient-to-r from-cyan-500/30 to-blue-500/05",
             tags: [
                 {
                     title: "Benchmark return",
@@ -70,6 +76,8 @@ export default function SectionServices() {
             subTitle: "Many thinks it's a easy bet to make big money but their is a caveat and for sure not all are same.",
             linkText: "Get Started",
             href: "/get-started",
+            bgLight: "border border-fuchsia-100 dark:border-fuchsia-900",
+            bgDark: "bg-gradient-to-r from-fuchsia-500/20 to-blue-500/05",
             tags: [
                 {
                     title: "Benchmark return",
@@ -88,7 +96,7 @@ export default function SectionServices() {
     ]
 
     return (
-        <div className="bg-black/[.02] dark:bg-white/[.01] pt-32 sm:pb-44 pb-20">
+        <div className="bg-black/[.02] dark:bg-white/05 pt-32 sm:pb-44 pb-20">
             <div className="max-w-fit sm:max-w-screen-2xl container mb-28 sm:text-center">
                 <div className="xl:text-[3rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.6rem]/[3.8rem] font-bold sm:font-semibold">Investment products, to aid your wealth</div>
                 <div className="sm:text-[1.3rem] text-[1.4rem] mt-8 sm:mt-0">Choose from our curated products baskets catering to all risk types.</div>
@@ -103,6 +111,8 @@ export default function SectionServices() {
                             linkText={item.linkText}
                             href={item.href}
                             tags={item.tags}
+                            bgLight={item.bgLight}
+                            bgDark={item.bgDark}
                         />
                     ))}
                 </div>

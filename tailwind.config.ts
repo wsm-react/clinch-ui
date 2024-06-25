@@ -12,7 +12,7 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.2rem",
       screens: {
         "2xl": "1400px",
       },
@@ -51,7 +51,7 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -74,7 +74,40 @@ const config = {
       }
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }: any) {
+      const newUtilities = {
+        '.bg-green-radial': {
+          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 60% at 50% 50%, rgba(89, 236, 165, 0.2) 0%, rgba(89, 236, 165, 0) 100%), 
+                       #000`,
+        },
+        '.bg-fuchsia-radial': {
+          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 60% at 50% 50%, rgba(236, 89, 221, 0.2) 0%, rgba(236, 89, 221, 0) 100%), 
+                       #000`,
+        },
+        '.bg-cyan-radial': {
+          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 60% at 50% 50%, rgba(89, 218, 236, 0.2) 0%, rgba(89, 218, 236, 0) 100%), 
+                       #000`,
+        },
+        '.bg-orange-radial': {
+          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 60% at 50% 50%, rgba(236, 195, 89, 0.2) 0%, rgba(236, 195, 89, 0) 100%), 
+                       #000`,
+        },
+        '.bg-gray-radial': {
+          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 60% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), 
+                       #000`,
+        },
+      };
+
+      addUtilities(newUtilities, ['responsive', 'hover']);
+    },
+  ],
 } satisfies Config
 
 export default config

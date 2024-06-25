@@ -2,10 +2,19 @@ import Link from 'next/link';
 import { OurServicesProps } from '../_interface/app-interface';
 import BorderdLink from './borderd-link';
 import { ChevronRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
     return (
-        <div className='border border-gray-100 dark:border-gray-800 p-6 sm:p-11 rounded-2xl bg-white dark:bg-white/[.01]'>
+        <div className={
+            cn(
+                // "border  p-6 sm:p-11 rounded-2xl border-gray-100 dark:border-white/[.02]",
+                "p-6 sm:p-11 rounded-2xl purple",
+                cardProps.bgLight ? cardProps.bgLight : "border border-gray-100 dark:border-white/[.02]",
+                // cardProps.bgDark ? `dark:${cardProps.bgDark}` : "dark:bg-white/[.01]"
+                // cardProps.bgDark ? `bg-gradient-to-r from-${cardProps.bgDark}/[.8] to-${cardProps.bgDark}/[.01]` : "bg-gradient-to-r from-blue-500/[.2] to-purple-500/[.01]"
+                cardProps.bgDark ? cardProps.bgDark : "bg-gradient-to-r from-blue-500/[.2] to-purple-500/[.01]"
+            )}>
             <div className="sm:text-[2.6rem] text-[2.8rem]/[3.4rem] font-semibold">{cardProps.title}</div>
             <div className="sm:text-[1.3rem] text-[1rem] mt-4">{cardProps.subTitle}</div>
             {cardProps.tags && cardProps.tags.length > 0 && (
@@ -14,7 +23,7 @@ const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
                         <div key={index} className="mt-2 flex justify-start align-middle gap-x-1 border border-gray-300 dark:border-gray-700 rounded-full p-[.4rem] pl-4 pr-4">
                             <div className="text-[.9rem] text-gray-600 dark:text-gray-400">{tag.title}</div>
                             <div className="text-[.9rem] text-gray-600 dark:text-gray-400">:</div>
-                            <div className="text-[.9rem] text-gray-600 dark:text-gray-400"> {tag.subTitle}</div>
+                            <div className="text-[.9rem] text-gray-600 dark:text-gray-400 "> {tag.subTitle}</div>
                         </div>
                     ))}
                 </div>

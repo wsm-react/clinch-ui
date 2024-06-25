@@ -11,36 +11,38 @@ import { MenuLinks } from './_interface/app-interface';
 export default function MenuLink() {
 
     const menuLinks: MenuLinks[] = [
-        {
-            id: 1,
-            label: "Home",
-            href: "/",
-            // icon: User,
-        },
-        {
-            id: 1,
-            label: "About Us",
-            href: "/about-us",
-            // icon: User,
-        },
-        {
-            id: 1,
-            label: "Contact us",
-            href: "/contact-us",
-            // icon: User,
-        },
+        // {
+        //     id: 1,
+        //     label: "Home",
+        //     href: "/",
+        //     // icon: User,
+        // },
+        // {
+        //     id: 1,
+        //     label: "About Us",
+        //     href: "/about-us",
+        //     // icon: User,
+        // },
+        // {
+        //     id: 1,
+        //     label: "Contact us",
+        //     href: "/contact-us",
+        //     // icon: User,
+        // },
         {
             id: 1,
             label: "Get started",
             href: "/get-started",
+            button: true
             // icon: User,
-        },
-        {
-            id: 1,
-            label: "Admin",
-            href: "/admin",
-            // icon: User,
-        },
+        }
+        // ,
+        // {
+        //     id: 1,
+        //     label: "Admin",
+        //     href: "/admin",
+        //     // icon: User,
+        // },
     ]
 
     const pathName = usePathname();
@@ -51,8 +53,9 @@ export default function MenuLink() {
                 {menuLinks.map((item, index) => {
                     const Icon = item.icon;
                     const isActive = pathName === item.href;
+                    const button = item.button;
                     return (
-                        <Link key={index} href={item.href} className={cn("transition-colors hover:text-foreground/80 text-foreground/50", isActive && "text-foreground/100")}>
+                        <Link key={index} href={item.href} className={cn("transition-all focus-visible:ring-[none] flex flex-row items-center", button === true ? "rounded-full p-6 pt-3 pb-3 text-[1rem] font-semibold text-white bg-blue-800 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700" : "hover:text-foreground/80 text-foreground/50", isActive && "text-foreground/100")}>
                             {Icon && <Icon className="inline-block w-4 mr-2" />}
                             {item.label}
                         </Link>

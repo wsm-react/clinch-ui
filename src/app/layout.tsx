@@ -116,7 +116,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   // themeColor: 'black', 
-  themeColor: 'black',
+  // themeColor: 'black',
   width: 'device-width',
   initialScale: 1,
   maximumScale: 1,
@@ -126,8 +126,8 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className='bg-black'>
-      <body className={cn("min-h-screen bg-black font-sans antialiased", [poppinsFont])}>
+    <html lang="en" suppressHydrationWarning className='bg-background'>
+      <body className={cn("min-h-screen bg-background font-sans antialiased", [poppinsFont])}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>

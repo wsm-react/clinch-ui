@@ -8,18 +8,18 @@ export default function SectionWealthManager() {
 
     const CardCareerData: WealthManagerProps[] = [
         {
-            title: "A Private wealth manager to you. Anywhere, Anytime",
+            title: "A Private wealth manager to you.",
             subTitle: "Our Qualified wealth managers are trained to guide you on your journey of Investment.",
             linkText: "Get Started",
             // imgSrc: "/section-2-img.jpg",
-            imgSrc: "/section-2-img-4.png",
+            imgSrc: "/private-wealth-2.png",
             href: "/get-started",
         }
     ]
 
     return (
-        <div className="pt-40 pb-40 min-h-[calc(100vh-20vh)] flex flex-col justify-center items-center">
-            <div className="w-11/12 mx-auto px-4 sm:px-3 md:px-5 mb-10">
+        <div className="pt-28 pb-36 flex flex-col justify-center items-center">
+            <div className="w-11/12 mx-auto px-4 sm:px-3 md:px-5">
                 {CardCareerData.map((item, index) => (
                     <CardWealthManager
                         key={index}

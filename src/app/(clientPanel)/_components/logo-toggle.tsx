@@ -27,5 +27,5 @@ export function LogoToggle() {
         getLogoComponent();
     }, [resolvedTheme]);
 
-    return LogoComponent ? <LogoComponent alt='logo' width={140} height={0} className='h-auto pt-5 pb-5' /> : null;
+    return LogoComponent ? <LogoComponent alt='logo' width={130} height={0} className='h-auto pt-5 pb-5' /> : null;
 }

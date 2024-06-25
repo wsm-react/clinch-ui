@@ -14,7 +14,7 @@ export default function SectionPageBanner() {
 
     return (
 
-        <div className="pt-20 pb-20 min-h-[calc(100vh-40vh)] sm:min-h-[calc(100vh-16vh)] flex flex-col justify-center items-center">
+        <div className="pt-20 pb-20 min-h-[calc(100vh-40vh)] sm:min-h-[calc(100vh-16vh)] flex flex-col justify-center items-center bg-gray-radial">
             <div className="container max-w-6xl">
                 {CardCareerData.map((item, index) => (
                     <CardBanner

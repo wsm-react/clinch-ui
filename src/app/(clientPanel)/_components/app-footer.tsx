@@ -127,7 +127,7 @@ export default function AppFooter() {
 
 
     return (
-        <footer className="bg-slate-800 dark:bg-black">
+        <footer className="bg-slate-800 dark:bg-background">
             <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 space-y-16 py-20 pb-10">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
                     <div>

@@ -8,6 +8,7 @@ import SectionWealthManager from '../_components/home-section/section-wealth-man
 import CardWeServe from '../_components/home-section/section-serve';
 import SectionHelpYou from '../_components/home-section/section-help-you';
 import { Fragment } from 'react';
+import SectionPortfolio from '../_components/home-section/section-portfolio';
 
 
 export default function ClientIndexPage() {
@@ -16,7 +17,8 @@ export default function ClientIndexPage() {
       <SectionPageBanner />
       <SectionServices />
       <SectionWealthManager />
-      <SectionExclusiveProducts />
+      <SectionPortfolio />
+      {/* <SectionExclusiveProducts /> */}
       <CardWeServe />
       <SectionTestimonial />
       <SectionCareer />

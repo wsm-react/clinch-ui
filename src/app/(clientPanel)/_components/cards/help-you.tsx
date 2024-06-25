@@ -30,7 +30,7 @@ const CardHelpYou: React.FC<HelpYouSectionProps> = (cardProps) => {
                     const paddedIndex = PadWithZero(index + 1);
                     return (
                         <AccordionItem key={paddedIndex} value={`item-${paddedIndex}`}>
-                            <AccordionTrigger className='text-[1.2rem]'>{item.title}</AccordionTrigger>
+                            <AccordionTrigger className='text-[1.2rem] text-start font-bold'>{item.title}</AccordionTrigger>
                             <AccordionContent>{item.content}</AccordionContent>
                         </AccordionItem>
                     );
