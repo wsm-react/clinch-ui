@@ -8,7 +8,7 @@ export default function GetStartedPage() {
     <div className="relative flex min-h-[calc(100vh-661px)] flex-col">
       <GetStartedNavBar />
       <SectionGetStarted />
-      <GetStartedFooter />
+      {/* <GetStartedFooter /> */}
     </div>
   );
 }

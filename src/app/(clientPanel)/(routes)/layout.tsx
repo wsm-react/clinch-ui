@@ -8,7 +8,7 @@ export default function ClientInnerLayout({ children }: Readonly<{ children: Rea
     <Fragment>
       <AppNavBar />
       {children}
-      <AppFooter />
+      {/* <AppFooter /> */}
     </Fragment>
   );
 }
