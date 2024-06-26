@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import appDB from '@/lib/prisma-lib'
+import appDB from '@/_lib/prisma-lib'
 import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
 

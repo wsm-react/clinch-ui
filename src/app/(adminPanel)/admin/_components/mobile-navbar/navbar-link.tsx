@@ -6,7 +6,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/_lib/utils';
 import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';

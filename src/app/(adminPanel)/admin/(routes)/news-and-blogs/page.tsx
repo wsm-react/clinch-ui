@@ -6,7 +6,7 @@ import { ToastAction } from "@/components/ui/toast"
 import { useToast } from "@/components/ui/use-toast"
 import NewsAndBlogsData from './_components/blog-userdata';
 import { Suspense } from 'react';
-import appDB from '@/lib/prisma-lib';
+import appDB from '@/_lib/prisma-lib';
 
 export default async function NewsAndBlogsPage() {
 

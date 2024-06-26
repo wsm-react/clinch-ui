@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/components/ui/use-toast"
 import { z as zodvalid } from "zod"
-import { cn } from '@/lib/utils'
+import { cn } from '@/_lib/utils'
 
 const FormSchema = zodvalid.object({
   title: zodvalid.string().min(2, { message: "Username must be at least 2 characters." }),

@@ -25,7 +25,7 @@ export default function SectionHelpYou() {
     return (
         <div className="bg-black/[.05] dark:bg-white/[.02] pt-40 pb-40">
             <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-10 md:text-center">
-                <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.6rem]/[3.8rem] font-semibold">How can we help you?</div>
+                <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.4rem]/[3.8rem] font-bold">How can we help you?</div>
                 <div className="sm:text-[1.8rem] text-[1.6rem] mt-6">Popular Topics</div>
             </div>
             <div className="container max-w-screen-xl">

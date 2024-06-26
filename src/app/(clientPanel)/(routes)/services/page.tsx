@@ -2,6 +2,9 @@ import Image from "next/image";
 
 export default function ServicesPage() {
   return (
-    <h1>Login  Screen</h1>
+    <div className="relative flex min-h-[calc(100vh-661px)] flex-col">
+
+      <h1>ServicesPage  Screen</h1>
+    </div>
   );
 }

@@ -16,6 +16,14 @@ export interface MenuLinks extends ListId {
     icon?: React.ComponentType<IconProps>;
 }
 
+
+export interface GetStartedLinks extends ListId {
+    title: string,
+    label?: string,
+    button?: boolean
+    href: string
+}
+
 export interface IconProps {
     className?: string;
 }
@@ -31,6 +39,7 @@ export interface BorderdLinkProps {
     href: string
     className: string
     labelClassName?: string
+    iconRight?: boolean
     icon?: React.ComponentType<IconProps>;
     iconClass: string
 }

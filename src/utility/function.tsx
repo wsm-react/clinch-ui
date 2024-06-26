@@ -1,5 +1,5 @@
 import { highlightKeywordProps } from '@/app/(clientPanel)/_components/_interface/app-interface';
-import { cn } from '@/lib/utils';
+import { cn } from '@/_lib/utils';
 import React from 'react';
 import { text } from 'stream/consumers';
 

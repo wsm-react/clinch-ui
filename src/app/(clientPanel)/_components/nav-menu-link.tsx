@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/_lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ModeToggle } from './mode-toggle';
@@ -55,14 +55,14 @@ export default function MenuLink() {
                     const isActive = pathName === item.href;
                     const button = item.button;
                     return (
-                        <Link key={index} href={item.href} className={cn("transition-all focus-visible:ring-[none] flex flex-row items-center", button === true ? "rounded-full p-6 pt-3 pb-3 text-[1rem] font-semibold text-white bg-blue-800 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700" : "hover:text-foreground/80 text-foreground/50", isActive && "text-foreground/100")}>
+                        <Link key={index} href={item.href} className={cn("transition-all focus-visible:ring-[none] flex flex-row items-center", button === true ? "rounded-full p-6 pt-3 pb-3 text-[1rem] font-semibold text-white bg-blue-800 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-700" : "hover:text-foreground/80 text-foreground/50", isActive && "bg-blue-700")}>
                             {Icon && <Icon className="inline-block w-4 mr-2" />}
                             {item.label}
                         </Link>
                     );
                 })}
             </div>
-            <ModeToggle />
+            {/* <ModeToggle /> */}
         </div>
     );
 }

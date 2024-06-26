@@ -13,7 +13,7 @@ export default function SectionCareer() {
         {
             id: 1,
             title: "Privacy & cookie notice",
-            subTitle: "/text",
+            subTitle: "/privacy-cookie-notice",
         }
     ]
 

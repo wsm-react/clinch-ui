@@ -11,11 +11,11 @@ export default function SectionRegisterNow() {
         {
             id: 1,
             title: "Privacy & cookie notice",
-            subTitle: "/text",
+            subTitle: "/privacy-cookie-notice",
         }
     ]
     return (
-        <div className="bg-background/20 backdrop-blur pt-20 pb-20">
+        <div className="dark:bg-gray-900 pt-20 pb-20">
             <div className="container max-w-screen-lg  mt-16 md:text-center">
                 <div className="xl:text-[3.2rem]/[5rem] lg:text-[3rem]/[4rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.2rem]/[3.6rem] font-bold">This program is for you?</div>
             </div>
@@ -27,7 +27,7 @@ export default function SectionRegisterNow() {
                         label={"Register Now"}
                         href={"/get-started"}
                         icon={MoveRight}
-                        className={'sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white rounded-full p-[.32rem] pr-10 pl-10'}
+                        className={'sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white rounded-full p-[.32rem] pr-10 pl-10 transition-all'}
                         iconClass={'inline-block w-8 h-10 ml-6'}
                     />
                 </div>

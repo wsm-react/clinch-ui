@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-import { cn } from "@/lib/utils"
+import { cn } from "@/_lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from './provider';
 import { poppinsFont } from '@/utility/fonts';

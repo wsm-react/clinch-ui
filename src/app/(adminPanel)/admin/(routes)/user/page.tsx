@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import UserListData from './_components/user-list-data';
-import appDB from '@/lib/prisma-lib';
+import appDB from '@/_lib/prisma-lib';
 import { Suspense } from 'react';
 
 

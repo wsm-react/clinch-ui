@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { cn } from "@/lib/utils"
+import { cn } from "@/_lib/utils"
 
 import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';

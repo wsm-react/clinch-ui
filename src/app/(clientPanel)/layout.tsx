@@ -3,14 +3,10 @@ import AppFooter from './_components/app-footer';
 import AppNavBar from './_components/app-navbar';
 
 
-export default function ClientLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function PageScreenLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <Fragment>
-      <div className="relative flex min-h-screen flex-col">
-        <AppNavBar />
-        {children}
-        <AppFooter />
-      </div>
+      {children}
     </Fragment>
   );
 }

@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { GetAvatarName, PadWithZero } from '@/utility/function';
 import { TestimonialSectionProps } from '../_interface/app-interface';
 import { useState } from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '@/_lib/utils';
 
 const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
     const [isActive, setIsActive] = useState(false);
