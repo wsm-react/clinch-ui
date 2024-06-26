@@ -31,7 +31,6 @@ export function ModeToggle() {
         setTheme(newTheme);
         setCurrentTheme(newTheme);
         // console.log(newTheme);
-
         updateThemeColor(newTheme);
     };
 

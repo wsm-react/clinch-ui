@@ -2,6 +2,7 @@ import { highlightKeywordProps } from '@/app/(clientPanel)/_components/_interfac
 import { cn } from '@/_lib/utils';
 import React from 'react';
 import { text } from 'stream/consumers';
+import { useTheme } from 'next-themes';
 
 export const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
   if (!keyword) return [text]; // Return the original text if keyword is undefined
@@ -36,3 +37,34 @@ export const EscapeSpecialChars = (text: string): string => {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 };
+
+
+
+
+export default function ChangeThemeAsPerPath(pathName: string) {
+  const { setTheme } = useTheme();
+
+
+  const updateThemeColor = (newTheme: string) => {
+    const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', themeColor);
+    }
+  };
+
+  const handlePathChange = (path: string) => {
+    if (path === pathName) {
+      setTheme('light'); // Update the theme to 'light'
+      updateThemeColor('light');
+    } else {
+      const newTheme = 'light'; // Default to light theme for other paths, adjust as necessary
+      updateThemeColor(newTheme);
+    }
+  };
+
+  if (typeof window !== 'undefined') {
+    handlePathChange(pathName);
+  }
+}

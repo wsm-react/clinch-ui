@@ -1,13 +1,7 @@
 "use client"
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
 
 import { cn } from '@/_lib/utils';
-import { Home, Newspaper, User } from 'lucide-react';
+import { Home, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { MenuLinks } from '../_interface/app-interface';

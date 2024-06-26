@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GetStartedNavBar from '../../_components/get-started-navbar';
-import SectionGetStarted from '../../_components/_get-started/page-get-started';
+import SectionGetStarted from '../../_components/get-started/page-get-started';
 import GetStartedFooter from '../../_components/get-started-footer';
 import FilledLink from '../../_components/cards/filled-link';
 import { MoveLeft, MoveRight } from 'lucide-react';

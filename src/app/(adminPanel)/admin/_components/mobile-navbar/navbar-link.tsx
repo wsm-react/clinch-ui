@@ -1,10 +1,4 @@
 "use client"
-import {
-    Tooltip,
-    TooltipContent,
-    TooltipProvider,
-    TooltipTrigger,
-} from "@/components/ui/tooltip"
 
 import { cn } from '@/_lib/utils';
 import { Home, Newspaper, User } from 'lucide-react';

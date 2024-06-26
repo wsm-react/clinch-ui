@@ -2,6 +2,7 @@
   "name": "clinch",
   "short_name": "clinch",
   "description": "Your app description here",
+  "orientation":"landscape-primary",
   "icons": [
     {
       "src": "android-chrome-36x36.png",

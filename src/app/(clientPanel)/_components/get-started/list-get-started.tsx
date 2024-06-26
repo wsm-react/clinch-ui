@@ -1,20 +1,24 @@
 "use client"
 
 import Link from 'next/link';
-import CardTestimonial from '../cards/testimonial';
-import { GetStartedLinks, TestimonialProps } from '../_interface/app-interface';
-import { EscapeSpecialChars, PadWithZero } from '@/utility/function';
+import { GetStartedLinks } from '../_interface/app-interface';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/_lib/utils';
-import { ChevronRight, Icon } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useTheme } from 'next-themes';
+import ChangeThemeAsPerPath from '@/utility/function';
 
 
 const LinkListGetStarted: React.FC<GetStartedLinks> = (cardProps) => {
-    const pathName = usePathname();
-
-
+    const pathName = usePathname(); // Assuming this returns the current pathname
     const isActive = pathName === cardProps.href;
     const button = cardProps.button;
+
+    useEffect(() => {
+        // Call the function when the path changes
+        ChangeThemeAsPerPath("/get-started");
+    }, [pathName]);
 
     return (
         <div className="border-b border-t border-slate-900/10 dark:border-slate-800 mt-[-1px] group">

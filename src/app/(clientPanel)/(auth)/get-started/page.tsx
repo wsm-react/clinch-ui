@@ -1,6 +1,6 @@
 import Image from "next/image";
 import GetStartedNavBar from '../../_components/get-started-navbar';
-import SectionGetStarted from '../../_components/_get-started/page-get-started';
+import SectionGetStarted from '../../_components/get-started/page-get-started';
 import GetStartedFooter from '../../_components/get-started-footer';
 
 export default function GetStartedPage() {

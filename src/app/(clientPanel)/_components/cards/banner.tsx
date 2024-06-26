@@ -22,14 +22,6 @@ const CardBanner: React.FC<CardsProps> = (cardProps) => {
             </div>
 
             <div className="flex justify-start sm:justify-center align-middle mt-20">
-                {/* <Link className="sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300" href={}><span className="border-b-2 border-blue-400 dark:border-cyan-500 pb-2">{cardProps.linkText}</span> <ChevronRight className="inline-block w-14 h-10 ml-2 mt-1" /></Link> */}
-                {/* <FilledLink
-                    label={cardProps.linkText}
-                    href={`${cardProps.href}`}
-                    className={'2xl:text-[1.5rem] xl:text-[1.3rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300'}
-                    icon={ChevronRight}
-                    iconClass={'inline-block w-14 h-10 ml-2 mt-1'}
-                /> */}
                 <FilledLink
                     label={cardProps.linkText}
                     href={`${cardProps.href}`}

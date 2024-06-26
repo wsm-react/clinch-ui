@@ -23,7 +23,7 @@ const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
                     const paddedIndex = PadWithZero(index + 1);
 
                     return (
-                        <div key={paddedIndex} className="border border-gray-200 dark:border-gray-700 p-10 rounded-2xl bg-white dark:bg-white/[.02]">
+                        <div key={paddedIndex} className="border border-black/5 dark:border-white/5 p-10 rounded-2xl bg-white dark:bg-white/[.02]">
                             <div className="flex items-center space-x-6">
                                 <Avatar className='w-20 h-20'>
                                     {/* <AvatarImage src={item.imgSrc} alt={item.imgAlt} /> */}

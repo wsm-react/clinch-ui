@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { buttonVariants } from '@/components/ui/button';
 import React from "react";
+import { ModeToggle } from './mode-toggle';
 
 
 export default function GetStartedNavBar() {
@@ -18,6 +19,7 @@ export default function GetStartedNavBar() {
                         </Link>
                     </div>
                 </div>
+                <ModeToggle />
             </div>
         </header>
     );

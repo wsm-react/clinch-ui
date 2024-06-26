@@ -62,7 +62,7 @@ export default function MenuLink() {
                     );
                 })}
             </div>
-            {/* <ModeToggle /> */}
+            <ModeToggle />
         </div>
     );
 }
