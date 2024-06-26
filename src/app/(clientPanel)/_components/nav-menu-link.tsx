@@ -2,13 +2,17 @@
 
 import { cn } from '@/_lib/utils';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+
 import { ModeToggle } from './mode-toggle';
 import { MenuLinks } from './_interface/app-interface';
+import { useTheme } from 'next-themes';
+import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 
 
 export default function MenuLink() {
+    const pathName = usePathname();
 
     const menuLinks: MenuLinks[] = [
         // {
@@ -44,8 +48,6 @@ export default function MenuLink() {
         //     // icon: User,
         // },
     ]
-
-    const pathName = usePathname();
 
     return (
         <div className="flex flex-row items-center">

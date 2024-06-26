@@ -7,7 +7,6 @@ import { cn } from '@/_lib/utils';
 import { ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import ChangeThemeAsPerPath from '@/utility/function';
 
 
 const LinkListGetStarted: React.FC<GetStartedLinks> = (cardProps) => {
@@ -15,10 +14,33 @@ const LinkListGetStarted: React.FC<GetStartedLinks> = (cardProps) => {
     const isActive = pathName === cardProps.href;
     const button = cardProps.button;
 
-    useEffect(() => {
-        // Call the function when the path changes
-        ChangeThemeAsPerPath("/get-started");
-    }, [pathName]);
+    // const { resolvedTheme, setTheme } = useTheme();
+    // const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'dark');
+
+    // const updateThemeColor = (newTheme: string) => {
+    //     const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+    //     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    //     if (metaThemeColor) {
+    //         metaThemeColor.setAttribute('content', themeColor);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     // Ensure this runs only on the client side
+    //     if (typeof window !== 'undefined') {
+    //         if (pathName === "/get-started") {
+    //             setTheme('light'); // Update the theme to 'light'
+    //             updateThemeColor('light');
+    //         } else {
+    //             updateThemeColor(currentTheme);
+    //         }
+    //     }
+    // }, [pathName, currentTheme, setTheme]);
+
+    // useEffect(() => {
+    //     updateThemeColor(currentTheme);
+    // }, [currentTheme]);
 
     return (
         <div className="border-b border-t border-slate-900/10 dark:border-slate-800 mt-[-1px] group">

@@ -1,7 +1,42 @@
+// "use client"
+
 import Link from 'next/link';
 import { MenuLinks } from './_interface/app-interface';
+import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function AppFooter() {
+
+    // const pathName = usePathname();
+
+    // const { resolvedTheme, setTheme } = useTheme();
+    // const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
+
+    // const updateThemeColor = (newTheme: string) => {
+    //     const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+    //     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+    //     if (metaThemeColor) {
+    //         metaThemeColor.setAttribute('content', themeColor);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     // Ensure this runs only on the client side
+    //     if (typeof window !== 'undefined') {
+    //         if (pathName === "/") {
+    //             setTheme('dark'); // Update the theme to 'light'
+    //             updateThemeColor('dark');
+    //         } else {
+    //             updateThemeColor("light");
+    //         }
+    //     }
+    // }, [pathName, currentTheme, setTheme]);
+
+    // useEffect(() => {
+    //     updateThemeColor(currentTheme);
+    // }, [currentTheme]);
 
     const menuLinksData1: MenuLinks[] = [
         {
