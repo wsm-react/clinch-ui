@@ -19,7 +19,7 @@ export default function GetStartedNavBar() {
                         </Link>
                     </div>
                 </div>
-                <ModeToggle />
+                {/* <ModeToggle /> */}
             </div>
         </header>
     );

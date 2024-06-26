@@ -1,7 +1,40 @@
+"use client"
+
 import Link from 'next/link';
 import { MenuLinks } from './_interface/app-interface';
+import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 
 export default function GetStartedFooter() {
+
+    const pathName = usePathname();
+
+    const { resolvedTheme, setTheme } = useTheme();
+    const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
+
+    const updateThemeColor = (newTheme: string) => {
+        const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
+        if (metaThemeColor) {
+            metaThemeColor.setAttribute('content', themeColor);
+        }
+    };
+
+    useEffect(() => {
+        // Ensure this runs only on the client side
+        if (pathName === "/") {
+            setTheme('dark'); // Update the theme to 'light'
+            updateThemeColor('dark');
+        } else if (pathName === "/get-started") {
+            setTheme('light'); // Update the theme to 'light'
+            updateThemeColor('light');
+        } else {
+            setTheme('light');
+            updateThemeColor('light');
+        }
+    }, [pathName, currentTheme, setTheme]);
 
     const menuLinksData1: MenuLinks[] = [
         {
@@ -127,7 +160,7 @@ export default function GetStartedFooter() {
 
 
     return (
-        <footer className="bg-slate-800 dark:bg-background">
+        <footer className="bg-slate-900 dark:bg-background">
             <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 space-y-16 py-20 pb-10">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
                     <div>
