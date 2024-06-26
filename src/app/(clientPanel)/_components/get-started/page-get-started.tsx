@@ -12,25 +12,25 @@ export default function SectionGetStarted() {
             id: 1,
             title: "Portfolio management services",
             label: "Managed portfolios with 32%* Returns (Variable) ",
-            href: "/as",
+            href: "/signup",
         },
         {
             id: 2,
             title: "Stocks",
             label: "Invest with experts built stocks portfolios",
-            href: "/as",
+            href: "/signup",
         },
         {
             id: 1,
             title: "Mutual Funds",
             label: "Guided fund with 26%* Returns (Variable)",
-            href: "/as",
+            href: "/signup",
         },
         {
             id: 1,
             title: "Bonds & FD's",
             label: "Grow your saving with 12%* Returns (Variable) ",
-            href: "/as",
+            href: "/signup",
         }
     ]
 
