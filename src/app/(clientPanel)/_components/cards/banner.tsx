@@ -4,9 +4,9 @@ import { CardsProps } from '../_interface/app-interface';
 import Link from 'next/link';
 
 import { ArrowRight, ChevronRight, MoveRight } from 'lucide-react';
-import BorderdLink from './borderd-link';
+import BorderdLink from '../borderd-link';
 import { HighlightKeyword } from '@/utility/function';
-import FilledLink from './filled-link';
+import FilledLink from '../filled-link';
 
 
 const CardBanner: React.FC<CardsProps> = (cardProps) => {

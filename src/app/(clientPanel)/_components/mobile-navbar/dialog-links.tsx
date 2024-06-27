@@ -30,8 +30,14 @@ export default function SideDialogLinks() {
         },
         {
             id: 1,
-            label: "News and blogs",
+            label: "Blogs",
             href: "/admin/blogs",
+            icon: Newspaper,
+        },
+        {
+            id: 1,
+            label: "News",
+            href: "/admin/news",
             icon: Newspaper,
         },
         {

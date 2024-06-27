@@ -41,7 +41,7 @@ export interface BorderdLinkProps {
     labelClassName?: string
     iconRight?: boolean
     icon?: React.ComponentType<IconProps>;
-    iconClass: string
+    iconClass?: string
 }
 
 export interface CareerProps extends HeadingsProps, ListId { }

@@ -1,5 +1,5 @@
 import { ChevronRight } from 'lucide-react';
-import BorderdLink from './borderd-link';
+import BorderdLink from '../borderd-link';
 import { WealthManagerProps } from '../_interface/app-interface';
 
 

@@ -14,7 +14,7 @@ import { usePathname } from 'next/navigation';
 
 
 
-export default function SideBottomLinks() {
+export default function SideBarBottomLinks() {
 
     interface IconProps {
         className?: string;
@@ -42,8 +42,14 @@ export default function SideBottomLinks() {
         },
         {
             id: 1,
-            label: "News and blogs",
+            label: "Blogs",
             href: "/admin/blogs",
+            icon: Newspaper,
+        },
+        {
+            id: 1,
+            label: "News",
+            href: "/admin/news",
             icon: Newspaper,
         },
         {

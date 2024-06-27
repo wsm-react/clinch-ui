@@ -12,7 +12,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion"
-import BorderdLink from './borderd-link';
+import BorderdLink from '../borderd-link';
 import { ChevronRight } from 'lucide-react';
 
 const CardHelpYou: React.FC<HelpYouSectionProps> = (cardProps) => {

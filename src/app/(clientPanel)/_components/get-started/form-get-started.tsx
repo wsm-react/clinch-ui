@@ -1,21 +1,94 @@
-import Link from 'next/link';
-import CardTestimonial from '../cards/testimonial';
-import { TestimonialProps } from '../_interface/app-interface';
-import { EscapeSpecialChars, PadWithZero } from '@/utility/function';
+"use client"
 
-export default function FormGetStarted() {
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
 
+import { Button } from "@/components/ui/button"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { Input } from "@/components/ui/input"
+import { toast } from "@/components/ui/use-toast"
+import { Checkbox } from '@/components/ui/checkbox'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import { signupFormSchema } from '@/utility/form-schema'
+import { FormEvent } from 'react'
 
+export function FormGetStarted() {
+    const router = useRouter();
 
-    const description = `People describe Nova's service as "exceeding expectations", "attentive and empathetic", "proactive & seamless", and the list is never-ending!`;
+    const form = useForm<z.infer<typeof signupFormSchema>>({
+        resolver: zodResolver(signupFormSchema),
+        defaultValues: {
+            mobile: "",
+            emailAddress: "",
+        },
+    })
 
+    const { isSubmitting, isValid } = form.formState;
+
+    function onSubmit(data: z.infer<typeof signupFormSchema>) {
+
+        router.push('/book-experts-call');
+        // toast({
+        //     title: "You submitted the following values:",
+        //     description: (
+        //         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+        //             <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        //         </pre>
+        //     ),
+        // })
+    }
+
+    const handleInput = (event: FormEvent<HTMLInputElement>) => {
+        const target = event.target as HTMLInputElement;
+        target.value = target.value.replace(/\D/g, '');
+    };
 
     return (
-        <div className="pt-20 ">
-            <div className="w-7/12 mx-auto px-4 sm:px-3 md:px-5">
-                <div className="sm:text-[1.8rem] text-[1.2rem]">Reviews that matters to us</div>
-                <div className="xl:text-[3.2rem]/[3.4rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.1rem]/[2.6rem] font-bold">4.5 Rating for 100+ testimonials form our clients</div>
-            </div>
-        </div>
-    );
+        <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="w-1/1 md:w-2/3 md:space-y-7 space-y-5">
+                <FormField
+                    control={form.control}
+                    name="mobile"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Mobile Number</FormLabel>
+                            <FormControl>
+                                <Input className='h-14 px-6' type='tel' maxLength={10} placeholder="0123456789" pattern="\d*" {...field} onInput={handleInput} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
+                    name="emailAddress"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Email address</FormLabel>
+                            <FormControl>
+                                <Input className='h-14 px-6' type='email' placeholder="me@example.org" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                        </FormItem>
+                    )}
+                />
+                <div className="flex items-start space-x-5 pt-4">
+                    <Checkbox id="terms" className="mt-1" />
+                    <label
+                        htmlFor="terms"
+                        className="text-[.9rem]/[1.35rem] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                    >
+                        By subscribing you agree to receive communications from Clinch. You can unsubscribe anytime using the link in the footer of any of our emails. See our
+                        <Link target={'_blank'} href={'/privacy-policy'} className="text-blue-700" > privacy policy</Link>
+                    </label>
+                </div>
+                {/* disabled={!isValid || isSubmitting} */}
+                <div className="pt-6">
+                    <Button className='h-14 px-16 font-bold' type="submit" > Continue</Button>
+                </div>
+            </form>
+        </Form>
+    )
 }

@@ -4,8 +4,8 @@ import { WealthManagerProps } from '../_interface/app-interface';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, ChevronRight, MoveRight } from 'lucide-react';
-import BorderdLink from './borderd-link';
-import FilledLink from './filled-link';
+import BorderdLink from '../borderd-link';
+import FilledLink from '../filled-link';
 
 
 const CardWealthManager: React.FC<WealthManagerProps> = (cardProps, props) => {

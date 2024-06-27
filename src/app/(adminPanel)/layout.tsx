@@ -2,7 +2,8 @@ import { Fragment } from 'react';
 import AdminAppNavBar from './admin/_components/admin-navbar';
 import MobNavDialogBody from './admin/_components/main-navbar';
 import SideDialogLinks from './admin/_components/mobile-navbar/dialog-links';
-import SideBottomLinks from './admin/_components/mobile-navbar/sidebar-bottom';
+import SideBarBottomLinks from './admin/_components/mobile-navbar/bottom-link';
+
 
 export default function AdminLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -20,7 +21,7 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
               <SideDialogLinks />
             </div>
             <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200">
-              <SideBottomLinks />
+              <SideBarBottomLinks />
             </div>
           </div>
         </div>

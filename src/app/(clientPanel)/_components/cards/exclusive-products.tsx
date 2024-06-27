@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import { ExclusiveProductsProps, WealthManagerProps } from '../_interface/app-interface';
-import BorderdLink from './borderd-link';
+import BorderdLink from '../borderd-link';
 import Image from 'next/image';
 
 import { text } from 'stream/consumers';

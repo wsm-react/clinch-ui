@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import CardExclusiveProducts from '../cards/exclusive-products';
 import { CareerProps } from '../_interface/app-interface';
-import BorderdLink from '../cards/borderd-link';
+import BorderdLink from '../borderd-link';
 import { ChevronRight, MoveRight } from 'lucide-react';
-import FilledLink from '../cards/filled-link';
+import FilledLink from '../filled-link';
 
 export default function SectionRegisterNow() {
 

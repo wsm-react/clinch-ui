@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { OurServicesProps } from '../_interface/app-interface';
-import BorderdLink from './borderd-link';
+import BorderdLink from '../borderd-link';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/_lib/utils';
 

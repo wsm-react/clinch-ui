@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BorderdLinkProps } from '../_interface/app-interface';
+import { BorderdLinkProps } from './_interface/app-interface';
 import { ChevronRight } from 'lucide-react';
 import { cn } from '@/_lib/utils';
 
