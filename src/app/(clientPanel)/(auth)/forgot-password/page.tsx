@@ -1,5 +1,10 @@
 import Image from "next/image";
 import GetStartedNavBar from '../../_components/get-started-navbar';
+import { Viewport } from 'next';
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+}
 
 export default function ForgotPasswordScreen() {
   return (

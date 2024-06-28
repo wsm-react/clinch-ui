@@ -31,15 +31,15 @@ export function FormGetStarted() {
     function onSubmit(data: z.infer<typeof signupFormSchema>) {
 
 
-        // router.push('/book-experts-call');
-        toast({
-            title: "You submitted the following values:",
-            description: (
-                <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
-                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-                </pre>
-            ),
-        })
+        router.push('/book-experts-call');
+        // toast({
+        //     title: "You submitted the following values:",
+        //     description: (
+        //         <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
+        //             <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+        //         </pre>
+        //     ),
+        // })
     }
 
     const handleInput = (event: FormEvent<HTMLInputElement>) => {
