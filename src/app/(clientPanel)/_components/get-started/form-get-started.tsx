@@ -22,6 +22,7 @@ export function FormGetStarted() {
         defaultValues: {
             mobile: "",
             emailAddress: "",
+            terms: false
         },
     })
 
@@ -29,15 +30,16 @@ export function FormGetStarted() {
 
     function onSubmit(data: z.infer<typeof signupFormSchema>) {
 
-        router.push('/book-experts-call');
-        // toast({
-        //     title: "You submitted the following values:",
-        //     description: (
-        //         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-        //             <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        //         </pre>
-        //     ),
-        // })
+
+        // router.push('/book-experts-call');
+        toast({
+            title: "You submitted the following values:",
+            description: (
+                <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
+                    <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+                </pre>
+            ),
+        })
     }
 
     const handleInput = (event: FormEvent<HTMLInputElement>) => {
@@ -74,21 +76,31 @@ export function FormGetStarted() {
                         </FormItem>
                     )}
                 />
-                <div className="flex items-start space-x-5 pt-4">
-                    <Checkbox id="terms" className="mt-1" />
-                    <label
-                        htmlFor="terms"
-                        className="text-[.9rem]/[1.35rem] peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                    >
-                        By subscribing you agree to receive communications from Clinch. You can unsubscribe anytime using the link in the footer of any of our emails. See our
-                        <Link target={'_blank'} href={'/privacy-policy'} className="text-blue-700" > privacy policy</Link>
-                    </label>
-                </div>
+                <FormField
+                    control={form.control}
+                    name="terms"
+                    render={({ field }) => (
+                        <FormItem className="flex flex-row items-start space-x-5 space-y-0">
+                            <FormControl>
+                                <Checkbox
+                                    checked={field.value}
+                                    onCheckedChange={field.onChange}
+                                />
+                            </FormControl>
+                            <div className="space-y-0 leading-none text-base">
+                                <FormLabel className='text-[.85rem]/[1rem] font-normal'>
+                                    By subscribing you agree to receive communications from Clinch. You can unsubscribe anytime using the link in the footer of any of our emails. See our
+                                    <Link target={'_blank'} href={'/privacy-policy'} className="text-blue-700" > privacy policy</Link>
+                                </FormLabel>
+                            </div>
+                        </FormItem>
+                    )}
+                />
                 {/* disabled={!isValid || isSubmitting} */}
                 <div className="pt-6">
                     <Button className='h-14 px-16 font-bold' type="submit" > Continue</Button>
                 </div>
-            </form>
-        </Form>
+            </form >
+        </Form >
     )
 }

@@ -8,5 +8,9 @@ export const signupFormSchema = z.object({
     // .max(10, { message: "Mobile number is not valid." }),
 
     emailAddress: z.string().min(1, { message: "This field has to be filled." })
-        .email("This is not a valid email.")
+        .email("This is not a valid email."),
+    terms: z.boolean().default(false),
 })
+
+
+// .refine(value => value === true, "You must agree to the terms and conditions")

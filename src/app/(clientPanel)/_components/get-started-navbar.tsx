@@ -5,8 +5,6 @@ import { ModeToggle } from './mode-toggle';
 
 
 export default function GetStartedNavBar() {
-    const buttonClasses = buttonVariants({ variant: "secondary" });
-
     return (
         // <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 drop-shadow-xl">
         <header className="z-50 w-full bg-background">
