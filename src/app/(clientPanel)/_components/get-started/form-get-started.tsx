@@ -21,12 +21,13 @@ export function FormGetStarted() {
         resolver: zodResolver(signupFormSchema),
         defaultValues: {
             mobile: "",
-            emailAddress: "",
-            terms: false
+            emailId: "",
+            terms: false,
         },
+        mode: 'onChange',
     })
 
-    const { isSubmitting, isValid } = form.formState;
+    const { isSubmitting, isValid, errors } = form.formState;
 
     function onSubmit(data: z.infer<typeof signupFormSchema>) {
 
@@ -42,10 +43,10 @@ export function FormGetStarted() {
         // })
     }
 
-    const handleInput = (event: FormEvent<HTMLInputElement>) => {
-        const target = event.target as HTMLInputElement;
-        target.value = target.value.replace(/\D/g, '');
-    };
+    // const handleInput = (event: FormEvent<HTMLInputElement>) => {
+    //     const target = event.target as HTMLInputElement;
+    //     target.value = target.value.replace(/\D/g, '');
+    // };
 
     return (
         <Form {...form}>
@@ -57,22 +58,24 @@ export function FormGetStarted() {
                         <FormItem>
                             <FormLabel>Mobile Number</FormLabel>
                             <FormControl>
-                                <Input className='h-14 px-6' type='tel' maxLength={10} placeholder="0123456789" pattern="\d*" {...field} onInput={handleInput} />
+                                <Input className='h-14 px-6' type='tel' maxLength={10} placeholder="0123456789" pattern="\d*" {...field}
+                                // onInput={handleInput}
+                                />
                             </FormControl>
-                            <FormMessage />
+                            {errors.mobile && <FormMessage>{errors.mobile.message}</FormMessage>}
                         </FormItem>
                     )}
                 />
                 <FormField
                     control={form.control}
-                    name="emailAddress"
+                    name="emailId"
                     render={({ field }) => (
                         <FormItem>
                             <FormLabel>Email address</FormLabel>
                             <FormControl>
                                 <Input className='h-14 px-6' type='email' placeholder="me@example.org" {...field} />
                             </FormControl>
-                            <FormMessage />
+                            {errors.emailId && <FormMessage>{errors.emailId.message}</FormMessage>}
                         </FormItem>
                     )}
                 />
@@ -80,18 +83,23 @@ export function FormGetStarted() {
                     control={form.control}
                     name="terms"
                     render={({ field }) => (
-                        <FormItem className="flex flex-row items-start space-x-5 space-y-0">
-                            <FormControl>
-                                <Checkbox
-                                    checked={field.value}
-                                    onCheckedChange={field.onChange}
-                                />
-                            </FormControl>
-                            <div className="space-y-0 leading-none text-base">
-                                <FormLabel className='text-[.85rem]/[1rem] font-normal'>
-                                    By subscribing you agree to receive communications from Clinch. You can unsubscribe anytime using the link in the footer of any of our emails. See our
-                                    <Link target={'_blank'} href={'/privacy-policy'} className="text-blue-700" > privacy policy</Link>
-                                </FormLabel>
+                        <FormItem>
+                            <div className="terms">
+                                <div className="flex flex-row items-start space-x-5 space-y-0">
+                                    <FormControl>
+                                        <Checkbox
+                                            checked={field.value}
+                                            onCheckedChange={field.onChange}
+                                        />
+                                    </FormControl>
+                                    <div className="space-y-0 leading-none text-base">
+                                        <FormLabel className='text-[.85rem]/[1rem] font-normal'>
+                                            By subscribing you agree to receive communications from Clinch. You can unsubscribe anytime using the link in the footer of any of our emails. See our
+                                            <Link target={'_blank'} href={'/privacy-policy'} className="text-blue-700" > privacy policy</Link>
+                                        </FormLabel>
+                                    </div>
+                                </div>
+                                {errors.terms && <FormMessage className='mt-5'>{errors.terms.message}</FormMessage>}
                             </div>
                         </FormItem>
                     )}
