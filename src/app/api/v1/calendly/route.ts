@@ -1,5 +1,6 @@
+import { parseURLSearchParams } from '@/utility/function';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
 interface SignupQueryParams {
     assigned_to?: string;
@@ -13,60 +14,26 @@ interface SignupQueryParams {
     answer_1?: string;
 }
 
-export function GET(req: NextApiRequest, res: NextApiResponse) {
-
-    // return new Response("Hi");
+export function GET(req: NextRequest, res: NextResponse) {
 
     try {
+        const searchParams = req.nextUrl.searchParams;
+        const parsedParams = parseURLSearchParams(searchParams);
+
         return NextResponse.json({
             messege: "ok",
             success: true,
-            req: req
-        }, {
-            status: 200
-        });
+            data: parsedParams
+        }, { status: 200 });
+
+        // return NextResponse.redirect("/");
 
     } catch (error) {
         return NextResponse
             .json(({
                 messege: "Error",
                 error,
-            }.error,
-            {
-                status: 500
-            }))
+            }.error, { status: 500 }));
     }
 
-    // const {
-    //     assigned_to,
-    //     event_type_uuid,
-    //     event_type_name,
-    //     event_start_time,
-    //     event_end_time,
-    //     invitee_uuid,
-    //     invitee_full_name,
-    //     invitee_email,
-    //     answer_1
-    // }: SignupQueryParams = req.query;
-
-    // // You can perform any necessary operations with the query parameters here
-
-    // res.status(200).json({
-    //     assigned_to,
-    //     event_type_uuid,
-    //     event_type_name,
-    //     event_start_time,
-    //     event_end_time,
-    //     invitee_uuid,
-    //     invitee_full_name,
-    //     invitee_email,
-    //     answer_1
-    // });
-}
-
-
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-    // const body = await req.json();
-
-    return new Response(JSON.stringify(res));
 }

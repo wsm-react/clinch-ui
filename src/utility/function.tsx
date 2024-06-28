@@ -38,3 +38,15 @@ export const EscapeSpecialChars = (text: string): string => {
 
 export const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 export const mobileRegExp = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+
+
+export function parseURLSearchParams(searchParams: URLSearchParams): Record<string, string> {
+  const paramsObject: Record<string, string> = {};
+
+  // Iterate over each key-value pair in the URLSearchParams
+  for (const [key, value] of searchParams.entries()) {
+    paramsObject[key] = value;
+  }
+
+  return paramsObject;
+}
