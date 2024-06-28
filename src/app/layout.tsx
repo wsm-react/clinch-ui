@@ -6,14 +6,15 @@ import { ThemeProvider } from './provider';
 import { poppinsFont } from '@/utility/fonts';
 
 export const metadata: Metadata = {
-  title: "clinch webapp",
+  title: {
+    default: "",
+    template: "%s | clinch"
+  },
   description: "clinch-ui in create next app",
   metadataBase: new URL('https://clinch.com'),
-
   keywords: ['Next.js', 'React', 'JavaScript'],
   authors: [
-    { name: 'Arun' },
-    { name: 'Himanshu Joshi', url: 'https://nextjs.org' }
+    { name: 'Himanshu Joshi', url: 'https://clinch.com' }
   ],
   alternates: {
     canonical: '/',
@@ -22,26 +23,26 @@ export const metadata: Metadata = {
       'de-DE': '/de-DE',
     },
   },
-  creator: 'Arun Kumar Gupta',
-  publisher: 'Webspeciman',
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
+  creator: 'webspeciman',
+  publisher: 'webspeciman',
+  // formatDetection: {
+  //   email: false,
+  //   address: false,
+  //   telephone: false,
+  // },
   manifest: '/favicon/site.webmanifest',
   robots: {
     index: false,
     follow: true,
     nocache: true,
-    googleBot: {
-      index: true,
-      follow: false,
-      noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+    // googleBot: {
+    //   index: true,
+    //   follow: false,
+    //   noimageindex: true,
+    //   'max-video-preview': -1,
+    //   'max-image-preview': 'large',
+    //   'max-snippet': -1,
+    // },
   },
   // icons: {
   //   icon: '/favicon/favicon-32x32.png',

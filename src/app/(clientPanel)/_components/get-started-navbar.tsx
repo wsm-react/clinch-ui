@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from "react";
 import { LogoToggle } from './logo-toggle';
-import { CircleX, X } from 'lucide-react';
+import { NavGoBack } from './nav-go-back';
 
 
 export default function GetStartedNavBar() {
@@ -13,17 +13,12 @@ export default function GetStartedNavBar() {
                 <div className="flex justify-between w-full">
                     <div className="flex items-center font-bold">
                         <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >
-                            {/* <div className='text-4xl pt-5 pb-5 font-bold'>clinch</div> */}
-                            <LogoToggle />
+                            <div className='text-4xl pt-5 pb-5 font-bold'>AppLogo</div>
+                            {/* <LogoToggle /> */}
                         </Link>
                     </div>
                     <div className="flex items-center">
-                        <div className="">
-                            <Link href='/'>
-                                {/* <CircleX /> */}
-                                <X className='bg-slate-100 border border-slate-200 text-slate-500 p-1 h-8 w-8 rounded-xl' />
-                            </Link>
-                        </div>
+                        <NavGoBack />
                     </div>
                 </div>
                 {/* <ModeToggle /> */}
