@@ -7,6 +7,7 @@ import { Metadata, Viewport } from 'next';
 export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
+
 export const metadata: Metadata = {
   title: "Get Started",
   robots: {

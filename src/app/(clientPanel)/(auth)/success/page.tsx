@@ -2,6 +2,25 @@ import GetStartedNavBar from '../../_components/get-started-navbar';
 import GetStartedFooter from '../../_components/get-started-footer';
 import FilledLink from '../../_components/filled-link';
 import { MoveLeft } from 'lucide-react';
+import { Metadata, Viewport } from 'next';
+
+export const viewport: Viewport = {
+  themeColor: '#ffffff',
+}
+
+export const metadata: Metadata = {
+  title: "thanks",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
+  description: "Clinch thanks",
+  alternates: {
+    canonical: '/get-started'
+  },
+  keywords: ['get-started', 'React get-started'],
+}
 
 export default function SuccessPage() {
   return (

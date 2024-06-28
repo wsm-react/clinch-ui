@@ -21,6 +21,8 @@ export interface GetStartedLinks extends ListId {
     title: string,
     label?: string,
     button?: boolean
+    background?: string,
+    textColor?: string,
     href: string
 }
 

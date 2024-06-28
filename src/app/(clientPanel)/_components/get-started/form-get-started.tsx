@@ -13,6 +13,7 @@ import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { signupFormSchema } from '@/utility/form-schema'
 import { FormEvent } from 'react'
+import { ShieldCheck } from 'lucide-react'
 
 export function FormGetStarted() {
     const router = useRouter();
@@ -20,9 +21,10 @@ export function FormGetStarted() {
     const form = useForm<z.infer<typeof signupFormSchema>>({
         resolver: zodResolver(signupFormSchema),
         defaultValues: {
+            name: "",
             mobile: "",
             emailId: "",
-            terms: false,
+            terms: true,
         },
         mode: 'onChange',
     })
@@ -53,12 +55,27 @@ export function FormGetStarted() {
             <form onSubmit={form.handleSubmit(onSubmit)} className="w-1/1 md:w-2/3 md:space-y-7 space-y-5">
                 <FormField
                     control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                        <FormItem>
+                            <FormLabel>Name</FormLabel>
+                            <FormControl>
+                                <Input className='h-14 px-6' type='text' placeholder="Enter your name" {...field}
+                                // onInput={handleInput}
+                                />
+                            </FormControl>
+                            {errors.name && <FormMessage>{errors.name.message}</FormMessage>}
+                        </FormItem>
+                    )}
+                />
+                <FormField
+                    control={form.control}
                     name="mobile"
                     render={({ field }) => (
                         <FormItem>
                             <FormLabel>Mobile Number</FormLabel>
                             <FormControl>
-                                <Input className='h-14 px-6' type='tel' maxLength={10} placeholder="0123456789" pattern="\d*" {...field}
+                                <Input className='h-14 px-6' type='tel' maxLength={10} placeholder="9919XXXXXX" pattern="\d*" {...field}
                                 // onInput={handleInput}
                                 />
                             </FormControl>
@@ -104,9 +121,10 @@ export function FormGetStarted() {
                         </FormItem>
                     )}
                 />
+
                 {/* disabled={!isValid || isSubmitting} */}
-                <div className="pt-6">
-                    <Button className='h-14 px-16 font-bold' type="submit" > Continue</Button>
+                <div className="pt-6 w-full">
+                    <Button className='h-14 px-16 w-full sm:w-auto font-bold' type="submit" > Continue</Button>
                 </div>
             </form >
         </Form >

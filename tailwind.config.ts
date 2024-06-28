@@ -99,8 +99,8 @@ const config = {
                        hsl(var(--background))`,
         },
         '.bg-gray-radial': {
-          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 60% at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), 
+          background: `radial-gradient(51.5% 44% at 50% 33%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                       radial-gradient(70% 50% at 50% 68%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%), 
                        hsl(var(--background))`,
         },
       };

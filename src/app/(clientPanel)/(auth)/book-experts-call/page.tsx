@@ -1,10 +1,25 @@
 import GetStartedNavBar from '../../_components/get-started-navbar';
 import { GetStartedLinks } from '../../_components/_interface/app-interface';
 import LinkListGetStarted from '../../_components/get-started/list-get-started';
-import { Viewport } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
+}
+
+
+export const metadata: Metadata = {
+  title: "Let's start",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
+  description: "Clinch Let's start",
+  alternates: {
+    canonical: '/get-started'
+  },
+  keywords: ['get-started', 'React get-started'],
 }
 
 export default function BookExpertsCallPage() {
@@ -15,6 +30,7 @@ export default function BookExpertsCallPage() {
       title: "Book a FREE call with Our Experts.",
       label: "Choose a day and time of your preference for a FREE pre Investment call",
       href: "/login",
+      textColor: "text-blue-700 font-bold"
     },
     {
       id: 2,
@@ -34,7 +50,7 @@ export default function BookExpertsCallPage() {
         </div>
         <div className="w-11/12 md:w-7/12 mx-auto px-6 mt-16 md:mt-16">
           {getStartedList.map((items, index) => {
-            return (<LinkListGetStarted key={index} title={items.title} label={items.label} href={items.href} />)
+            return (<LinkListGetStarted key={index} title={items.title} label={items.label} href={items.href} textColor={items.textColor} />)
           })}
         </div>
       </div>

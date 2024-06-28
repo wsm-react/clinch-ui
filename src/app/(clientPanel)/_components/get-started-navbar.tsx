@@ -13,8 +13,8 @@ export default function GetStartedNavBar() {
                 <div className="flex justify-between w-full">
                     <div className="flex items-center font-bold">
                         <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >
-                            <div className='text-4xl pt-5 pb-5 font-bold'>AppLogo</div>
-                            {/* <LogoToggle /> */}
+                            {/* <div className='text-4xl pt-5 pb-5 font-bold'>AppLogo</div> */}
+                            <LogoToggle />
                         </Link>
                     </div>
                     <div className="flex items-center">

@@ -2,10 +2,24 @@ import Image from "next/image";
 import GetStartedNavBar from '../../_components/get-started-navbar';
 import { FormGetStarted } from '../../_components/get-started/form-get-started';
 import { ShieldCheck } from 'lucide-react';
-import { Viewport } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
+}
+
+export const metadata: Metadata = {
+  title: "signup",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+  },
+  description: "Clinch signup",
+  alternates: {
+    canonical: '/get-started'
+  },
+  keywords: ['get-started', 'React get-started'],
 }
 
 export default function SignUpScreen() {
@@ -19,7 +33,12 @@ export default function SignUpScreen() {
         </div>
         <div className="w-11/12 md:w-6/12 mx-auto px-6 mt-12 md:mt-16">
           <FormGetStarted />
-          <div className="text-gray-500 text-xs mt-16 flex flex-row items-center"><ShieldCheck className='inline-block w-5 h-5 mr-2' /> All your information is secure.</div>
+          <div className="sm:text-[.9rem] text-[.95rem] mt-16 flex flex-row items-start p-4 border border-green-400 bg-green-100/50 rounded-lg ">
+            <div className="w-9 h-9 sm:w-5 sm:h-5 mr-4">
+              <ShieldCheck className='inline-block w-9 h-9 sm:w-6 sm:h-6 mr-5 text-green-800' />
+            </div>
+            We offer Spam free experience. We never call you unless requested by you
+          </div>
         </div>
       </div>
     </div>
