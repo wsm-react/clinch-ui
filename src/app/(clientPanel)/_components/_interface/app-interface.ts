@@ -1,3 +1,9 @@
+import { LinkProps } from 'next/dist/client/link';
+import { Url } from 'next/dist/shared/lib/router/router';
+import { ParsedUrlQueryInput } from 'node:querystring';
+import type { UrlObject } from 'url';
+
+
 export interface highlightKeywordProps {
     text: string
     keyword: string | undefined
@@ -23,7 +29,12 @@ export interface GetStartedLinks extends ListId {
     button?: boolean
     background?: string,
     textColor?: string,
-    href: string
+    href: string | Href;
+}
+
+interface Href {
+    pathname: string;
+    query?: ParsedUrlQueryInput;
 }
 
 export interface IconProps {

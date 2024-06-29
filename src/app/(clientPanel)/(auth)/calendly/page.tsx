@@ -1,23 +1,23 @@
 import GetStartedNavBar from '../../_components/get-started-navbar';
 import GetStartedFooter from '../../_components/get-started-footer';
 import FilledLink from '../../_components/filled-link';
-import { MoveLeft } from 'lucide-react';
 import { Metadata, Viewport } from 'next';
+import React from 'react';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
 }
 
 export const metadata: Metadata = {
-  title: "thanks",
+  title: "thanks for subscribe",
   robots: {
     index: true,
     follow: true,
     nocache: false,
   },
-  description: "Clinch thanks",
+  description: "Clinch thanks for subscribe",
   alternates: {
-    canonical: '/success'
+    canonical: '/calendly'
   },
   keywords: ['get-started', 'React get-started'],
 }

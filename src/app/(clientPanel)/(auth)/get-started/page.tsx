@@ -22,31 +22,51 @@ export const metadata: Metadata = {
   keywords: ['get-started', 'React get-started'],
 }
 
-export default function GetStartedPage() {
+export default function GetStartedPage({ searchParams }: { searchParams?: { query?: string; page?: string } }) {
   const getStartedList: GetStartedLinks[] = [
     {
       id: 1,
       title: "Portfolio management services",
       label: "Managed portfolios with 32%* Returns (Variable) ",
-      href: "/signup",
+      href: {
+        pathname: "/get-started/portfolio-management-services",
+        query: {
+          link: "https://calendly.com/ichwebdsign/portfolio-management-services"
+        }
+      },
     },
     {
       id: 2,
       title: "Stocks",
       label: "Invest with experts built stocks portfolios",
-      href: "/signup",
+      href: {
+        pathname: "/get-started/stocks",
+        query: {
+          link: "https://calendly.com/ichwebdsign/stocks"
+        }
+      },
     },
     {
       id: 1,
       title: "Mutual Funds",
       label: "Guided fund with 26%* Returns (Variable)",
-      href: "/signup",
+      href: {
+        pathname: "/get-started/mutual-funds",
+        query: {
+          link: "https://calendly.com/ichwebdsign/mutual-funds"
+        }
+      },
     },
     {
       id: 1,
       title: "Bonds & FD's",
       label: "Grow your saving with 12%* Returns (Variable) ",
-      href: "/signup",
+      href: {
+        pathname: "/get-started/bonds-and-fds",
+        query: {
+          link: "https://calendly.com/ichwebdsign/bonds-and-fds"
+        }
+      },
     }
   ]
 

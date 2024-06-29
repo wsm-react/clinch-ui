@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   description: "Clinch login",
   alternates: {
-    canonical: '/get-started'
+    canonical: '/login'
   },
   keywords: ['get-started', 'React get-started'],
 }
