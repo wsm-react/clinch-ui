@@ -27,7 +27,7 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
     {
       id: 1,
       title: "Portfolio management services",
-      label: "Managed portfolios with 32%* Returns (Variable) ",
+      label: "Managed portfolios with 32%* Returns (Variable)",
       href: {
         pathname: "/get-started/portfolio-management-services",
         query: {
@@ -60,7 +60,7 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
     {
       id: 1,
       title: "Bonds & FD's",
-      label: "Grow your saving with 12%* Returns (Variable) ",
+      label: "Grow your saving with 12%* Returns (Variable)",
       href: {
         pathname: "/get-started/bonds-and-fds",
         query: {
@@ -76,7 +76,7 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
       <GetStartedNavBar />
       <div className="md:pt-14 md:pb-14 pt-6 pb-6">
         <div className="w-11/12 md:w-7/12 mx-auto px-6">
-          <div className="xl:text-[2.3rem]/[2.8rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2rem]/[2.1rem] font-normal md:font-semibold">How you would want your get started </div>
+          <div className="xl:text-[2.3rem]/[2.8rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2rem]/[2.1rem] font-normal md:font-semibold">How you would want your get started</div>
           <div className="sm:text-[1.15rem] text-[.95rem] mt-5 md:mt-2">Choose from the products your are interested in</div>
         </div>
       </div>

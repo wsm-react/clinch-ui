@@ -2,96 +2,128 @@ import Link from 'next/link';
 import CardOurServices from '../cards/services';
 import { OurServicesProps } from '../_interface/app-interface';
 
-export default function SectionServices() {
+export default function SectionServices({ searchParams }: { searchParams?: { query?: string; page?: string } }) {
 
     const CardCareerData: OurServicesProps[] = [
         {
             title: "Portfolio Management",
             subTitle: "Keeping your books up to date monthly gives you reliable numbers key to sound financial decisions.",
             linkText: "Get Started",
-            href: "/signup",
             bgLight: "border border-lime-500/30 dark:border-lime-900/50",
             bgDark: "bg-gradient-to-r from-lime-500/20 to-blue-500/02",
             tags: [
                 {
                     title: "Benchmark return",
                     subTitle: "42%",
+                    href: ''
                 },
                 {
                     title: "Holding period",
                     subTitle: "3+ Yrs.",
+                    href: ''
                 },
                 {
                     title: "Min Investment",
                     subTitle: "50,00,000",
+                    href: ''
                 }
-            ]
+            ],
+            href: {
+                pathname: "/get-started/portfolio-management-services",
+                query: {
+                    link: "https://calendly.com/ichwebdsign/portfolio-management-services"
+                }
+            },
         },
         {
             title: "Mutual Funds",
             subTitle: "Bringing down to 40 great investment plans from 4000 schemes. From low, medium to high alpha generator we have in our basket.",
             linkText: "Get Started",
-            href: "/signup",
             bgLight: "border border-amber-500/30 dark:border-amber-900/50",
             bgDark: "bg-gradient-to-r from-amber-500/20 to-blue-500/02",
             tags: [
                 {
                     title: "Benchmark return",
                     subTitle: "42%",
+                    href: ''
                 },
                 {
                     title: "Holding period",
                     subTitle: "3+ Yrs.",
+                    href: ''
                 },
                 {
                     title: "Min Investment",
                     subTitle: "50,00,000",
+                    href: ''
                 }
-            ]
+            ],
+            href: {
+                pathname: "/get-started/mutual-funds",
+                query: {
+                    link: "https://calendly.com/ichwebdsign/mutual-funds"
+                }
+            },
         },
         {
             title: "Bonds and FD's",
             subTitle: "If you are looking for low risk, consistent returns, Of Course better in deposits and bank FD's , This is you game and we know the trick to win.",
             linkText: "Get Started",
-            href: "/signup",
             bgLight: "border border-cyan-500/30 dark:border-cyan-900/50",
             bgDark: "bg-gradient-to-r from-cyan-500/20 to-blue-500/02",
             tags: [
                 {
                     title: "Benchmark return",
                     subTitle: "42%",
+                    href: ''
                 },
                 {
                     title: "Holding period",
                     subTitle: "3+ Yrs.",
+                    href: ''
                 },
                 {
                     title: "Min Investment",
                     subTitle: "50,00,000",
+                    href: ''
                 }
-            ]
+            ],
+            href: {
+                pathname: "/get-started/bonds-and-fds",
+                query: {
+                    link: "https://calendly.com/ichwebdsign/bonds-and-fds"
+                }
+            },
         },
         {
             title: "IPO's",
             subTitle: "Many thinks it's a easy bet to make big money but their is a caveat and for sure not all are same.",
             linkText: "Get Started",
-            href: "/signup",
             bgLight: "border border-fuchsia-500/30 dark:border-fuchsia-900/50",
             bgDark: "bg-gradient-to-r from-fuchsia-500/20 to-blue-500/02",
             tags: [
                 {
                     title: "Benchmark return",
                     subTitle: "42%",
+                    href: ''
                 },
                 {
                     title: "Holding period",
                     subTitle: "3+ Yrs.",
+                    href: ''
                 },
                 {
                     title: "Min Investment",
                     subTitle: "50,00,000",
+                    href: ''
                 }
-            ]
+            ],
+            href: {
+                pathname: "/get-started/stocks",
+                query: {
+                    link: "https://calendly.com/ichwebdsign/ipos"
+                }
+            },
         }
     ]
 

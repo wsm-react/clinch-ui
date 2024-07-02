@@ -15,21 +15,19 @@ export interface ListId {
 }
 
 
-export interface MenuLinks extends ListId {
-    href: string
+export interface MenuLinks extends ListId, linkProps {
     label: string,
     button?: boolean
     icon?: React.ComponentType<IconProps>;
 }
 
 
-export interface GetStartedLinks extends ListId {
+export interface GetStartedLinks extends ListId, linkProps {
     title: string,
     label?: string,
     button?: boolean
     background?: string,
     textColor?: string,
-    href: string | Href;
 }
 
 interface Href {
@@ -46,10 +44,13 @@ export interface HeadingsProps {
     subTitle: string
 }
 
+export interface linkProps {
+    href: string | Href;
+}
 
-export interface BorderdLinkProps {
+
+export interface BorderdLinkProps extends linkProps, linkProps {
     label: string | undefined
-    href: string
     className: string
     labelClassName?: string
     iconRight?: boolean
@@ -62,9 +63,8 @@ export interface SubscribeProps extends HeadingsProps, ListId {
     note?: string
 }
 
-export interface CardsProps extends ListId, HeadingsProps {
+export interface CardsProps extends ListId, HeadingsProps, linkProps {
     linkText?: string
-    href?: string
     icon?: React.ComponentType<IconProps>;
 }
 
@@ -80,7 +80,7 @@ export interface ExclusiveProductsProps extends CardsProps {
     reversed?: boolean
 }
 
-export interface OurServicesProps extends CardsProps {
+export interface OurServicesProps extends CardsProps, linkProps {
     tags?: OurServicesTagsProps[],
     bgLight?: string
     bgDark?: string
