@@ -22,6 +22,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
 
         return NextResponse.json({
             messege: "ok",
+            status: 200,
             success: true,
             data: parsedParams
         }, { status: 200 });
