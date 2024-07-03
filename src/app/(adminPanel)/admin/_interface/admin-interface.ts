@@ -4,35 +4,8 @@ import { ParsedUrlQueryInput } from 'node:querystring';
 import type { UrlObject } from 'url';
 
 
-export interface highlightKeywordProps {
-    text: string
-    keyword: string | undefined
-    className?: string
-}
-
 export interface ListId {
     id?: number | string
-}
-
-
-export interface MenuLinks extends ListId, linkProps {
-    label: string,
-    button?: boolean
-    icon?: React.ComponentType<IconProps>;
-}
-
-
-export interface GetStartedLinks extends ListId, linkProps {
-    title: string,
-    label?: string,
-    button?: boolean
-    background?: string,
-    textColor?: string,
-}
-
-interface Href {
-    pathname: string;
-    query?: ParsedUrlQueryInput;
 }
 
 export interface IconProps {
@@ -45,18 +18,40 @@ export interface HeadingsProps {
 }
 
 export interface linkProps {
-    href: string | Href;
+    href: string | hrefProps;
 }
+
+interface hrefProps {
+    pathname: string;
+    query?: ParsedUrlQueryInput;
+}
+
+export interface highlightKeywordProps {
+    text: string
+    keyword: string | undefined
+    className?: string
+}
+
+export interface MenuLinks extends ListId, linkProps {
+    label: string,
+    button?: boolean
+    icon?: React.ComponentType<IconProps>;
+}
+
+
+export interface LogoProps extends ListId, linkProps { }
+
+
 
 
 export interface BorderdLinkProps extends linkProps {
     label: string | undefined
     className: string
-    labelClassName?: string
     containerClass?: string
+    labelClassName?: string
     iconRight?: boolean
     icon?: React.ComponentType<IconProps>;
-    iconClass?: string
+    iconClass?: string,
 }
 
 export interface CareerProps extends HeadingsProps, ListId, linkProps, MenuLinks { }

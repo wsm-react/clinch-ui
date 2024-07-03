@@ -4,7 +4,6 @@ import CardHeadings from '../cards/headings';
 import { CareerProps } from '../_interface/app-interface';
 import Image from 'next/image';
 import { EscapeSpecialChars } from '@/utility/function';
-import CareerImg from '/public/career-img.png';
 import { PngPath } from '@/utility/constants';
 
 export default function SectionCareer() {
@@ -17,7 +16,7 @@ export default function SectionCareer() {
             <div className="w-11/12 mx-auto px-4 sm:px-3 md:px-5 text-center ">
                 <div className="text-[3.2rem]/[5.6rem] font-bold">Career</div>
                 <div className="flex align-middle justify-center">
-                    <Image src={PngPath.careerImg} width={460} height={0} className='h-auto pt-5 pb-5' loading="lazy" alt='' />
+                    <Image src={PngPath.careerImg} width={460} height={460} className='h-auto pt-5 pb-5' sizes='100vh' loading="lazy" alt='asas' />
                 </div>
             </div>
             <div className="container max-w-screen-lg text-center mt-16">

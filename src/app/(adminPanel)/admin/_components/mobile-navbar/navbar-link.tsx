@@ -5,23 +5,13 @@ import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ModeToggle } from './mode-toggle';
+import { MenuLinks } from '../../_interface/admin-interface';
 
 
 
 export default function NavbarLink() {
 
-    interface IconProps {
-        className?: string;
-    }
-
-    interface BottomLinks {
-        id: number | string
-        href: string
-        label: string
-        icon?: React.ComponentType<IconProps>;
-    }
-
-    const bottomLinks: BottomLinks[] = [
+    const bottomLinks: MenuLinks[] = [
         {
             id: 1,
             label: "Website",

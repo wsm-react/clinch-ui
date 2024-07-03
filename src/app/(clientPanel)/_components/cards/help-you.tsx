@@ -36,16 +36,14 @@ const CardHelpYou: React.FC<HelpYouSectionProps> = (cardProps) => {
                     );
                 })}
             </Accordion>
-            <div className="flex justify-center align-middle mt-20">
-                {/* <Link className="sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300" href={}><span className="border-b-2 border-blue-400 dark:border-cyan-500 pb-2">{cardProps.linkText}</span> <ChevronRight className="inline-block w-14 h-10 ml-2 mt-1" /></Link> */}
-                <BorderdLink
-                    label={cardProps.label}
-                    href={cardProps.href}
-                    className={cardProps.className}
-                    icon={ChevronRight}
-                    iconClass={cardProps.iconClass}
-                />
-            </div>
+            <BorderdLink
+                label={cardProps.label}
+                href={cardProps.href}
+                className={cardProps.className}
+                icon={ChevronRight}
+                containerClass='flex justify-center align-middle mt-20'
+                iconClass={cardProps.iconClass}
+            />
         </div>
 
     );

@@ -30,18 +30,16 @@ const CardOurServices: React.FC<OurServicesProps> = (cardProps) => {
             )}
             {/* <div className="asasas">{CardProps.title}</div>
             <div className="asasas">{CardProps.title}</div> */}
-            {cardProps.linkText && (
-                <div className="flex justify-start align-middle">
-                    <BorderdLink
-                        label={cardProps.linkText}
-                        href={cardProps.href}
-                        className={'sm:text-[1.2rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-600 dark:hover:text-green-300'}
-                        icon={ChevronRight}
-                        labelClassName={"border-b border-blue-500 dark:border-green-700 pb-1 hover:border-gray-300 dark:hover:border-green-300"}
-                        iconClass={'inline-block w-12 h-8 ml-2 mt-1'}
-                    />
-                </div>
-            )}
+            {cardProps.linkText &&
+                <BorderdLink
+                    label={cardProps.linkText}
+                    href={cardProps.href}
+                    containerClass='flex justify-start align-middle'
+                    className={'sm:text-[1.2rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-600 dark:hover:text-green-300'}
+                    icon={ChevronRight}
+                    labelClassName={"border-b border-blue-500 dark:border-green-700 pb-1 hover:border-gray-300 dark:hover:border-green-300"}
+                    iconClass={'inline-block w-12 h-8 ml-2 mt-1'}
+                />}
 
         </div>
     );

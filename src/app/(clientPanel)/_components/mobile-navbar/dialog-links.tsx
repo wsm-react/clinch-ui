@@ -42,8 +42,8 @@ export default function SideDialogLinks() {
         },
         {
             id: 1,
-            label: "Page block",
-            href: "/admin/page-block",
+            label: "Pages",
+            href: "/admin/pages",
             icon: FilePlus2,
         },
         {

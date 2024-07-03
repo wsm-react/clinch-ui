@@ -34,7 +34,7 @@ export function FormGetStarted() {
     function onSubmit(data: z.infer<typeof signupFormSchema>) {
 
 
-        router.push('/book-experts-call');
+        router.push('/success');
         // toast({
         //     title: "You submitted the following values:",
         //     description: (

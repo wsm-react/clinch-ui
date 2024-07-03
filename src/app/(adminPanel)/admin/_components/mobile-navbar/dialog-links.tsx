@@ -1,10 +1,10 @@
 "use client"
 
-import { MenuLinks } from '@/app/(clientPanel)/_components/_interface/app-interface';
 import { cn } from '@/_lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, LayoutDashboard, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { MenuLinks } from '../../_interface/admin-interface';
 
 export default function SideDialogLinks() {
 
@@ -14,6 +14,12 @@ export default function SideDialogLinks() {
             label: "Dashboard",
             href: "/admin",
             icon: LayoutDashboard,
+        },
+        {
+            id: 1,
+            label: "Pages",
+            href: "/admin/pages",
+            icon: FilePlus2,
         },
         {
             id: 1,
@@ -39,12 +45,7 @@ export default function SideDialogLinks() {
             href: "/admin/news",
             icon: Newspaper,
         },
-        {
-            id: 1,
-            label: "Page block",
-            href: "/admin/page-block",
-            icon: FilePlus2,
-        },
+
         {
             id: 1,
             label: "Services",

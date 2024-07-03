@@ -31,16 +31,15 @@ export default function SuccessPage() {
           <div className="border border-gray-300 rounded-xl sm:p-20 p-10 md:text-center">
             <div className="xl:text-[3rem]/[2.8rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.4rem]/[2.7rem] font-bold md:font-semibold">Thanks</div>
             <div className="sm:text-[1.6rem] text-[1.2rem] mt-6 md:mt-6">we have received your details and noted your call preference</div>
-            <div className="flex justify-start md:justify-center align-middle mt-20">
-              <FilledLink
-                label={"Back to home"}
-                href={`/`}
-                className={'sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white h-12 rounded-full p-[.5rem] pr-10 pl-10 transition-all'}
-              // iconRight={true}
-              // icon={MoveLeft}
-              // iconClass={'inline-block w-8 h-10 mr-6 '}
-              />
-            </div>
+            <FilledLink
+              label={"Back to home"}
+              href={`/`}
+              containerClass='flex justify-start md:justify-center align-middle mt-20'
+              className={'sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white h-12 rounded-full p-[.5rem] pr-10 pl-10 transition-all'}
+            // iconRight={true}
+            // icon={MoveLeft}
+            // iconClass={'inline-block w-8 h-10 mr-6 '}
+            />
           </div>
         </div>
       </div>

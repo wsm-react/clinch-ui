@@ -14,7 +14,7 @@ interface SignupQueryParams {
     answer_1?: string;
 }
 
-export function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest, res: NextResponse) {
 
     try {
         const searchParams = req.nextUrl.searchParams;
