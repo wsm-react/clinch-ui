@@ -20,7 +20,7 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
             <div className="mb-14 overflow-y-auto">
               <SideDialogLinks />
             </div>
-            <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200">
+            <div className="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
               <SideBarBottomLinks />
             </div>
           </div>
@@ -30,7 +30,7 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
             <div className="p-8 pt-6 max-sm:px-4">
               {children}
             </div>
-            <div className="mt-auto justify-center hidden w-full p-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200">
+            <div className="mt-auto justify-center hidden w-full p-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
               <div className="aasas">&copy; 2019-2023 sitename.com. All rights reserved.</div>
             </div>
           </div>

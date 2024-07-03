@@ -1,10 +1,12 @@
-import Link from 'next/link';
-import CardExclusiveProducts from '../cards/exclusive-products';
+"use client"
+
 import { CareerProps } from '../_interface/app-interface';
-import BorderdLink from '../borderd-link';
-import { ChevronRight, MoveRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 import FilledLink from '../filled-link';
-import ScrollingText from '../scrolling-text';
+
+import { useEffect, useState } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { cn } from '@/_lib/utils';
 
 
 
@@ -19,15 +21,73 @@ export default function SectionPrivateWealth({ searchParams }: { searchParams?: 
         icon: MoveRight
     }
 
+    const words = sectionData.subTitle.split(' ');
+
+    const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
+
+    const { ref: textRef, inView, entry } = useInView({
+        threshold: 0,
+    });
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (entry) {
+                const scrollY = window.scrollY;
+                const screenHeight = window.innerHeight;
+                const elementTop = entry.target.getBoundingClientRect().top + scrollY;
+                const elementHeight = entry.target.getBoundingClientRect().height;
+
+                const elementBottom = elementTop + elementHeight;
+                const adjustedScrollPosition = scrollY + screenHeight / 2;
+
+                // Calculate the distance between the top of the element and the middle of the screen
+                const distanceFromTop = adjustedScrollPosition - elementTop;
+
+                // Calculate the total scrollable distance within the element
+                const totalScrollableDistance = elementBottom - screenHeight / 3 - (elementTop + screenHeight / 3);
+
+                // Calculate the scroll progress as a percentage
+                const scrollProgress = (distanceFromTop / totalScrollableDistance) * 100;
+
+                // Determine the index of the active word based on the scroll progress
+                const newIndex = Math.min(
+                    Math.max(
+                        Math.floor((scrollProgress / 100) * (words.length / 2)),
+                        0
+                    ),
+                    Math.ceil(words.length) - 1
+                );
+
+                setActiveWordIndex(newIndex);
+            }
+        };
+
+        // Initial call to handle scroll to set active index on load
+        handleScroll();
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [entry, words.length]);
 
     return (
-        <div className="dark:bg-gray-900/30 md:pt-32 md:pb-32 pt-24 pb-24">
+        <div className="dark:bg-gray-900/30 md:pt-32 md:pb-32 pt-24 pb-24" ref={textRef}>
             <div className="container max-w-screen-sm">
-                <div className="sm:text-[1.46rem]/[3rem] text-[1.22rem]/[3.6rem] uppercase space-x-4 tracking-[.2em]">{sectionData.title}</div>
+                <div className="sm:text-[1.46rem]/[3rem] text-[1.22rem]/[3.6rem] uppercase space-x-4 tracking-[.25em]">{sectionData.title}</div>
             </div>
             <div className="container max-w-screen-sm md:mt-10 mt-4 ">
-                <div className="xl:text-[2.38rem]/[3.4rem] lg:text-[1.3rem] text-[2.3rem]/[3.4rem]"><ScrollingText text={sectionData.subTitle} /></div>
-
+                <div className="xl:text-[2.38rem]/[3.4rem] lg:text-[1.3rem] text-[2.3rem]/[3.4rem]" >
+                    {words.map((word, index) => {
+                        const isActive = index < activeWordIndex * 1.8;
+                        return (
+                            <span key={index} className={cn("transition ease-in-out", isActive ? 'text-gray-200 font-semibold' : 'text-gray-500')}>
+                                {word}{' '}
+                            </span>
+                        );
+                    })}
+                </div>
                 <div className="flex justify-start align-middle mt-20">
                     <FilledLink
                         label={sectionData.label}

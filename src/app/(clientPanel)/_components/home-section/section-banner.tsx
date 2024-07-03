@@ -1,5 +1,7 @@
+import { Fragment } from 'react';
 import { CardsProps } from '../_interface/app-interface';
 import CardBanner from '../cards/banner';
+import StructuredData from '../StructuredData';
 
 export default function SectionPageBanner() {
 
@@ -13,20 +15,23 @@ export default function SectionPageBanner() {
     ]
 
     return (
+        <Fragment>
+            {/* <StructuredData data={generatePageStructuredData(CardCareerData)} /> */}
 
-        <div className="pt-20 pb-20 min-h-[calc(100vh-40vh)] sm:min-h-[calc(100vh-16vh)] flex flex-col justify-center items-center dark:bg-gray-radial">
-            <div className="container max-w-6xl">
-                {CardCareerData.map((item, index) => (
-                    <CardBanner
-                        key={index}
-                        id={item.id}
-                        title={item.title}
-                        subTitle={item.subTitle}
-                        linkText={item.linkText}
-                        href={item.href}
-                    />
-                ))}
+            <div className="pt-20 pb-20 min-h-[calc(100vh-40vh)] sm:min-h-[calc(100vh-16vh)] flex flex-col justify-center items-center dark:bg-gray-radial">
+                <div className="container max-w-6xl">
+                    {CardCareerData.map((item, index) => (
+                        <CardBanner
+                            key={index}
+                            id={item.id}
+                            title={item.title}
+                            subTitle={item.subTitle}
+                            linkText={item.linkText}
+                            href={item.href}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
+        </Fragment>
     );
 }

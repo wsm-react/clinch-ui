@@ -74,7 +74,7 @@ export default function SideDialogLinks() {
                 const isActive = pathName === item.href;
 
                 return (
-                    <Link key={index} href={item.href} className={cn("text-sm p-3 pl-3 pr-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200 w-full transition duration-75 rounded-lg", isActive && "bg-gray-200 text-gray-900")}>
+                    <Link key={index} href={item.href} className={cn("transition-all text-sm p-3 pl-3 pr-3 text-gray-500 hover:text-gray-900 hover:bg-gray-200  w-full rounded-lg", "dark:text-white dark:hover:bg-blue-800 dark:hover:text-white/70", isActive && "bg-gray-200 text-gray-900 dark:bg-blue-600 dark:text-white")}>
                         {Icon && <Icon className="inline-block w-5 mr-3 text-sm" />}
                         {item.label}
                     </Link>
