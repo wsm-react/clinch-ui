@@ -9,12 +9,14 @@ import CardWeServe from '../_components/home-section/section-serve';
 import SectionHelpYou from '../_components/home-section/section-help-you';
 import { Fragment } from 'react';
 import SectionPortfolio from '../_components/home-section/section-portfolio';
+import SectionPrivateWealth from '../_components/home-section/section-private-wealth';
 
 
 export default function ClientIndexPage() {
   return (
     <Fragment>
       <SectionPageBanner />
+      <SectionPrivateWealth />
       <SectionServices />
       <SectionWealthManager />
       <SectionPortfolio />

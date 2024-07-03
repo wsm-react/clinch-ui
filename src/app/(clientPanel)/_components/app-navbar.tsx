@@ -21,11 +21,11 @@ export default function AppNavBar() {
         <div className="flex justify-between w-full">
           <div className="flex items-center font-bold">
             <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' >
-              <div className='text-2xl pt-5 pb-5 font-bold'>AppLogo</div>
+              {/* <div className='text-2xl pt-5 pb-5 font-bold'>AppLogo</div> */}
               {/* <Image layout="responsive" priority src={appLogo} alt='logo' width={120} height={0} className='h-auto' /> */}
               {/* <ApppLogo alt='logo' width={160} height={0} className='h-auto pt-3 pb-3' /> */}
               {/* <div className='text-4xl pt-5 pb-5 font-bold'>AppLogo</div> */}
-              {/* <LogoToggle /> */}
+              <LogoToggle />
             </Link>
             {/* <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' ><Image src='/logo.svg' alt='logo' width={120} height={40} /></Link> */}
           </div>

@@ -49,7 +49,7 @@ export interface linkProps {
 }
 
 
-export interface BorderdLinkProps extends linkProps, linkProps {
+export interface BorderdLinkProps extends linkProps {
     label: string | undefined
     className: string
     labelClassName?: string
@@ -58,7 +58,7 @@ export interface BorderdLinkProps extends linkProps, linkProps {
     iconClass?: string
 }
 
-export interface CareerProps extends HeadingsProps, ListId { }
+export interface CareerProps extends HeadingsProps, ListId, linkProps, MenuLinks { }
 export interface SubscribeProps extends HeadingsProps, ListId {
     note?: string
 }

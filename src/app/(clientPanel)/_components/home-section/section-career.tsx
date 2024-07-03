@@ -9,14 +9,6 @@ import { PngPath } from '@/utility/constants';
 
 export default function SectionCareer() {
 
-    const cardCareerData: CareerProps[] = [
-        {
-            id: 1,
-            title: "Privacy & cookie notice",
-            subTitle: "/privacy-cookie-notice",
-        }
-    ]
-
     const description = "While strong financial acumen remains integral to our business, ethics and values are the most essential attributes we look for in our partners. Client trust is our biggest treasury and if you believe in this, we are always looking for right partners.";
 
     return (

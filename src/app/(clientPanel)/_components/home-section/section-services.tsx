@@ -130,7 +130,7 @@ export default function SectionServices({ searchParams }: { searchParams?: { que
     return (
         <div className="bg-black/[.03] dark:bg-white/05 pt-32 sm:pb-44 pb-20">
             <div className="max-w-fit sm:max-w-screen-2xl container mb-28 sm:text-center">
-                <div className="xl:text-[3rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.6rem]/[3.8rem] font-bold sm:font-semibold">Investment products, to aid your wealth</div>
+                <div className="xl:text-[3rem]/[5.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.6rem]/[3.8rem] font-bold sm:font-semibold">Investment products to aid your wealth</div>
                 <div className="sm:text-[1.3rem] text-[1.4rem] mt-8 sm:mt-0">Choose from our curated products baskets catering to all risk types.</div>
             </div>
             <div className="w-auto sm:w-11/12 mx-auto px-4 sm:px-3 md:px-5">
