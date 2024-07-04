@@ -78,6 +78,14 @@ export interface ExclusiveProductsProps extends CardsProps {
     keyword?: string
     imgSrc: string
     imgAlt?: string
+    type?: string
+    reversed?: boolean
+}
+
+export interface ExclusiveOfferingProps extends CardsProps {
+    keyword?: string
+    imgSrc: string
+    imgAlt?: string
     reversed?: boolean
 }
 

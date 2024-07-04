@@ -11,13 +11,16 @@ export default function SectionServe() {
             subTitle: "Benefits that work the way you thought they would.",
         },
         {
-            title: "No complicated jargon",
-            subTitle: "We make it simple to understand your coverage.",
+            title: "Driven by performance",
+            subTitle: "We are driven by the value we create for you, the performance we deliver",
         },
         {
-            title: "No unexpected costs",
-            subTitle: "When it comes to health coverage, it's good to be predictable.",
-            reversed: true,
+            title: "Accessible to all",
+            subTitle: "We are offering access to private wealth for everyone.",
+        },
+        {
+            title: "Comprehensive Wealth planning",
+            subTitle: "Assessment guided by experts to ensure we meet all requirements.",
         },
     ]
 
@@ -28,7 +31,7 @@ export default function SectionServe() {
                     <div className="xl:text-[3rem]/[4.2rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.6rem]/[3.8rem] font-bold">What makes <br />us truly different</div>
                 </div>
                 <div className="">
-                    <div className="grid grid-cols-1 gap-10 sm:gap-y-8 lg:grid-cols-2 xl:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-10 sm:gap-y-8 lg:grid-cols-2 xl:grid-cols-4">
                         {weServeData.map((item, index) => (
                             <CardWeServe key={index} title={item.title} subTitle={item.subTitle} />
                         ))}
