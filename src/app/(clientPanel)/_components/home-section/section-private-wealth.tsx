@@ -82,7 +82,7 @@ export default function SectionPrivateWealth({ searchParams }: { searchParams?: 
                     {words.map((word, index) => {
                         const isActive = index < activeWordIndex * 1.8;
                         return (
-                            <span key={index} className={cn("transition ease-in-out", isActive ? 'text-gray-200 font-semibold' : 'text-gray-500')}>
+                            <span key={index} className={cn("transition ease-in-out", isActive ? 'dark:text-gray-200  text-gray-900 font-semibold font-serif' : 'dark:text-gray-500 text-gray-200')}>
                                 {word}{' '}
                             </span>
                         );

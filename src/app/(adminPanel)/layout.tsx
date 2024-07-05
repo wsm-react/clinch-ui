@@ -27,7 +27,7 @@ export default function AdminLayout({ children }: Readonly<{ children: React.Rea
         </div>
         <div className="relative w-full overflow-y-auto bg-gray-50 lg:ml-80 dark:bg-gray-900 min-h-[calc(100vh-56px)]">
           <div className="flex flex-col min-h-[calc(100vh-58px)]">
-            <div className="p-8 pt-6 max-sm:px-4">
+            <div className="p-8 pt-6 max-sm:px-4 flex flex-1 flex-col">
               {children}
             </div>
             <div className="mt-auto justify-center hidden w-full p-4 bg-white lg:flex dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">

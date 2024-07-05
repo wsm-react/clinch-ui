@@ -10,7 +10,7 @@ type blogs = {
   authorId: string
 }
 
-export default async function AddNewPage({ params }: any) {
+export default async function AddNewPage(props: any) {
 
 
   return (

@@ -77,6 +77,7 @@ export interface WealthManagerProps extends CardsProps {
 export interface ExclusiveProductsProps extends CardsProps {
     keyword?: string
     imgSrc: string
+    shadow?: string
     imgAlt?: string
     type?: string
     reversed?: boolean

@@ -18,6 +18,18 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        'blue': '0 4px 0px rgba(255, 255, 255, 0.3)',
+        'multi-white': `
+        8px 8px rgba(255, 255, 255, 0.2),
+        16px 16px rgba(255, 255, 255, 0.1),
+        24px 24px rgba(255, 255, 255, 0.08),
+        32px 32px rgba(255, 255, 255, 0.05),
+        40px 40px rgba(255, 255, 255, 0.02)`,
+        'multi-orange': '8px 8px rgba(217, 119, 6, 0.2), 16px 16px rgba(217, 119, 6, 0.1), 24px 24px rgba(217, 119, 6, 0.08), 32px 32px rgba(217, 119, 6, 0.05), 40px 40px rgba(217, 119, 6, 0.02)',
+        'multi-gray': '8px 8px rgba(128, 128, 128, 0.2), 16px 16px rgba(128, 128, 128, 0.1), 24px 24px rgba(128, 128, 128, 0.08), 32px 32px rgba(128, 128, 128, 0.05), 40px 40px rgba(128, 128, 128, 0.02)',
+        // Add more custom shadows as needed
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
