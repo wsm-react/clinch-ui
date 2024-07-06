@@ -31,7 +31,7 @@ const LinkbookExpert: React.FC<HelpYouProps> = (cardProps) => {
             id: 2,
             title: "Let's do it later.",
             label: "I am good , Please call me back as per your schedule ",
-            href: "/signup",
+            href: "/sign-up",
         }
     ]
 

@@ -3,6 +3,7 @@ import GetStartedNavBar from '../../_components/get-started-navbar';
 import { FormGetStarted } from '../../_components/get-started/form-get-started';
 import { ShieldCheck } from 'lucide-react';
 import { Metadata, Viewport } from 'next';
+import { SignIn } from '@clerk/nextjs';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   description: "Clinch signup",
   alternates: {
-    canonical: '/signup'
+    canonical: '/sign-up'
   },
   keywords: ['get-started', 'React get-started'],
 }

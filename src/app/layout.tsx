@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from './provider';
 import { poppinsFont } from '@/utility/fonts';
 import { ClerkProvider } from '@clerk/nextjs';
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
   title: {
@@ -133,6 +134,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           </ThemeProvider>
           <Toaster />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>

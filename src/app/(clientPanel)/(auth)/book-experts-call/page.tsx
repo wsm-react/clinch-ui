@@ -29,7 +29,7 @@ export default function BookExpertsCallPage() {
       id: 1,
       title: "Book a FREE call with Our Experts.",
       label: "Choose a day and time of your preference for a FREE pre Investment call",
-      href: "/login",
+      href: "/sign-in",
       textColor: "text-blue-700 font-bold"
     },
     {

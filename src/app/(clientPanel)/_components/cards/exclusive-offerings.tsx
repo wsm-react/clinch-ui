@@ -32,11 +32,6 @@ const CardExclusiveOffering: React.FC<ExclusiveProductsProps> = (cardProps, prop
                         iconClass={'inline-block w-12 h-10 ml-2 mt-1'}
                     />}
                 </div>
-                {/* {(cardProps.imgSrc && cardProps.reversed === true) && <div className="w-full md:basis-[40%]">
-                    <AspectRatio ratio={1 / 1}>
-                        <Image src={cardProps.imgSrc} className="rounded-md object-cover" fill alt={cardProps.imgSrc} />
-                    </AspectRatio>
-                </div>} */}
             </div>
         </div>
     );

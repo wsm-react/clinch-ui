@@ -1,7 +1,5 @@
 "use client"
 
-import Link from 'next/link';
-import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { GetAvatarName, PadWithZero } from '@/utility/function';
 import { TestimonialSectionProps } from '../_interface/app-interface';

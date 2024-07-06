@@ -27,7 +27,7 @@
     "prisma:seed": "npx prisma db seed",
     "prisma:push": "npx prisma db push",
     "prisma:studio": "npx prisma studio",
-    "vercel:prod": "vercel --prod",
+    "vercel": "vercel --prod",
     "ngrok": "ngrok http --domain=polecat-peaceful-gradually.ngrok-free.app 3000"
   },
   "prisma": {
@@ -54,9 +54,11 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@tanstack/react-table": "^8.17.3",
+    "@vercel/analytics": "^1.3.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
+    "framer-motion": "^11.2.13",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.383.0",
     "next": "14.2.3",
@@ -65,7 +67,6 @@
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
     "react-hook-form": "^7.51.5",
-    "react-intersection-observer": "^9.10.3",
     "schema-dts": "^1.1.2",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",

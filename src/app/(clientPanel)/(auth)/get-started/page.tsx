@@ -84,7 +84,7 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
         <div className="w-11/12 md:w-7/12 mx-auto px-6">
           <div className="flex flex-row items-center justify-between mb-3 md:mb-8 font-semibold">
             <div className="sm:text-[1.4rem] text-[1.2rem] text-slate-600 dark:text-white">Select Product</div>
-            <Link href={'/signup'} className="text-blue-700 hover:text-red-700"> I'll do it later</Link>
+            <Link href={'/sign-up'} className="text-blue-700 hover:text-red-700"> I'll do it later</Link>
           </div>
           {getStartedList.map((items, index) => {
             return (<LinkListGetStarted key={index} title={items.title} label={items.label} href={items.href} />)
