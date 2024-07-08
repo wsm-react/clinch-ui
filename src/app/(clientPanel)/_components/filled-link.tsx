@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import { BorderdLinkProps } from './_interface/app-interface';
-import { ChevronRight } from 'lucide-react';
+import { BorderdLinkProps } from '@/app/interface/client-interface';
 import { cn } from '@/_lib/utils';
-
-
+// const MotionLink = motion(Link);
 
 const FilledLink: React.FC<BorderdLinkProps> = ({ containerClass, href, label, className, labelClassName, icon: Icon, iconClass, iconRight = false, ...restProps }) => {
     return (label && (

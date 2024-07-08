@@ -1,5 +1,5 @@
 import { ChevronRight } from 'lucide-react';
-import { ExclusiveProductsProps, WealthManagerProps } from '../_interface/app-interface';
+import { ExclusiveProductsProps, WealthManagerProps } from '@/app/interface/client-interface';
 import BorderdLink from '../borderd-link';
 import Image from 'next/image';
 

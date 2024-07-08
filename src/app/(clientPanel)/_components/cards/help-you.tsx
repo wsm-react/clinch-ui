@@ -2,7 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { GetAvatarName, PadWithZero } from '@/utility/function';
-import { HelpYouSectionProps } from '../_interface/app-interface';
+import { HelpYouSectionProps } from '@/app/interface/client-interface';
 import { useState } from 'react';
 import { cn } from '@/_lib/utils';
 

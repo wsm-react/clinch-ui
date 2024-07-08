@@ -4,7 +4,7 @@ import { cn } from '@/_lib/utils';
 import { BriefcaseBusiness, Contact, Earth, FilePlus2, IndianRupee, LayoutDashboard, MessageSquareDiff, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MenuLinks } from '../_interface/app-interface';
+import { MenuLinks } from '@/app/interface/client-interface';
 
 export default function SideDialogLinks() {
 

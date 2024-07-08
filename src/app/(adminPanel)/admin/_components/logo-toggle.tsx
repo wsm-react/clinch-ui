@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { LogoProps } from '../_interface/admin-interface';
+import { LogoProps } from '@/app/interface/admin-interface';
 // import dynamic from 'next/dynamic';
 // import AppLogoLight from '/public/logo-dark.svg'; // Adjust the import based on your project structure
 // import AppLogoDark from '/public/logo-dark.svg'; // Adjust the import based on your project structure

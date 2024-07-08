@@ -1,7 +1,10 @@
-import GetStartedNavBar from '../../_components/get-started-navbar';
-import { GetStartedLinks } from '../../_components/_interface/app-interface';
-import LinkListGetStarted from '../../_components/get-started/list-get-started';
+import React from 'react';
 import { Metadata, Viewport } from 'next';
+
+import { GetStartedLinks } from '@/app/interface/client-interface';
+import GetStartedNavBar from '../../_components/get-started-navbar';
+import LinkListGetStarted from '../../_components/get-started/list-get-started';
+
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',

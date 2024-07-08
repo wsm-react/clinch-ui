@@ -1,9 +1,8 @@
-import Image from "next/image";
-import GetStartedNavBar from '../../_components/get-started-navbar';
-import { FormGetStarted } from '../../_components/get-started/form-get-started';
+
 import { ShieldCheck } from 'lucide-react';
 import { Metadata, Viewport } from 'next';
-import { SignIn } from '@clerk/nextjs';
+import GetStartedNavBar from '@/app/(clientPanel)/_components/get-started-navbar';
+import { FormGetStarted } from '@/app/(clientPanel)/_components/get-started/form-get-started';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',

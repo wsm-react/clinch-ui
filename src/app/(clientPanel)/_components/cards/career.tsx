@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/_lib/utils"
-import { CareerProps } from '../_interface/app-interface';
+import { CareerProps } from '@/app/interface/client-interface';
 
 
 const CardCareer: React.FC<CareerProps> = (cardProps, ...props) => {

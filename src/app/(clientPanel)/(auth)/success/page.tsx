@@ -1,8 +1,9 @@
-import GetStartedNavBar from '../../_components/get-started-navbar';
-import GetStartedFooter from '../../_components/get-started-footer';
-import FilledLink from '../../_components/filled-link';
+
 import { MoveLeft } from 'lucide-react';
 import { Metadata, Viewport } from 'next';
+import GetStartedFooter from '@/app/(clientPanel)/_components/get-started-footer';
+import GetStartedNavBar from '@/app/(clientPanel)/_components/get-started-navbar';
+import FilledLink from '@/app/(clientPanel)/_components/filled-link';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',
@@ -36,9 +37,6 @@ export default function SuccessPage() {
               href={`/`}
               containerClass='flex justify-start md:justify-center align-middle mt-20'
               className={'sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white h-12 rounded-full p-[.5rem] pr-10 pl-10 transition-all'}
-            // iconRight={true}
-            // icon={MoveLeft}
-            // iconClass={'inline-block w-8 h-10 mr-6 '}
             />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { cn } from '@/_lib/utils';
-import { BorderdLinkProps } from '../_interface/admin-interface';
+import { BorderdLinkProps } from '@/app/interface/admin-interface';
+
 
 
 const BorderdLink: React.FC<BorderdLinkProps> = ({ href, label, className, labelClassName, icon: Icon, iconClass, iconRight = false, ...restProps }) => {

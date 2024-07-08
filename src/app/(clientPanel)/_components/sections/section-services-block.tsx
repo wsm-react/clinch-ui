@@ -1,5 +1,7 @@
-import { ExclusiveProductsProps } from '../_interface/app-interface';
+import { ExclusiveProductsProps } from '@/app/interface/client-interface';
 import CardExclusiveOffering from '../cards/exclusive-offerings';
+import AppPageWrapper from '../animation/app-wrapper';
+import AppSectionWrapper from '../animation/app-wrapper';
 
 export default function SectionServicesBlock({ searchParams }: { searchParams?: { query?: string; page?: string } }) {
 
@@ -35,28 +37,30 @@ export default function SectionServicesBlock({ searchParams }: { searchParams?: 
     ]
 
     return (
-        <div className="bg-black/[.02] dark:bg-white/[.01] pt-40 pb-10">
-            <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-0 text-center">
-                <div className="md:text-[4rem]/[4rem] text-[3rem]/[3.2rem] font-bold border-b-2 border-t-2 border-gray-300 dark:border-gray-700 pb-10 pt-10">Our Exclusive Offerings</div>
+        <AppSectionWrapper>
+            <div className="bg-black/[.02] dark:bg-white/[.01] pt-40 pb-10">
+                <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-0 text-center">
+                    <div className="md:text-[4rem]/[4rem] text-[3rem]/[3.2rem] font-bold border-b-2 border-t-2 border-gray-300 dark:border-gray-700 pb-10 pt-10">Our Exclusive Offerings</div>
+                </div>
+                <div className="w-11/12 mx-auto px-0 sm:px-3 md:px-5">
+                    {cardData.map((items, index) => {
+                        return (
+                            <CardExclusiveOffering
+                                key={index}
+                                title={items.title}
+                                subTitle={items.subTitle}
+                                type={items.type}
+                                keyword={items.keyword}
+                                imgSrc={items.imgSrc}
+                                shadow={items.shadow}
+                                linkText={items.linkText}
+                                href={items.href}
+                                reversed={items.reversed}
+                            />
+                        );
+                    })}
+                </div>
             </div>
-            <div className="w-11/12 mx-auto px-0 sm:px-3 md:px-5">
-                {cardData.map((items, index) => {
-                    return (
-                        <CardExclusiveOffering
-                            key={index}
-                            title={items.title}
-                            subTitle={items.subTitle}
-                            type={items.type}
-                            keyword={items.keyword}
-                            imgSrc={items.imgSrc}
-                            shadow={items.shadow}
-                            linkText={items.linkText}
-                            href={items.href}
-                            reversed={items.reversed}
-                        />
-                    );
-                })}
-            </div>
-        </div>
+        </AppSectionWrapper>
     );
 }

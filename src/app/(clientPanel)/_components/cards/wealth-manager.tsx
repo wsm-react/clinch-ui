@@ -1,6 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import BorderdLink from '../borderd-link';
-import { WealthManagerProps } from '../_interface/app-interface';
+import { WealthManagerProps } from '@/app/interface/client-interface';
 
 
 const CardWealthManager: React.FC<WealthManagerProps> = (cardProps) => {

@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { MenuLinks } from './_interface/app-interface';
+import { MenuLinks } from '@/app/interface/client-interface';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';

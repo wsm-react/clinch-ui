@@ -4,7 +4,6 @@ import { cn } from "@/_lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from './provider';
 import { poppinsFont } from '@/utility/fonts';
-import { ClerkProvider } from '@clerk/nextjs';
 import { Analytics } from '@vercel/analytics/react';
 
 export const metadata: Metadata = {
@@ -127,16 +126,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <ClerkProvider>
-      <html lang="en" suppressHydrationWarning>
-        <body className={cn("min-h-screen bg-background font-sans antialiased transition-all", [poppinsFont])} suppressHydrationWarning>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
-            {children}
-          </ThemeProvider>
-          <Toaster />
-          <Analytics />
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn("min-h-screen bg-background font-sans antialiased transition-all", [poppinsFont], "overflow-y-scroll overflow-x-hidden")} suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
+        <Toaster />
+        <Analytics />
+      </body>
+    </html>
   );
 }

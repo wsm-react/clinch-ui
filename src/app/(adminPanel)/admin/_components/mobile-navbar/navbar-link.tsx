@@ -5,10 +5,8 @@ import { Home, Newspaper, User } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ModeToggle } from './mode-toggle';
-import { MenuLinks } from '../../_interface/admin-interface';
-import { SignedOut, SignInButton, SignedIn, UserButton } from '@clerk/nextjs';
 
-
+import { MenuLinks } from '@/app/interface/admin-interface';
 
 export default function NavbarLink() {
 
@@ -42,8 +40,7 @@ export default function NavbarLink() {
                     </Link>
                 );
             })}
-            <SignedOut> <SignInButton /> </SignedOut>
-            <SignedIn> <UserButton /> </SignedIn>
+
             <ModeToggle />
         </div>
     );

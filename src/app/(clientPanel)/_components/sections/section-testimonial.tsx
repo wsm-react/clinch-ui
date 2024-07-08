@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import CardTestimonial from '../cards/testimonial';
-import { TestimonialProps } from '../_interface/app-interface';
+import { TestimonialProps } from '@/app/interface/client-interface';
 import { EscapeSpecialChars, PadWithZero } from '@/utility/function';
+import AppSectionWrapper from '../animation/app-wrapper';
 
 export default function SectionTestimonial() {
 
@@ -204,15 +205,17 @@ export default function SectionTestimonial() {
 
 
     return (
-        <div className="bg-black/[.05] dark:bg-background/[.1] pt-40 relative">
-            <div className="w-11/12 mx-auto px-4 sm:px-3 md:px-5 md:text-center">
-                <div className="sm:text-[1.8rem] text-[1.2rem]">Reviews that matters to us</div>
-                <div className="xl:text-[3.2rem]/[3.4rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.1rem]/[2.6rem] font-bold">4.5 Rating for 100+ testimonials form our clients</div>
+        <AppSectionWrapper>
+            <div className="bg-black/[.05] dark:bg-background/[.1] pt-40 relative">
+                <div className="w-11/12 mx-auto px-4 sm:px-3 md:px-5 md:text-center">
+                    <div className="sm:text-[1.8rem] text-[1.2rem]">Reviews that matters to us</div>
+                    <div className="xl:text-[3.2rem]/[3.4rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.1rem]/[2.6rem] font-bold">4.5 Rating for 100+ testimonials form our clients</div>
+                </div>
+                <div className="w-11/12 md:w-7/12 mx-auto px-4 sm:px-3 md:px-5 mb-20 md:text-center">
+                    <div className="sm:text-[1.15rem] text-[1rem] mt-6">{description}</div>
+                </div>
+                <CardTestimonial data={weServeData} />
             </div>
-            <div className="w-11/12 md:w-7/12 mx-auto px-4 sm:px-3 md:px-5 mb-20 md:text-center">
-                <div className="sm:text-[1.15rem] text-[1rem] mt-6">{description}</div>
-            </div>
-            <CardTestimonial data={weServeData} />
-        </div>
+        </AppSectionWrapper>
     );
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { HeadingsProps } from '../_interface/app-interface';
+import { HeadingsProps } from '@/app/interface/client-interface';
 
 
 const CardHeadings: React.FC<HeadingsProps> = (props: HeadingsProps) => {

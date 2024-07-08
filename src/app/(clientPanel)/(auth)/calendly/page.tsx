@@ -1,8 +1,9 @@
-import GetStartedNavBar from '../../_components/get-started-navbar';
-import GetStartedFooter from '../../_components/get-started-footer';
-import FilledLink from '../../_components/filled-link';
-import { Metadata, Viewport } from 'next';
+
 import React from 'react';
+import { Metadata, Viewport } from 'next';
+import FilledLink from '@/app/(clientPanel)/_components/filled-link';
+import GetStartedFooter from '@/app/(clientPanel)/_components/get-started-footer';
+import GetStartedNavBar from '@/app/(clientPanel)/_components/get-started-navbar';
 
 export const viewport: Viewport = {
   themeColor: '#ffffff',

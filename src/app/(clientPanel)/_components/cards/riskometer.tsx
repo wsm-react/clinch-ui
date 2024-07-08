@@ -4,7 +4,7 @@ import { cn } from "@/_lib/utils"
 import Link from 'next/link';
 import { ArrowRight, ChevronRight } from 'lucide-react';
 import BorderdLink from '../borderd-link';
-import { CardsProps } from '../_interface/app-interface';
+import { CardsProps } from '@/app/interface/client-interface';
 
 
 const CardRiskometer: React.FC<CardsProps> = (cardProps) => {

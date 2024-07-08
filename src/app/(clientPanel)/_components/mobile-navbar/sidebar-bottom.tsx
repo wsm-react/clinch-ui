@@ -11,7 +11,7 @@ import { cn } from '@/_lib/utils';
 import { Contact, FilePlus2, Newspaper, Orbit } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { MenuLinks } from '../_interface/app-interface';
+import { MenuLinks } from '@/app/interface/client-interface';
 
 
 

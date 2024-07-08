@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CareerProps, WeServeProps } from '../_interface/app-interface';
+import { CareerProps, WeServeProps } from '@/app/interface/client-interface';
 
 const CardWeServe: React.FC<WeServeProps> = (cardProps) => {
     return (

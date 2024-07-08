@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { GetStartedLinks } from '../_interface/app-interface';
+import { GetStartedLinks } from '@/app/interface/client-interface';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { cn } from '@/_lib/utils';
 import { ChevronRight } from 'lucide-react';

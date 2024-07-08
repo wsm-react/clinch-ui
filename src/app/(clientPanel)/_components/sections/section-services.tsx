@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CardOurServices from '../cards/services';
-import { OurServicesProps } from '../_interface/app-interface';
+import { OurServicesProps } from '@/app/interface/client-interface';
 
 export default function SectionServices({ searchParams }: { searchParams?: { query?: string; page?: string } }) {
 

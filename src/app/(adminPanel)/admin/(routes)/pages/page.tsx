@@ -1,8 +1,7 @@
 import appDB from '@/_lib/prisma-lib';
-import { CirclePlus, MoveLeft, MoveRight } from 'lucide-react';
+import { CirclePlus } from 'lucide-react';
 import { Fragment } from 'react';
 import FilledLink from '../../_components/filled-link';
-import { Button } from '@/components/ui/button';
 
 export default async function PageBlockPage(props: any) {
   const pageCount = await appDB.blogPost.count();

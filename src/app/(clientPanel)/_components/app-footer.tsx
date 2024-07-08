@@ -1,7 +1,7 @@
 "use client"
 
 import Link from 'next/link';
-import { MenuLinks } from './_interface/app-interface';
+import { MenuLinks } from '@/app/interface/client-interface';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -164,7 +164,7 @@ export default function AppFooter() {
 
 
     return (
-        <footer className="bg-slate-900 dark:bg-background">
+        <footer className="bg-black dark:bg-background">
             <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 space-y-16 py-20 pb-10">
                 <div className="grid grid-cols-2 gap-6 sm:grid-cols-3">
                     <div>

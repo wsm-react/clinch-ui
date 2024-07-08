@@ -31,7 +31,7 @@ export default function AppNavBar() {
           </div>
           <div className="flex items-center">
             <div className="flex items-center text-sm sm:hidden ">
-              <Link href='/get-started' className={"text-[.95rem] rounded-full bg-gradient-to-br from-blue-400 to-blue-700 px-5 py-[.7rem] font-semibold text-zinc-50 ring-2 ring-blue-500/50 ring-offset-2 ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-700/70 flex items-center gap-3 focus-visible:ring-[none]"} >Get started</Link>
+              <Link href='/get-started' className={"text-[.95rem] rounded-full bg-gradient-to-br from-blue-400 to-blue-700 px-5 py-[.7rem] font-semibold text-zinc-50 ring-2 ring-blue-500/50 ring-offset-2 dark:ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-700/70 flex items-center gap-3 focus-visible:ring-[none]"} >Get started</Link>
               {/* <MobileNavBar /> */}
             </div>
             <div className="hidden sm:block">

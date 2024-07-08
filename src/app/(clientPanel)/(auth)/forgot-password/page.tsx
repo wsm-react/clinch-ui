@@ -1,4 +1,5 @@
-import GetStartedNavBar from '../../_components/get-started-navbar';
+
+import GetStartedNavBar from '@/app/(clientPanel)/_components/get-started-navbar';
 import { Metadata, Viewport } from 'next';
 
 export const viewport: Viewport = {

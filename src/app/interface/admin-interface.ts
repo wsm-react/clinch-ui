@@ -1,7 +1,5 @@
-import { LinkProps } from 'next/dist/client/link';
-import { Url } from 'next/dist/shared/lib/router/router';
 import { ParsedUrlQueryInput } from 'node:querystring';
-import type { UrlObject } from 'url';
+import { ComponentType } from 'react';
 
 
 export interface ListId {
@@ -35,7 +33,7 @@ export interface highlightKeywordProps {
 export interface MenuLinks extends ListId, linkProps {
     label: string,
     button?: boolean
-    icon?: React.ComponentType<IconProps>;
+    icon?: ComponentType<IconProps>;
 }
 
 
@@ -50,7 +48,7 @@ export interface BorderdLinkProps extends linkProps {
     containerClass?: string
     labelClassName?: string
     iconRight?: boolean
-    icon?: React.ComponentType<IconProps>;
+    icon?: ComponentType<IconProps>;
     iconClass?: string,
 }
 
@@ -61,7 +59,7 @@ export interface SubscribeProps extends HeadingsProps, ListId {
 
 export interface CardsProps extends ListId, HeadingsProps, linkProps {
     linkText?: string
-    icon?: React.ComponentType<IconProps>;
+    icon?: ComponentType<IconProps>;
 }
 
 export interface WealthManagerProps extends CardsProps {

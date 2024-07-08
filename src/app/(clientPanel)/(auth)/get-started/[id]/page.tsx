@@ -1,9 +1,6 @@
 import { Metadata, Viewport } from 'next';
 import React from 'react';
-import { GetStartedLinks } from '../../../_components/_interface/app-interface';
-import LinkListGetStarted from '../../../_components/get-started/list-get-started';
 import GetStartedNavBar from '@/app/(clientPanel)/_components/get-started-navbar';
-import { useSearchParams } from 'next/navigation';
 import LinkbookExpert from '@/app/(clientPanel)/_components/get-started/list-book-expert';
 
 export const viewport: Viewport = {

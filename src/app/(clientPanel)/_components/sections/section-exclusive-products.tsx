@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import CardExclusiveProducts from '../cards/exclusive-products';
-import { ExclusiveProductsProps } from '../_interface/app-interface';
+import { ExclusiveProductsProps } from '@/app/interface/client-interface';
 
 export default function SectionExclusiveProducts() {
 

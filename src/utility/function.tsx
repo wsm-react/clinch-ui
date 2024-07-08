@@ -1,6 +1,7 @@
-import { highlightKeywordProps } from '@/app/(clientPanel)/_components/_interface/app-interface';
-import { cn } from '@/_lib/utils';
+
 import React from 'react';
+import { cn } from '@/_lib/utils';
+import { highlightKeywordProps } from '@/app/interface/client-interface';
 
 export const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
   if (!keyword) return [text]; // Return the original text if keyword is undefined

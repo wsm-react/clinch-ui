@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
-import { CardsProps } from '../_interface/app-interface';
+import { CardsProps } from '@/app/interface/client-interface';
 import CardBanner from '../cards/banner';
-import StructuredData from '../StructuredData';
+import AppSectionWrapper from '../animation/app-wrapper';
 
 export default function SectionPageBanner() {
 
@@ -9,15 +8,14 @@ export default function SectionPageBanner() {
         {
             title: "Turn your money into wealth",
             subTitle: "Clinch offers exclusively crafted investment solutions, enabling you to choose from the best.",
+            keyword: "Clinch",
             linkText: "Make the first move",
             href: "/get-started",
         }
     ]
 
     return (
-        <Fragment>
-            {/* <StructuredData data={generatePageStructuredData(CardCareerData)} /> */}
-
+        <AppSectionWrapper>
             <div className="pt-20 pb-20 min-h-[calc(100vh-40vh)] sm:min-h-[calc(100vh-16vh)] flex flex-col justify-center items-center dark:bg-gray-radial">
                 <div className="container max-w-6xl">
                     {CardCareerData.map((item, index) => (
@@ -26,12 +24,13 @@ export default function SectionPageBanner() {
                             id={item.id}
                             title={item.title}
                             subTitle={item.subTitle}
+                            keyword={item.keyword}
                             linkText={item.linkText}
                             href={item.href}
                         />
                     ))}
                 </div>
             </div>
-        </Fragment>
+        </AppSectionWrapper>
     );
 }

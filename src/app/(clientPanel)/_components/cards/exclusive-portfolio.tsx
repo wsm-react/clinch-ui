@@ -1,4 +1,4 @@
-import { SubscribeProps } from '../_interface/app-interface';
+import { SubscribeProps } from '@/app/interface/client-interface';
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight, MoveRight } from 'lucide-react';
