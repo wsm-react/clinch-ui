@@ -3,7 +3,7 @@ import { CareerProps } from '@/app/interface/client-interface';
 import FilledLink from '../filled-link';
 import { useState, useEffect, Fragment, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { slideInFromBottom } from '@/utility/motion';
+import { slideInFromBottom, slideInFromLeft, slideInFromTop } from '@/utility/motion';
 
 
 const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
@@ -48,7 +48,7 @@ const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
     return (
         <motion.div initial="hidden" animate="visible">
             <div className="container max-w-screen-sm">
-                <motion.div variants={slideInFromBottom({ delay: 0.5, yAxis: 20 })} className="sm:text-[1.46rem]/[3rem] text-[1.22rem]/[3.6rem] uppercase space-x-4 tracking-[.25em]">{cardProps.title}</motion.div>
+                <motion.div variants={slideInFromLeft({ delay: 0.5, yAxis: -20 })} className="sm:text-[1.46rem]/[3rem] text-[1.22rem]/[3.6rem] uppercase space-x-4 tracking-[.25em]">{cardProps.title}</motion.div>
             </div>
             <div className="container max-w-screen-sm md:mt-10 mt-4" ref={textRef}>
                 <div className="xl:text-[2.38rem]/[3.4rem] lg:text-[1.3rem] text-[2.3rem]/[3.4rem]">
