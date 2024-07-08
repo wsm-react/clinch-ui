@@ -41,6 +41,13 @@ export default function AppFooter() {
     // }, [currentTheme]);
 
     const menuLinksData1: MenuLinks[] = [
+
+        {
+            id: 1,
+            label: "Faq's",
+            href: "/faqs",
+
+        },
         {
             id: 1,
             label: "Privacy & cookie notice",

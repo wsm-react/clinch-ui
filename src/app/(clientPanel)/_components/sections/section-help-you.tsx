@@ -22,9 +22,7 @@ At Clinch, our team comprises Investment Advisors who evaluate clients' current 
         },
         {
             title: 'How experienced is Clinch Private Wealth Management Team?',
-            content: `When you’re looking for a financial advisor, choose someone proven you can trust.
-Clinch Private Wealth is helping clients to invest, preserve and protect their assets. Our team averages more than 15 years of wealth management experience. 
-`
+            content: `When you're looking for a financial advisor, choose someone proven you can trust. Clinch Private Wealth is helping clients to invest, preserve and protect their assets. Our team averages more than 15 years of wealth management experience.`
         },
         {
             title: 'When should I consider private wealth management?',
@@ -32,7 +30,6 @@ Clinch Private Wealth is helping clients to invest, preserve and protect their a
         }
     ]
 
-    const description = `People describe Nova's service as "exceeding expectations", "attentive and empathetic", "proactive & seamless", and the list is never-ending!`;
 
 
     return (
@@ -50,6 +47,7 @@ Clinch Private Wealth is helping clients to invest, preserve and protect their a
                         className={'sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300'}
                         iconClass={'inline-block w-14 h-10 ml-2 mt-1'}
                     />
+
                 </div>
             </div>
         </AppSectionWrapper>

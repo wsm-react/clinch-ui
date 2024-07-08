@@ -125,6 +125,10 @@ export interface HelpYouSectionProps extends BorderdLinkProps {
     data: HelpYouProps[];
 }
 
+export interface HelpYouAccordionProps {
+    data: HelpYouProps[];
+}
+
 
 export interface MotionSlideProps {
     delay?: number;

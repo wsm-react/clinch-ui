@@ -9,9 +9,7 @@ export default function ClientInnerLayout({ children }: Readonly<{ children: Rea
     <Fragment>
       <AppNavBar />
       {/* <PageStairAnimataion /> */}
-      <AppPageWrapper>
-        {children}
-      </AppPageWrapper>
+      {children}
     </Fragment>
   );
 }

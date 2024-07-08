@@ -17,20 +17,18 @@ import AppPageWrapper from '../_components/animation/page-wrapper';
 export default function ClientIndexPage() {
   return (
     <Fragment>
-      <AppPageWrapper>
-        <SectionPageBanner />
-        <SectionPrivateWealth />
-        {/* <SectionServices /> */}
-        <SectionServicesBlock />
-        <SectionPortfolio />
-        <SectionWealthManager />
-        {/* <SectionExclusiveProducts /> */}
-        <CardWeServe />
-        <SectionTestimonial />
-        <SectionCareer />
-        <SectionHelpYou />
-        <SectionRegisterNow />
-      </AppPageWrapper>
+      <SectionPageBanner />
+      <SectionPrivateWealth />
+      {/* <SectionServices /> */}
+      <SectionServicesBlock />
+      <SectionPortfolio />
+      <SectionWealthManager />
+      {/* <SectionExclusiveProducts /> */}
+      <CardWeServe />
+      <SectionTestimonial />
+      <SectionCareer />
+      <SectionHelpYou />
+      <SectionRegisterNow />
     </Fragment>
   );
 }

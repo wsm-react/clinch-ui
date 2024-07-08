@@ -6,14 +6,10 @@ import { HelpYouSectionProps } from '@/app/interface/client-interface';
 import { useState } from 'react';
 import { cn } from '@/_lib/utils';
 
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+
 import BorderdLink from '../borderd-link';
 import { ChevronRight } from 'lucide-react';
+import FaqsAccordion from './faqs-accordion';
 
 const CardHelpYou: React.FC<HelpYouSectionProps> = (cardProps) => {
     const [isActive, setIsActive] = useState(false);
@@ -25,17 +21,7 @@ const CardHelpYou: React.FC<HelpYouSectionProps> = (cardProps) => {
     return (
         <div className="">
             {/* <div className="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3 max-h-[33rem] overflow-hidden"> */}
-            <Accordion type="single" className="w-full">
-                {cardProps.data.map((item, index) => {
-                    const paddedIndex = PadWithZero(index + 1);
-                    return (
-                        <AccordionItem key={paddedIndex} value={`item-${paddedIndex}`}>
-                            <AccordionTrigger className='text-[1.2rem] text-start font-bold'>{item.title}</AccordionTrigger>
-                            <AccordionContent>{item.content}</AccordionContent>
-                        </AccordionItem>
-                    );
-                })}
-            </Accordion>
+            <FaqsAccordion data={cardProps.data} />
             <BorderdLink
                 label={cardProps.label}
                 href={cardProps.href}
