@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from "next";
 import { cn } from "@/_lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeProvider } from './provider';
-import { poppinsFont } from '@/utility/fonts';
 import { Analytics } from '@vercel/analytics/react';
+import { poppinsFont } from '@/_lib/fonts';
 
 export const metadata: Metadata = {
   title: {

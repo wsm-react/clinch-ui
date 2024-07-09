@@ -1,20 +1,11 @@
 "use client"
 
+import React, { useState } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-import { useState } from 'react';
+import { HelpYouAccordionProps } from '@/app/interface/client-interface';
 
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
-
-import { ChevronRight } from 'lucide-react';
-import React from 'react';
-import { HelpYouAccordionProps, HelpYouProps, HelpYouSectionProps } from '@/app/interface/client-interface';
-import { PadWithZero } from '@/utility/function';
-import BorderdLink from '../borderd-link';
+import { PadWithZero } from '@/_lib/function';
 
 const FaqsAccordion: React.FC<HelpYouAccordionProps> = (cardProps) => {
     const [isActive, setIsActive] = useState(false);

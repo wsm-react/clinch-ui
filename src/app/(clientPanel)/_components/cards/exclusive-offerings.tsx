@@ -3,9 +3,9 @@ import { ExclusiveOfferingProps, ExclusiveProductsProps } from '@/app/interface/
 import BorderdLink from '../borderd-link';
 import Image from 'next/image';
 
-import { HighlightKeyword } from '@/utility/function';
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import { cn } from '@/_lib/utils';
+import { HighlightKeyword } from '@/_lib/function';
 
 const CardExclusiveOffering: React.FC<ExclusiveProductsProps> = (cardProps, props) => {
     return (

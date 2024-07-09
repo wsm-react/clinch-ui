@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { mobileRegExp } from './function';
+import { mobileRegExp } from '../function';
 
 export const signupFormSchema = z.object({
     name: z.string()

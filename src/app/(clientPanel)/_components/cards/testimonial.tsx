@@ -1,11 +1,11 @@
 "use client"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { GetAvatarName, PadWithZero } from '@/utility/function';
 import { TestimonialSectionProps } from '@/app/interface/client-interface';
 import { useState } from 'react';
 import { cn } from '@/_lib/utils';
 import AppSectionWrapper from '../animation/app-wrapper';
+import { PadWithZero, GetAvatarName } from '@/_lib/function';
 
 const CardTestimonial: React.FC<TestimonialSectionProps> = ({ data }) => {
     const [isActive, setIsActive] = useState(false);

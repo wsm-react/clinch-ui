@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { EscapeSpecialChars } from '@/utility/function';
-import { PngPath } from '@/utility/constants';
 import AppSectionWrapper from '../animation/app-wrapper';
+import { PngPath } from '@/_lib/constants';
+import { EscapeSpecialChars } from '@/_lib/function';
 
 export default function SectionCareer() {
 

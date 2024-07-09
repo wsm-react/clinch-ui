@@ -3,6 +3,7 @@ import { HelpYouProps } from '@/app/interface/client-interface';
 import CardHelpYou from '../cards/help-you';
 import AppPageWrapper from '../animation/app-wrapper';
 import AppSectionWrapper from '../animation/app-wrapper';
+import CardHeadings from '../cards/headings';
 
 export default function SectionHelpYou() {
 
@@ -36,8 +37,13 @@ At Clinch, our team comprises Investment Advisors who evaluate clients' current 
         <AppSectionWrapper>
             <div className="bg-black/[.05] dark:bg-white/[.02] pt-40 pb-40">
                 <div className="w-11/12 mx-auto  px-4 sm:px-3 md:px-5 mb-10 md:text-center">
-                    <div className="xl:text-[3.2rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.4rem]/[3.8rem] font-bold">How can we help you?</div>
-                    <div className="sm:text-[1.8rem] text-[1.6rem] mt-6">Popular Topics</div>
+                    <CardHeadings
+                        spaceY={"space-y-2"}
+                        title={'How can we help you?'}
+                        titleClass={'xl:text-[3.2rem]/[3.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[3.4rem]/[3.8rem] font-bold'}
+                        subTitle={'Popular Topics'}
+                        subTitleClass={'sm:text-[1.8rem] text-[1.6rem]'}
+                    />
                 </div>
                 <div className="container max-w-screen-xl">
                     <CardHelpYou
@@ -47,7 +53,6 @@ At Clinch, our team comprises Investment Advisors who evaluate clients' current 
                         className={'sm:text-[1.5rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center hover:text-blue-400 dark:hover:text-cyan-300'}
                         iconClass={'inline-block w-14 h-10 ml-2 mt-1'}
                     />
-
                 </div>
             </div>
         </AppSectionWrapper>

@@ -1,11 +1,12 @@
 "use client"
 
-import { MoveRight } from 'lucide-react';
 import FilledLink from '../filled-link';
-import { HighlightKeyword } from '@/utility/function';
+
 import { CardsProps } from '@/app/interface/client-interface';
 import { motion } from 'framer-motion';
-import { slideInFromBottom, slideInFromTop } from '@/utility/motion';
+import { HighlightKeyword } from '@/_lib/function';
+import { slideInFromTop, slideInFromBottom } from '@/_lib/motion';
+
 
 const CardBanner: React.FC<CardsProps> = (cardProps) => {
 

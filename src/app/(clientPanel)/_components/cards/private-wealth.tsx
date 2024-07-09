@@ -3,7 +3,7 @@ import { CareerProps } from '@/app/interface/client-interface';
 import FilledLink from '../filled-link';
 import { useState, useEffect, Fragment, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { slideInFromBottom, slideInFromLeft, slideInFromTop } from '@/utility/motion';
+import { slideInFromLeft, slideInFromBottom } from '@/_lib/motion';
 
 
 const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {

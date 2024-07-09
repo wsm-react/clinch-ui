@@ -1,5 +1,5 @@
 import { ParsedUrlQueryInput } from 'node:querystring';
-import { ComponentType } from 'react';
+import { ComponentType, ElementType } from 'react';
 
 
 export interface highlightKeywordProps {
@@ -40,6 +40,15 @@ export interface IconProps {
 export interface HeadingsProps {
     title: string
     subTitle: string
+}
+
+export interface HeadingsClassProps {
+    title: string
+    subTitle?: string
+    titleTag?: ElementType
+    spaceY?: string
+    titleClass?: string
+    subTitleClass?: string
 }
 
 export interface linkProps {

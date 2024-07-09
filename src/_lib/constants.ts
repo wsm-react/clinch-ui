@@ -25,3 +25,8 @@ export const SOCIAL_BOOKMARKS_COUNT = 200;
 export const ONE_ON_ONE_CHATS_COUNT = 100;
 export const GROUP_CHATS_COUNT = 30;
 export const GROUP_CHAT_MAX_PARTICIPANTS_COUNT = 10;
+
+
+export const PngPath = {
+    careerImg: "/career-img.png",
+};

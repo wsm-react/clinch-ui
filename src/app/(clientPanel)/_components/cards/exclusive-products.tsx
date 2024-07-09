@@ -2,10 +2,7 @@ import { ChevronRight } from 'lucide-react';
 import { ExclusiveProductsProps, WealthManagerProps } from '@/app/interface/client-interface';
 import BorderdLink from '../borderd-link';
 import Image from 'next/image';
-
-import { text } from 'stream/consumers';
-import { HighlightKeyword } from '@/utility/function';
-
+import { HighlightKeyword } from '@/_lib/function';
 
 
 const CardExclusiveProducts: React.FC<ExclusiveProductsProps> = (cardProps, props) => {
