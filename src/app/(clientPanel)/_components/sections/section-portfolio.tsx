@@ -2,6 +2,7 @@ import { SubscribeProps } from '@/app/interface/client-interface';
 import CradPortfolio from '../cards/exclusive-portfolio';
 import AppPageWrapper from '../animation/app-wrapper';
 import AppSectionWrapper from '../animation/app-wrapper';
+import CradExclusivePlaceholder from '../cards/exclusive-placeholder';
 
 export default function SectionPortfolio() {
 
@@ -18,7 +19,8 @@ export default function SectionPortfolio() {
                 <div className="max-w-fit sm:max-w-2xl xl:max-w-5xl 2xl:max-w-5xl mx-auto md:text-center container">
                     <div className="xl:text-[3.4rem]/[4.6rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.6rem]/[3rem] font-bold">Already have an Investment portfolio, Get it reviewed for free</div>
                 </div>
-                <CradPortfolio title={subscribeData.title} subTitle={subscribeData.subTitle} />
+                <CradExclusivePlaceholder />
+                {/* <CradPortfolio title={subscribeData.title} subTitle={subscribeData.subTitle} /> */}
                 <div className="max-w-fit sm:max-w-2xl mx-auto md:text-center container">
                     <div className="lg:text-[1rem] text-[.8rem]">{subscribeData.note}</div>
                 </div>

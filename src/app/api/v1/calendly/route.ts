@@ -1,4 +1,5 @@
-import { parseURLSearchParams } from '@/utility/function';
+
+import { parseURLSearchParams } from '@/_lib/function';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { NextRequest, NextResponse } from 'next/server';
 

@@ -4,8 +4,8 @@ import FilledLink from '../filled-link';
 
 import { CardsProps } from '@/app/interface/client-interface';
 import { motion } from 'framer-motion';
-import { HighlightKeyword } from '@/_lib/function';
 import { slideInFromTop, slideInFromBottom } from '@/_lib/motion';
+import { HighlightAnmiKeyword } from '@/_lib/function';
 
 
 const CardBanner: React.FC<CardsProps> = (cardProps) => {
@@ -20,7 +20,8 @@ const CardBanner: React.FC<CardsProps> = (cardProps) => {
                 className="2xl:text-[4.4rem]/[5.6rem] xl:text-[3.6rem]/[5rem] lg:text-[4rem]/[6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[4.2rem]/[4.1rem] font-black mb-10">{cardProps.title}</motion.div>}
             {cardProps.subTitle && <motion.div variants={slideInFromBottom({ delay: 0.5, yAxis: 20 })} className="max-w-fit sm:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl mx-auto">
                 <div className="2xl:text-[1.8rem] xl:text-[1.4rem] text-[1.3rem] text-gray-400">
-                    <HighlightKeyword text={cardProps.subTitle} keyword={cardProps.keyword} />
+                    {/* <HighlightKeyword animateKeyword={cardProps.animateKeyword} text={cardProps.subTitle} keyword={cardProps.keyword} /> */}
+                    <HighlightAnmiKeyword text={cardProps.subTitle} replaceText={cardProps.replaceText} animateKeywords={cardProps.animateKeywords} keyword={cardProps.keyword} />
                 </div>
             </motion.div>}
 

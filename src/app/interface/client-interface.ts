@@ -4,7 +4,9 @@ import { ComponentType, ElementType } from 'react';
 
 export interface highlightKeywordProps {
     text: string
-    keyword: string | undefined
+    keyword?: string | null;
+    replaceText?: string | null;
+    animateKeywords: string[];
     className?: string
 }
 
@@ -74,6 +76,8 @@ export interface SubscribeProps extends HeadingsProps, ListId {
 export interface CardsProps extends ListId, HeadingsProps, linkProps {
     linkText?: string
     keyword?: string
+    replaceText?: string
+    animateKeywords: string[]
     icon?: ComponentType<IconProps>;
 }
 

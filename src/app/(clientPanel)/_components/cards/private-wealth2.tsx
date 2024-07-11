@@ -1,14 +1,15 @@
 import { cn } from '@/_lib/utils';
 import { CareerProps } from '@/app/interface/client-interface';
 import FilledLink from '../filled-link';
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, Fragment, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { slideInFromLeft, slideInFromBottom } from '@/_lib/motion';
 
 
-const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
+const CardPrivateWealth2: React.FC<CareerProps> = (cardProps) => {
     const words = cardProps.subTitle.split(' ');
     const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
+    const controls = useAnimation();
     const textRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -24,39 +25,25 @@ const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
                 const totalScrollableDistance = elementTop + height - screenHeight / 5 - (elementTop + screenHeight / 3);
 
                 const scrollProgress = (distanceFromTop / totalScrollableDistance) * 100;
-                const newIndex = Math.min(Math.max(Math.floor((scrollProgress / 100) * words.length), 0), words.length - 1);
+                const newIndex = Math.min(Math.max(Math.floor((scrollProgress / 100) * (words.length / 2)), 0), words.length - 1);
+
 
                 setActiveWordIndex(newIndex);
+
+                controls.start(i => ({
+                    opacity: i < newIndex * 1.3 ? 1 : 0.3,
+                    transition: { delay: i * 0.001 }
+                }));
             }
         };
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        window.addEventListener('scroll', handleScroll);
-                        handleScroll(); // Initial call to handleScroll to set initial state
-                    } else {
-                        window.removeEventListener('scroll', handleScroll);
-                    }
-                });
-            },
-            {
-                threshold: [0, 0.05, 0.05, 0.05, 1],
-            }
-        );
-
-        if (textRef.current) {
-            observer.observe(textRef.current);
-        }
+        handleScroll();
+        window.addEventListener('scroll', handleScroll);
 
         return () => {
-            if (textRef.current) {
-                observer.unobserve(textRef.current);
-            }
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [words.length]);
+    }, [words.length, controls]);
 
     return (
         <motion.div initial="hidden" animate="visible">
@@ -75,8 +62,8 @@ const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
                                     : 'dark:text-gray-500 text-gray-200'
                             )}
                             initial={{ opacity: .5 }}
-                            animate={{ opacity: index <= activeWordIndex ? 1 : 0.2 }}
-                            transition={{ delay: index * 0.02 }}
+                            animate={controls}
+                            custom={index}
                         >
                             {word}{' '}
                         </motion.span>
@@ -97,4 +84,5 @@ const CardPrivateWealth: React.FC<CareerProps> = (cardProps) => {
     );
 }
 
-export default CardPrivateWealth;
+
+export default CardPrivateWealth2;

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import CardTestimonial from '../cards/testimonial';
 import { TestimonialProps } from '@/app/interface/client-interface';
-import { EscapeSpecialChars, PadWithZero } from '@/utility/function';
+
 import AppSectionWrapper from '../animation/app-wrapper';
 
 export default function SectionTestimonial() {

@@ -2,7 +2,6 @@ import { Fragment } from 'react';
 import AppNavBar from '../_components/app-navbar';
 import AppPageWrapper from '../_components/animation/page-wrapper';
 import PageStairAnimataion from '../_components/animation/page-stairs';
-import { ThemeModeToggle } from '../_components/theme-toggle';
 
 
 export default function ClientInnerLayout({ children }: Readonly<{ children: React.ReactNode }>) {

@@ -1,4 +1,7 @@
 import type { Config } from "tailwindcss"
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
@@ -88,38 +91,123 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    function ({ addUtilities }: any) {
-      const newUtilities = {
-        '.bg-green-radial': {
-          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 60% at 50% 50%, rgba(89, 236, 165, 0.2) 0%, rgba(89, 236, 165, 0) 100%), 
-                       hsl(var(--background))`,
-        },
-        '.bg-fuchsia-radial': {
-          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 60% at 50% 50%, rgba(236, 89, 221, 0.2) 0%, rgba(236, 89, 221, 0) 100%), 
-                       hsl(var(--background))`,
-        },
-        '.bg-cyan-radial': {
-          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 60% at 50% 50%, rgba(89, 218, 236, 0.2) 0%, rgba(89, 218, 236, 0) 100%), 
-                       hsl(var(--background))`,
-        },
-        '.bg-orange-radial': {
-          background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 60% at 50% 50%, rgba(236, 195, 89, 0.2) 0%, rgba(236, 195, 89, 0) 100%), 
-                       hsl(var(--background))`,
-        },
-        '.bg-gray-radial': {
-          background: `radial-gradient(51.5% 44% at 50% 33%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-                       radial-gradient(70% 50% at 50% 68%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%), 
-                       hsl(var(--background))`,
-        },
-      };
+    // function ({ addUtilities }: any) {
+    //   const newUtilities = {
+    //     '.bg-green-radial': {
+    //       background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+    //                    radial-gradient(70% 60% at 50% 50%, rgba(89, 236, 165, 0.2) 0%, rgba(89, 236, 165, 0) 100%), 
+    //                    hsl(var(--background))`,
+    //     },
+    //     '.bg-fuchsia-radial': {
+    //       background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+    //                    radial-gradient(70% 60% at 50% 50%, rgba(236, 89, 221, 0.2) 0%, rgba(236, 89, 221, 0) 100%), 
+    //                    hsl(var(--background))`,
+    //     },
+    //     '.bg-cyan-radial': {
+    //       background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+    //                    radial-gradient(70% 60% at 50% 50%, rgba(89, 218, 236, 0.2) 0%, rgba(89, 218, 236, 0) 100%), 
+    //                    hsl(var(--background))`,
+    //     },
+    //     '.bg-orange-radial': {
+    //       background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+    //                    radial-gradient(70% 60% at 50% 50%, rgba(236, 195, 89, 0.2) 0%, rgba(236, 195, 89, 0) 100%), 
+    //                    hsl(var(--background))`,
+    //     },
+    //     '.bg-gray-radial': {
+    //       background: `radial-gradient(51.5% 44% at 50% 33%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+    //                    radial-gradient(70% 50% at 50% 68%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60%), 
+    //                    hsl(var(--background))`,
+    //     },
+    //   };
 
-      addUtilities(newUtilities, ['responsive', 'hover']);
-    },
+    //   addUtilities(newUtilities, ['responsive', 'hover']);
+    // },
+    addCustomUtilities,
+    addVariablesForColors,
   ],
 } satisfies Config
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
+
+function addCustomUtilities({ addUtilities, theme }: any) {
+  const colors = flattenColorPalette(theme('colors'));
+
+  const rgbaColor = (colorValue: string, opacity: number = 0.2) => {
+    if (colorValue.startsWith('#')) {
+      let r = 0, g = 0, b = 0;
+      if (colorValue.length === 4) {
+        r = parseInt(colorValue[1] + colorValue[1], 16);
+        g = parseInt(colorValue[2] + colorValue[2], 16);
+        b = parseInt(colorValue[3] + colorValue[3], 16);
+      } else if (colorValue.length === 7) {
+        r = parseInt(colorValue[1] + colorValue[2], 16);
+        g = parseInt(colorValue[3] + colorValue[4], 16);
+        b = parseInt(colorValue[5] + colorValue[6], 16);
+      }
+      return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+    }
+    return colorValue;
+  };
+
+  const newUtilities = Object.entries(colors).reduce((acc, [colorName, colorValue]) => {
+    const colorValueString = colorValue as string;
+    return {
+      ...acc,
+      [`.bg-${colorName}-radial`]: {
+        background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+                     radial-gradient(70% 60% at 50% 50%, ${rgbaColor(colorValueString, 0.2)} 0%, ${rgbaColor(colorValueString, 0)} 100%), 
+                     hsl(var(--background))`,
+      },
+    };
+  }, {});
+
+  addUtilities(newUtilities, ['responsive', 'hover']);
+}
+
+// function addBgRadialGradient({ addUtilities, theme }: any) {
+//   const colors = flattenColorPalette(theme('colors'));
+
+//   const rgbaColor = (colorValue: string, opacity: number = 0.2) => {
+//     // Convert hex color to rgba
+//     if (colorValue.startsWith('#')) {
+//       let r = 0, g = 0, b = 0;
+//       if (colorValue.length === 4) {
+//         r = parseInt(colorValue[1] + colorValue[1], 16);
+//         g = parseInt(colorValue[2] + colorValue[2], 16);
+//         b = parseInt(colorValue[3] + colorValue[3], 16);
+//       } else if (colorValue.length === 7) {
+//         r = parseInt(colorValue[1] + colorValue[2], 16);
+//         g = parseInt(colorValue[3] + colorValue[4], 16);
+//         b = parseInt(colorValue[5] + colorValue[6], 16);
+//       }
+//       return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+//     }
+//     return colorValue; // return original if it's not hex
+//   };
+
+//   const bgRadialUtilities = Object.entries(colors).reduce((acc, [colorName, colorValue]) => {
+//     const colorValueString = colorValue as string;
+//     return {
+//       ...acc,
+//       [`.bg-${colorName}-radial`]: {
+//         background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
+//                      radial-gradient(70% 60% at 50% 50%, ${rgbaColor(colorValueString, 0.2)} 0%, ${rgbaColor(colorValueString, 0)} 100%), 
+//                      hsl(var(--background))`,
+//       },
+//     };
+//   }, {});
+
+//   addUtilities(bgRadialUtilities, ['responsive', 'hover']);
+// }
 
 export default config

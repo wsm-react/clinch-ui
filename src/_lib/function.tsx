@@ -2,6 +2,7 @@
 import React from 'react';
 import { cn } from '@/_lib/utils';
 import { highlightKeywordProps } from '@/app/interface/client-interface';
+import { FlipWords } from '@/components/ui/flip-words';
 
 export const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, className }) => {
   if (!keyword) return [text]; // Return the original text if keyword is undefined
@@ -14,6 +15,59 @@ export const HighlightKeyword: React.FC<highlightKeywordProps> = ({ text, keywor
       <span key={index} className={cn('font-bold', className ? className : "text-gray-500 dark:text-gray-300")}>
         {part}
       </span>) : (part)
+  );
+};
+
+function escapeRegExp(str: string) {
+  return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+}
+
+export const HighlightAnmiKeyword: React.FC<highlightKeywordProps> = ({ text, keyword, replaceText, animateKeywords, className }) => {
+  if (!keyword) return <>{text}</>; // Return the original text if keyword is undefined
+
+  // Escape special characters in keyword and replaceText for safe RegExp usage
+  const sanitizedKeyword = escapeRegExp(keyword.trim());
+  const sanitizedReplaceText = replaceText ? escapeRegExp(replaceText.trim()) : '';
+
+  // Split text into parts based on keyword and replaceText
+  const parts = text.split(new RegExp(`(${sanitizedKeyword}|${sanitizedReplaceText})`, 'gi'));
+
+  return (
+    <div className="2xl:text-[1.8rem] xl:text-[1.4rem] text-[1.3rem] text-gray-400">
+      {parts.map((part, index) => {
+        if (part.toLowerCase() === keyword.toLowerCase()) {
+          // Render keyword in bold
+          return (
+            <span key={`bold-${index}`} className="font-bold text-gray-500 dark:text-gray-300">
+              {part}
+            </span>
+          );
+        } else if (part.toLowerCase() === replaceText?.toLowerCase() && animateKeywords && animateKeywords.length > 0) {
+          // Render replaceText and then animateKeywords
+          // return (
+          //   <React.Fragment key={`replace-${index}`}>
+          //     <FlipWords key={`animate-${index}`} words={animateKeywords} />
+          //   </React.Fragment>
+          // );
+          // animateKeywords.map((word, animateIndex) => {
+          //   return newWords.push(word);
+          // })
+
+          return (
+            // <React.Fragment key={`replace-${index}`}>
+            //   <span className="font-bold text-gray-500 dark:text-gray-300">{part}</span>
+
+            //   {/* {newWords} */}
+
+            // </React.Fragment>
+            <FlipWords key={`replace-${index}`} words={animateKeywords} />
+          );
+        } else {
+          // Render normal text parts
+          return <span key={`rest-${index}`}>{part}</span>;
+        }
+      })}
+    </div>
   );
 };
 

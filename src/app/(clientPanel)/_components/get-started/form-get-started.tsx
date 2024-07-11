@@ -11,9 +11,9 @@ import { toast } from "@/components/ui/use-toast"
 import { Checkbox } from '@/components/ui/checkbox'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { signupFormSchema } from '@/utility/form-schema'
 import { FormEvent } from 'react'
 import { ShieldCheck } from 'lucide-react'
+import { signupFormSchema } from '@/_lib/form-schema/login-fm'
 
 export function FormGetStarted() {
     const router = useRouter();

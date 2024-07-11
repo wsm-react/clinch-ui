@@ -2,13 +2,9 @@
 
 import { CareerProps } from '@/app/interface/client-interface';
 import { MoveRight } from 'lucide-react';
-import FilledLink from '../filled-link';
 
-import { useEffect, useState } from 'react';
-import { cn } from '@/_lib/utils';
-import CardPrivateWealth from '../cards/private-wealth';
-import AppPageWrapper from '../animation/app-wrapper';
 import AppSectionWrapper from '../animation/app-wrapper';
+import CardPrivateWealth2 from '../cards/private-wealth2';
 
 
 
@@ -26,7 +22,7 @@ export default function SectionPrivateWealth({ searchParams }: { searchParams?: 
     return (
         <AppSectionWrapper>
             <div className="dark:bg-gray-900/30 md:pt-32 md:pb-32 pt-24 pb-24">
-                <CardPrivateWealth
+                <CardPrivateWealth2
                     title={sectionData.title}
                     subTitle={sectionData.subTitle}
                     href={sectionData.href}
