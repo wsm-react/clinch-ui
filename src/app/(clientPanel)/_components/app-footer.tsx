@@ -5,36 +5,37 @@ import { MenuLinks } from '@/app/interface/client-interface';
 import { useTheme } from 'next-themes';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
+import { ThemeModeToggle } from './theme-toggle';
 
 export default function AppFooter() {
 
-    const pathName = usePathname();
+    // const pathName = usePathname();
 
-    const { resolvedTheme, setTheme } = useTheme();
-    const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
+    // const { resolvedTheme, setTheme } = useTheme();
+    // const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
 
-    const updateThemeColor = (newTheme: string) => {
-        const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    // const updateThemeColor = (newTheme: string) => {
+    //     const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+    //     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', themeColor);
-        }
-    };
+    //     if (metaThemeColor) {
+    //         metaThemeColor.setAttribute('content', themeColor);
+    //     }
+    // };
 
-    useEffect(() => {
-        // Ensure this runs only on the client side
-        if (pathName === "/") {
-            setTheme('dark'); // Update the theme to 'light'
-            updateThemeColor('dark');
-        } else if (pathName === "/get-started") {
-            setTheme('light'); // Update the theme to 'light'
-            updateThemeColor('light');
-        } else {
-            setTheme('light');
-            updateThemeColor('light');
-        }
-    }, [pathName, currentTheme, setTheme]);
+    // useEffect(() => {
+    //     // Ensure this runs only on the client side
+    //     if (pathName === "/") {
+    //         setTheme('dark'); // Update the theme to 'light'
+    //         updateThemeColor('dark');
+    //     } else if (pathName === "/get-started") {
+    //         setTheme('light'); // Update the theme to 'light'
+    //         updateThemeColor('light');
+    //     } else {
+    //         setTheme('light');
+    //         updateThemeColor('light');
+    //     }
+    // }, [pathName, currentTheme, setTheme]);
 
     // useEffect(() => {
     //     updateThemeColor(currentTheme);
@@ -215,7 +216,7 @@ export default function AppFooter() {
                     <div className="text-sm text-gray-600">Clinch is powered by  is registered with SEBI Registration no. INP000007377. Mutual Fund distribution services are offered through NHOJH Distribution Services Pvt Limited, a wholly owned subsidiary with AMFI Registration No.: ARN -248439. Mutual fund investments are subject to market risks, read all scheme related documents carefully. Terms and conditions of the website are applicable. Privacy policy of the website is applicable.</div>
                 </div>
                 <div className="text-center border-t border-white/10 pt-14">
-                    <ul className="flex justify-center space-x-5">
+                    <ul className="flex justify-center space-x-5 align-middle items-center">
                         {/* {MenuLinks4.map((item, index) => (
                             <li key={index}>
                                 <Link href={item.href} className="text-sm  hover:text-white text-gray-400">
@@ -223,6 +224,7 @@ export default function AppFooter() {
                                 </Link>
                             </li>
                         ))} */}
+                        <li><ThemeModeToggle /></li>
                         <li>
                             <Link href="https://www.facebook.com/" target="_blank" className="hover:text-blue-400 text-gray-400">
                                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd"></path></svg>

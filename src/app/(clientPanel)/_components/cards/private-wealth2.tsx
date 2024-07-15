@@ -1,12 +1,13 @@
 import { cn } from '@/_lib/utils';
 import { CareerProps } from '@/app/interface/client-interface';
 import FilledLink from '../filled-link';
-import { useState, useEffect, Fragment, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { slideInFromLeft, slideInFromBottom } from '@/_lib/motion';
 
 
 const CardPrivateWealth2: React.FC<CareerProps> = (cardProps) => {
+
     const words = cardProps.subTitle.split(' ');
     const [activeWordIndex, setActiveWordIndex] = useState<number>(0);
     const controls = useAnimation();
@@ -75,7 +76,7 @@ const CardPrivateWealth2: React.FC<CareerProps> = (cardProps) => {
                         href={cardProps.href}
                         icon={cardProps.icon}
                         containerClass="flex justify-start align-middle mt-20"
-                        className="sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white rounded-full p-[.32rem] pr-10 pl-10 transition-all"
+                        className="sm:text-[1.1rem] text-[1rem] focus-visible:ring-[none] flex flex-row items-center font-bold text-white bg-slate-900 hover:bg-blue-700 dark:bg-white dark:text-black hover:dark:bg-blue-600 dark:hover:text-white rounded-full p-[.8rem] pr-10 pl-10 transition-all"
                         iconClass="inline-block w-8 h-10 ml-6"
                     />
                 </motion.div>

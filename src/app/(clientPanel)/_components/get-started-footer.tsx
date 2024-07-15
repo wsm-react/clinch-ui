@@ -8,33 +8,33 @@ import { useState, useEffect } from 'react';
 
 export default function GetStartedFooter() {
 
-    const pathName = usePathname();
+    // const pathName = usePathname();
 
-    const { resolvedTheme, setTheme } = useTheme();
-    const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
+    // const { resolvedTheme, setTheme } = useTheme();
+    // const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'light');
 
-    const updateThemeColor = (newTheme: string) => {
-        const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
-        const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    // const updateThemeColor = (newTheme: string) => {
+    //     const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
+    //     const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
-        if (metaThemeColor) {
-            metaThemeColor.setAttribute('content', themeColor);
-        }
-    };
+    //     if (metaThemeColor) {
+    //         metaThemeColor.setAttribute('content', themeColor);
+    //     }
+    // };
 
-    useEffect(() => {
-        // Ensure this runs only on the client side
-        if (pathName === "/") {
-            setTheme('dark'); // Update the theme to 'light'
-            updateThemeColor('dark');
-        } else if (pathName === "/get-started") {
-            setTheme('light'); // Update the theme to 'light'
-            updateThemeColor('light');
-        } else {
-            setTheme('light');
-            updateThemeColor('light');
-        }
-    }, [pathName, currentTheme, setTheme]);
+    // useEffect(() => {
+    //     // Ensure this runs only on the client side
+    //     if (pathName === "/") {
+    //         setTheme('dark'); // Update the theme to 'light'
+    //         updateThemeColor('dark');
+    //     } else if (pathName === "/get-started") {
+    //         setTheme('light'); // Update the theme to 'light'
+    //         updateThemeColor('light');
+    //     } else {
+    //         setTheme('light');
+    //         updateThemeColor('light');
+    //     }
+    // }, [pathName, currentTheme, setTheme]);
 
     const menuLinksData1: MenuLinks[] = [
         {

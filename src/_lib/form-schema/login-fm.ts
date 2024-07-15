@@ -17,6 +17,13 @@ export const signupFormSchema = z.object({
     terms: z.boolean().refine(val => val === true, { message: "You must accept the terms and conditions" })
 });
 
+export const forgotPasswordSchema = z.object({
+    emailId: z.string()
+        .min(1, { message: "This field has to be filled." })
+        .email("This is not a valid email."),
+    terms: z.boolean().refine(val => val === true, { message: "You must accept the terms and conditions" })
+});
+
 
 
 // .refine(value => value === true, "You must agree to the terms and conditions")

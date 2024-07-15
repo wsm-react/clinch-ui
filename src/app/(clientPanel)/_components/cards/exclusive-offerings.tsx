@@ -21,7 +21,19 @@ const CardExclusiveOffering: React.FC<ExclusiveProductsProps> = (cardProps, prop
                     {/* {cardProps.title && <div className="2xl:text-[4.1rem]/[5rem] xl:text-[3.2rem]/[4rem] lg:text-[3rem]/[3.6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[1.4rem]/[2.6rem] font-bold mb-14 max-lg:hidden">{cardProps.title}</div>} */}
                     {cardProps.title && <div className="xl:text-[3.2rem]/[4rem] lg:text-[3rem]/[3.6rem] md:text-[2.8rem]/[4rem] sm:text-[2.2rem]/[3rem] text-[2.2rem]/[2.7rem] font-semibold mb-8 md:mb-14">{cardProps.title}</div>}
                     {cardProps.subTitle && <div className="sm:text-[1.3rem] xl:text-[1.4rem] md:text-[1.6rem] text-[1.2rem]"> <HighlightKeyword text={cardProps.subTitle} keyword={cardProps.keyword} className='text-gray-800 dark:text-white' /> </div>}
-                    {cardProps.type && <div className="mt-8"><span className='border-2 border-gray-300 dark:border-gray-700 rounded-full p-[.4rem] pl-4 pr-4 text-gray-800 dark:text-gray-300'><HighlightKeyword text={cardProps.type} keyword={cardProps.keyword} className='' /></span></div>}
+                    {/* {cardProps.type && <div className="mt-8"><span className='border-2 border-gray-300 dark:border-gray-700 rounded-full p-[.4rem] pl-4 pr-4 text-gray-800 dark:text-gray-300'><HighlightKeyword text={cardProps.type} keyword={cardProps.keyword} className='' /></span></div>} */}
+
+                    {cardProps.tags && cardProps.tags.length > 0 && (
+                        <div className="flex flex-row flex-wrap gap-x-2 gap-y-[.4] mt-12 mb-20">
+                            {cardProps.tags.map((tag, index) => (
+                                <div key={index} className="mt-2 flex justify-start align-middle gap-x-1 border border-gray-300 dark:border-gray-700 rounded-full p-[.4rem] pl-4 pr-4">
+                                    {tag.title && <div className="text-[.9rem] text-gray-600 dark:text-gray-400">{tag.title}</div>}
+                                    {tag.subTitle && <div className="text-[.9rem] text-gray-600 dark:text-gray-400 "> {tag.subTitle}</div>}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+
                     {cardProps.linkText && <BorderdLink
                         label={cardProps.linkText}
                         href={cardProps.href}

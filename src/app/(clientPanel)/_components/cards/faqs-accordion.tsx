@@ -23,7 +23,7 @@ const FaqsAccordion: React.FC<HelpYouAccordionProps> = (cardProps) => {
                     const paddedIndex = PadWithZero(index + 1);
                     return (
                         <AccordionItem key={paddedIndex} value={`item-${paddedIndex}`}>
-                            <AccordionTrigger className='text-[1.1rem] text-start font-bold'>{item.title}</AccordionTrigger>
+                            <AccordionTrigger className='text-[1.1rem] text-start'>{item.title}</AccordionTrigger>
                             <AccordionContent className='text-[1.1rem]'>{item.content}</AccordionContent>
                         </AccordionItem>
                     );

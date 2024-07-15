@@ -8,10 +8,9 @@ import { motion } from 'framer-motion'
 import { cn } from '@/_lib/utils'
 
 
+const TOGGLE_CLASSES = "text-sm font-medium flex items-center gap-2 p-[.3rem] transition-colors relative z-10";
 
-export default function ThemeModeToggle() {
-
-    const TOGGLE_CLASSES = "flex items-center gap-3 p-[.44rem] pr-[.5rem] pl-[.5rem] transition-colors relative z-10 focus-visible:ring-[none]";
+export function ThemeModeToggle() {
 
     const { setTheme, resolvedTheme, theme } = useTheme();
     const [currentTheme, setCurrentTheme] = useState<string>(resolvedTheme || 'dark');
@@ -26,9 +25,10 @@ export default function ThemeModeToggle() {
     // console.log(theme);
 
     const handleThemeChange = (newTheme: string) => {
+        // console.log(newTheme);
+
         setTheme(newTheme);
         setCurrentTheme(newTheme);
-        // console.log(newTheme);
         updateThemeColor(newTheme);
     };
 
@@ -47,67 +47,48 @@ export default function ThemeModeToggle() {
 
 
     return (
-        <div className={cn("relative flex w-fit items-center rounded-full border-2 border-gray-200 dark:border-gray-600")}>
-            <button className={cn(TOGGLE_CLASSES, currentTheme === "light" ? "text-white" : "text-slate-400")}
-                onClick={() => { handleThemeChange("light"); }}
-            >
-                <Sun className="relative z-10 h-4 w-4" />
-                {/* <span className="relative z-10">Light</span> */}
-            </button>
-            <button
-                className={cn(TOGGLE_CLASSES, currentTheme === "dark" ? "text-white" : "text-slate-300")}
-                onClick={() => { handleThemeChange("dark"); }}
-            >
-                <MoonStar className="relative z-10 h-4 w-4" />
-                {/* <span className="relative z-10">Dark</span> */}
-            </button>
-            <div
-                className={cn("absolute inset-0 z-0 flex", currentTheme === "dark" ? "justify-end" : "justify-start")}
-            >
-                <motion.span
-                    layout
-                    transition={{ type: "spring", damping: 40, stiffness: 350 }}
-                    className="h-full w-1/2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600"
-                />
-            </div>
+        <div className={cn("relative flex w-fit items-center rounded-full border border-white/30 dark:border-white/20")}>
+            <SliderToggle selected={theme} className={TOGGLE_CLASSES} setSelected={handleThemeChange} />
         </div>
     );
 }
 
 
-// export function ModeToggle() {
+const SliderToggle = ({ selected, className, setSelected }: any) => {
+    // console.log(selected);
 
-//     const { setTheme, resolvedTheme } = useTheme();
-//     const [position, setPosition] = useState(resolvedTheme || '');
-
-//     console.log(resolvedTheme);
-
-
-//     useEffect(() => {
-//         if (resolvedTheme) {
-//             setPosition(resolvedTheme);
-//         }
-//     }, [resolvedTheme]);
-
-//     return (
-//         <DropdownMenu >
-//             <DropdownMenuTrigger asChild>
-//                 <Button variant="link" className="transition-colors hover:text-foreground/80 text-foreground/50 focus-visible:ring-[none]">
-//                     <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-//                     <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-//                 </Button>
-//             </DropdownMenuTrigger>
-//             <DropdownMenuContent className="dark:border-0" align="end">
-//                 <DropdownMenuRadioGroup value={position}
-//                     onValueChange={(value) => {
-//                         setPosition(value);
-//                         setTheme(value);
-//                     }}>
-//                     <DropdownMenuRadioItem value="light"><MoonStar className="inline-block w-4 mr-2" /> Light</DropdownMenuRadioItem>
-//                     <DropdownMenuRadioItem value="dark"><Sun className="inline-block w-4 mr-2" /> Dark</DropdownMenuRadioItem>
-//                     <DropdownMenuRadioItem value="system"><Monitor className="inline-block w-4 mr-2" /> System</DropdownMenuRadioItem>
-//                 </DropdownMenuRadioGroup>
-//             </DropdownMenuContent>
-//         </DropdownMenu>
-//     )
-// }
+    return (
+        <div className="relative flex w-fit items-center rounded-full">
+            <button
+                className={cn(className, selected === "light" ? "text-white" : "text-slate-300")}
+                onClick={() => {
+                    setSelected("light");
+                }}
+            >
+                <MoonStar className="relative z-10 h-4 w-4" />
+                {/* <FiMoon className="relative z-10 text-lg md:text-sm" /> */}
+                {/* <span className="relative z-10">Light</span> */}
+            </button>
+            <button
+                className={cn(className, selected === "dark" ? "text-white" : "text-slate-300")}
+                onClick={() => {
+                    setSelected("dark");
+                }}
+            >
+                {/* <Sun className="relative z-10 text-lg md:text-sm" /> */}
+                <Sun className="relative z-10 h-4 w-4" />
+                {/* <span className="relative z-10">Dark</span> */}
+            </button>
+            <div
+                className={`absolute inset-0 z-0 flex ${selected === "dark" ? "justify-end" : "justify-start"
+                    }`}
+            >
+                <motion.span
+                    layout
+                    transition={{ type: "spring", damping: 15, stiffness: 250 }}
+                    className="h-full w-1/2 rounded-full bg-gradient-to-r from-violet-600 to-indigo-600"
+                />
+            </div>
+        </div>
+    );
+};

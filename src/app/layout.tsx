@@ -110,7 +110,7 @@ export const metadata: Metadata = {
   //   },
   // },
   other: {
-    "apple-mobile-web-app-status-bar-style": "default",
+    "apple-mobile-web-app-status-bar-style": "dark",
     "apple-mobile-web-app-capable": "yes",
   },
 
@@ -121,6 +121,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "dark"
 }
 
 
@@ -128,7 +129,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background font-sans antialiased transition-all", [poppinsFont], "overflow-y-scroll overflow-x-hidden")} suppressHydrationWarning>
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
         <Toaster />

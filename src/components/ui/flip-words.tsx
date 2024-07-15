@@ -1,6 +1,6 @@
 "use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import React, { useCallback, useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from '@/_lib/utils';
 
 
@@ -36,7 +36,7 @@ export const FlipWords = ({
                 setIsAnimating(false);
             }}
         >
-            <motion.div
+            <motion.span
                 initial={{
                     opacity: 0,
                     y: 10,
@@ -64,16 +64,27 @@ export const FlipWords = ({
                     "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
                     className
                 )}
-                key={currentWord}
+                key={`new-${currentWord}`}
             >
                 {currentWord.split("").map((letter, index) => {
-
+                    // return (<>ashasj </>)
                     if (letter === ' ') {
-                        return <span key={`letter-${currentWord + index}`}>&nbsp;</span>; // Preserve space visually
+                        return (
+                            <motion.span
+                                key={`letter-${currentWord + index}`}
+                                initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+                                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                                transition={{
+                                    delay: index * 0.08,
+                                    duration: 0.3,
+                                }}
+                                className="inline-block"
+                            >&nbsp;</motion.span>
+                        ); // Preserve space visually
                     } else {
                         return (
                             <motion.span
-                                key={`word-${currentWord + index}`}
+                                key={`words-${currentWord + index}`}
                                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                                 transition={{
@@ -87,7 +98,7 @@ export const FlipWords = ({
                         );
                     }
                 })}
-            </motion.div>
+            </motion.span>
         </AnimatePresence>
     );
 };

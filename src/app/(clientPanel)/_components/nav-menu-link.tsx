@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 import { usePathname } from 'next/navigation';
 import { MenuLinks } from '@/app/interface/client-interface';
+import { ModeToggle } from './mode-toggle';
 
 export default function MenuLink() {
     const pathName = usePathname();
@@ -60,7 +61,7 @@ export default function MenuLink() {
                     );
                 })}
             </div>
-            {/* <ModeToggle /> */}
+
         </div>
     );
 }

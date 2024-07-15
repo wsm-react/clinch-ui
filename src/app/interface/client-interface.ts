@@ -6,7 +6,7 @@ export interface highlightKeywordProps {
     text: string
     keyword?: string | null;
     replaceText?: string | null;
-    animateKeywords: string[];
+    animateKeywords?: string[];
     className?: string
 }
 
@@ -77,7 +77,7 @@ export interface CardsProps extends ListId, HeadingsProps, linkProps {
     linkText?: string
     keyword?: string
     replaceText?: string
-    animateKeywords: string[]
+    animateKeywords?: string[]
     icon?: ComponentType<IconProps>;
 }
 
@@ -91,9 +91,12 @@ export interface ExclusiveProductsProps extends CardsProps {
     imgSrc: string
     shadow?: string
     imgAlt?: string
-    type?: string
+    // type?: string
     reversed?: boolean
+    tags?: null | ProductsTagsProps[],
 }
+
+export interface ProductsTagsProps extends HeadingsProps { }
 
 export interface ExclusiveOfferingProps extends CardsProps {
     keyword?: string
@@ -147,4 +150,12 @@ export interface MotionSlideProps {
     delay?: number;
     yAxis?: number;
     xAxis?: number;
+}
+
+
+interface EmailOptionsProps {
+    to: string;
+    subject: string;
+    text?: string;
+    html?: string;
 }

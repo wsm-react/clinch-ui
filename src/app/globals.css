@@ -11,6 +11,25 @@ body {
 
 @layer base {
   :root {
+    --min-viewport-width: 220px;
+    --max-viewport-width: 5000px;
+    --ideal-viewport-width: 1600;
+    --current-viewport-width: 100vw;
+    --clamped-viewport-width: clamp(var(--min-viewport-width),var(--current-viewport-width),var(--max-viewport-width));
+    --scale: var(--clamped-viewport-width) /var(--ideal-viewport-width);
+    --size-14: calc(14 * var(--scale));
+    --size-16: calc(16 * var(--scale));
+    --size-18: calc(18 * var(--scale));
+    --size-20: calc(20 * var(--scale));
+    --size-22: calc(21 * var(--scale));
+    --size-24: calc(24 * var(--scale));
+    --size-28: calc(28 * var(--scale));
+    --size-32: calc(32 * var(--scale));
+    --size-34: calc(34 * var(--scale));
+    --size-38: calc(38 * var(--scale));
+    --size-42: calc(42 * var(--scale));
+    --size-46: calc(52 * var(--scale));
+    --size-55: calc(55 * var(--scale))
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
@@ -34,6 +53,25 @@ body {
   }
 
   .dark {
+    --min-viewport-width: 220px;
+    --max-viewport-width: 5000px;
+    --ideal-viewport-width: 1600;
+    --current-viewport-width: 100vw;
+    --clamped-viewport-width: clamp(var(--min-viewport-width),var(--current-viewport-width),var(--max-viewport-width));
+    --scale: var(--clamped-viewport-width) /var(--ideal-viewport-width);
+    --size-14: calc(14 * var(--scale));
+    --size-16: calc(16 * var(--scale));
+    --size-18: calc(18 * var(--scale));
+    --size-20: calc(20 * var(--scale));
+    --size-22: calc(21 * var(--scale));
+    --size-24: calc(24 * var(--scale));
+    --size-28: calc(28 * var(--scale));
+    --size-32: calc(32 * var(--scale));
+    --size-34: calc(34 * var(--scale));
+    --size-38: calc(38 * var(--scale));
+    --size-42: calc(42 * var(--scale));
+    --size-46: calc(52 * var(--scale));
+    --size-55: calc(55 * var(--scale))
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     --card: 222.2 84% 4.9%;

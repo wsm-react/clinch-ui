@@ -4,15 +4,12 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-import { Button } from "@/components/ui/button"
+import Link from 'next/link'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { toast } from "@/components/ui/use-toast"
 import { Checkbox } from '@/components/ui/checkbox'
+import { Button } from "@/components/ui/button"
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { FormEvent } from 'react'
-import { ShieldCheck } from 'lucide-react'
 import { signupFormSchema } from '@/_lib/form-schema/login-fm'
 
 export function FormGetStarted() {

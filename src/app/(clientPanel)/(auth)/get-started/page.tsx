@@ -28,10 +28,10 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
   const getStartedList: GetStartedLinks[] = [
     {
       id: 1,
-      title: "Portfolio management services",
-      label: "Managed portfolios with 32%* Returns (Variable)",
+      title: "Are you a millennial?",
+      label: "Aged between( 26- 41),Wealth Creation Millennials is exclusively designed to match millennial's aspirations, Investment solution designed to meet the risk and reward matrix of millennials.",
       href: {
-        pathname: "/get-started/portfolio-management-services",
+        pathname: "/get-started/are-you-a-millennial",
         query: {
           link: "https://calendly.com/ichwebdsign/portfolio-management-services"
         }
@@ -39,10 +39,10 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
     },
     {
       id: 2,
-      title: "Stocks",
-      label: "Invest with experts built stocks portfolios",
+      title: "Are you Gen X?",
+      label: "Aged between ( 42-57 ) Wealth creation for Gen X, With changing priorities and asset size, we provide holistic wealth management solutions to match your aspirations.",
       href: {
-        pathname: "/get-started/stocks",
+        pathname: "/get-started/are-you-gen-x",
         query: {
           link: "https://calendly.com/ichwebdsign/stocks"
         }
@@ -50,10 +50,10 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
     },
     {
       id: 1,
-      title: "Mutual Funds",
-      label: "Guided fund with 26%* Returns (Variable)",
+      title: "Standalone Investment solutions",
+      label: "Irrespective of your Age, Access to curated standalone investment solutions for all kind of Investment.",
       href: {
-        pathname: "/get-started/mutual-funds",
+        pathname: "/get-started/standalone-investment-solutions",
         query: {
           link: "https://calendly.com/ichwebdsign/mutual-funds"
         }
@@ -61,10 +61,10 @@ export default function GetStartedPage({ searchParams }: { searchParams?: { quer
     },
     {
       id: 1,
-      title: "Bonds & FD's",
-      label: "Grow your saving with 12%* Returns (Variable)",
+      title: "Wealth Protector and growth Program",
+      label: "If you have achieved your financial goals and now looking to protect your wealth with steady returns or to meet upcoming priorities",
       href: {
-        pathname: "/get-started/bonds-and-fds",
+        pathname: "/get-started/wealth-protector-and-growth-program",
         query: {
           link: "https://calendly.com/ichwebdsign/bonds-and-fds"
         }

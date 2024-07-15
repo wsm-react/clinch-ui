@@ -28,31 +28,30 @@ export async function createUser(formdata: FormData) {
 
 export async function createBlogPost(formdata: FormData) {
     // Extract and process form data
-    const id = formdata.get("id") as string;
     const slug = (formdata.get("slug") as string).replace(/\s+/g, "-").toLowerCase();
     const title = formdata.get("title") as string;
     const body = formdata.get("body") as string;
     const published = formdata.get("published") === "true"; // Assuming published is sent as a string "true" or "false"
-    const authorId = formdata.get("authorId") as string; // Author ID for the relation
+    // const authorId = formdata.get("authorId") as number; // Author ID for the relation
 
     // Ensure authorId is provided
-    if (!authorId) {
-        throw new Error("Author ID is required to create a blog post.");
-    }
+    // if (!authorId) {
+    //     throw new Error("Author ID is required to create a blog post.");
+    // }
 
-    // Create the blog post in the database
-    await appDB.blogPost.create({
-        data: {
-            id: id,
-            slug: slug,
-            title: title,
-            body: body,
-            published: published,
-            author: {
-                connect: {
-                    id: authorId,
-                },
-            },
-        },
-    });
+    // // Create the blog post in the database
+    // await appDB.blogPost.create({
+    //     data: {
+
+    //         slug: slug,
+    //         title: title,
+    //         body: body,
+    //         published: published,
+    //         author: {
+    //             connect: {
+    //                 id: authorId,
+    //             },
+    //         },
+    //     },
+    // });
 }

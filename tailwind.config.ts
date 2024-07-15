@@ -3,6 +3,8 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+const svgToDataUri = require("mini-svg-data-uri");
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -31,6 +33,7 @@ const config = {
         40px 40px rgba(255, 255, 255, 0.02)`,
         'multi-orange': '8px 8px rgba(217, 119, 6, 0.2), 16px 16px rgba(217, 119, 6, 0.1), 24px 24px rgba(217, 119, 6, 0.08), 32px 32px rgba(217, 119, 6, 0.05), 40px 40px rgba(217, 119, 6, 0.02)',
         'multi-gray': '8px 8px rgba(128, 128, 128, 0.2), 16px 16px rgba(128, 128, 128, 0.1), 24px 24px rgba(128, 128, 128, 0.08), 32px 32px rgba(128, 128, 128, 0.05), 40px 40px rgba(128, 128, 128, 0.02)',
+
         // Add more custom shadows as needed
       },
       colors: {
@@ -73,6 +76,13 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "aurora": "aurora 60s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
+        "spotlight": "spotlight 2s ease .75s 1 forwards",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -82,11 +92,33 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      }
     },
   },
   plugins: [
@@ -124,6 +156,8 @@ const config = {
     // },
     addCustomUtilities,
     addVariablesForColors,
+    addAuroraColors,
+    BgGridUtilities,
   ],
 } satisfies Config
 
@@ -174,40 +208,39 @@ function addCustomUtilities({ addUtilities, theme }: any) {
   addUtilities(newUtilities, ['responsive', 'hover']);
 }
 
-// function addBgRadialGradient({ addUtilities, theme }: any) {
-//   const colors = flattenColorPalette(theme('colors'));
+function BgGridUtilities({ matchUtilities, theme }: any) {
+  matchUtilities(
+    {
+      "bg-grid": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`,
+      }),
+      "bg-grid-small": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`,
+      }),
+      "bg-dot": (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+        )}")`,
+      }),
+    },
+    { values: flattenColorPalette(theme("backgroundColor")), type: "color" }
+  );
+}
 
-//   const rgbaColor = (colorValue: string, opacity: number = 0.2) => {
-//     // Convert hex color to rgba
-//     if (colorValue.startsWith('#')) {
-//       let r = 0, g = 0, b = 0;
-//       if (colorValue.length === 4) {
-//         r = parseInt(colorValue[1] + colorValue[1], 16);
-//         g = parseInt(colorValue[2] + colorValue[2], 16);
-//         b = parseInt(colorValue[3] + colorValue[3], 16);
-//       } else if (colorValue.length === 7) {
-//         r = parseInt(colorValue[1] + colorValue[2], 16);
-//         g = parseInt(colorValue[3] + colorValue[4], 16);
-//         b = parseInt(colorValue[5] + colorValue[6], 16);
-//       }
-//       return `rgba(${r}, ${g}, ${b}, ${opacity})`;
-//     }
-//     return colorValue; // return original if it's not hex
-//   };
 
-//   const bgRadialUtilities = Object.entries(colors).reduce((acc, [colorName, colorValue]) => {
-//     const colorValueString = colorValue as string;
-//     return {
-//       ...acc,
-//       [`.bg-${colorName}-radial`]: {
-//         background: `radial-gradient(51.5% 42.89% at 50% 25%, hsla(0,0%,100%,.2) 0%, hsla(0,0%,100%,0) 50%), 
-//                      radial-gradient(70% 60% at 50% 50%, ${rgbaColor(colorValueString, 0.2)} 0%, ${rgbaColor(colorValueString, 0)} 100%), 
-//                      hsl(var(--background))`,
-//       },
-//     };
-//   }, {});
+function addAuroraColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
 
-//   addUtilities(bgRadialUtilities, ['responsive', 'hover']);
-// }
+  addBase({
+    ":root": newVars,
+  });
+}
 
 export default config

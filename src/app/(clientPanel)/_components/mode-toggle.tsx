@@ -38,6 +38,9 @@ export function ModeToggle() {
         const themeColor = newTheme === 'dark' ? '#000000' : '#ffffff';
         const metaThemeColor = document.querySelector('meta[name="theme-color"]');
 
+        // console.log(newTheme);
+
+
         if (metaThemeColor) {
             metaThemeColor.setAttribute('content', themeColor);
         }

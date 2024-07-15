@@ -26,19 +26,19 @@ export function LogoToggle() {
         }
     };
 
-    useEffect(() => {
-        // Ensure this runs only on the client side
-        if (pathName === "/") {
-            setTheme('dark'); // Update the theme to 'light'
-            updateThemeColor('dark');
-        } else if (pathName === "/get-started") {
-            setTheme('light'); // Update the theme to 'light'
-            updateThemeColor('light');
-        } else {
-            setTheme('light');
-            updateThemeColor('light');
-        }
-    }, [pathName, currentTheme, setTheme]);
+    // useEffect(() => {
+    //     // Ensure this runs only on the client side
+    //     if (pathName === "/") {
+    //         setTheme('dark'); // Update the theme to 'light'
+    //         updateThemeColor('dark');
+    //     } else if (pathName === "/get-started") {
+    //         setTheme('light'); // Update the theme to 'light'
+    //         updateThemeColor('light');
+    //     } else {
+    //         setTheme('light');
+    //         updateThemeColor('light');
+    //     }
+    // }, [pathName, currentTheme, setTheme]);
 
     useEffect(() => {
         // Determine which logo component to use based on the resolved theme

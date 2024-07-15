@@ -9,6 +9,7 @@ import { ModeToggle } from './mode-toggle';
 
 import ApppLogo from "/public/logo-dark.svg";
 import { LogoToggle } from './logo-toggle';
+import { ThemeModeToggle } from './theme-toggle';
 
 export default function AppNavBar() {
   const buttonClasses = buttonVariants({ variant: "secondary" });
@@ -29,6 +30,8 @@ export default function AppNavBar() {
             </Link>
             {/* <Link href='/' className='transition-colors hover:text-foreground/80 text-foreground/60' ><Image src='/logo.svg' alt='logo' width={120} height={40} /></Link> */}
           </div>
+          {/* <ModeToggle /> */}
+          {/* <ThemeModeToggle /> */}
           <div className="flex items-center">
             <div className="flex items-center text-sm sm:hidden ">
               <Link href='/get-started' className={"text-[.95rem] rounded-full bg-gradient-to-br from-blue-400 to-blue-700 px-5 py-[.7rem] font-semibold text-zinc-50 ring-2 ring-blue-500/50 ring-offset-2 dark:ring-offset-zinc-950 transition-all hover:scale-[1.02] hover:ring-transparent active:scale-[0.98] active:ring-blue-700/70 flex items-center gap-3 focus-visible:ring-[none]"} >Get started</Link>
