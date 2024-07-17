@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { useToast } from "@/components/ui/use-toast"
 import { z as zodvalid } from "zod"
 import { createUser } from '@/actions/actions'
+import { cn } from '@/_lib/utils'
 
 const FormSchema = zodvalid.object({
   name: zodvalid.string().min(6, { message: "name must be at least 6 characters long" }),
@@ -34,6 +35,7 @@ export function InsertUserForm() {
 
     // createUser(data as FormData);
     toast({
+      className: cn('bg-white'),
       title: "You submitted the following values:",
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-2">

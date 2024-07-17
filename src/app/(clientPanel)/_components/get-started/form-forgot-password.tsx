@@ -7,14 +7,13 @@ import { z } from "zod"
 
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { FormEvent } from 'react'
-import { ShieldCheck } from 'lucide-react'
 import { forgotPasswordSchema } from '@/_lib/form-schema/login-fm'
 import { FormField, FormItem, FormLabel, FormControl, FormMessage, Form } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { toast } from '@/components/ui/use-toast'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { cn } from '@/_lib/utils'
 
 export function FormforgotPassword() {
     const router = useRouter();
@@ -35,9 +34,10 @@ export function FormforgotPassword() {
 
         // router.push('/success');
         toast({
+            className: cn('bg-white'),
             title: "You submitted the following values:",
             description: (
-                <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
+                <pre className="mt-2 w-full rounded-md bg-slate-800 p-4">
                     <code className="text-white">{JSON.stringify(data, null, 2)}</code>
                 </pre>
             ),
